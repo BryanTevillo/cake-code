@@ -6,3 +6,4 @@
 - Itzel Perez Rodriguez
 - Alejandro de León Piña
 - Ana Paula Garfias Rios
+- Fernando Zubillaga Gomez
