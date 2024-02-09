@@ -70,7 +70,7 @@ function Footer() {
           className="text-neutral-800 dark:text-neutral-400"
           href="https://tw-elements.com/"
         >
-          TW elements
+          Cake-Code
         </a>
       </div>
     </footer>
