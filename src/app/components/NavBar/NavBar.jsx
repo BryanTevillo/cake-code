@@ -12,22 +12,27 @@ function Header() {
     <Navbar
       fluid={true}
       rounded={true}
-      className={[opensans, " bg-orange-100 px-7 text-xl font-bold"]}
+      className={[opensans, " bg-orange-100 px-7 text-xl "]}
     >
-      <Navbar.Brand href="https://flowbite.com/">
-        <Image
-          src={Logo}
-          className="mr-3 h-6 sm:h-20 sm:w-auto"
-          alt="cake-code Logo"
-        />
+      <Navbar.Brand href="https://github.com/BryanTevillo/cake-code.git">
+        <Image src={Logo} className="size-28" alt="cake-code Logo" />
       </Navbar.Brand>
 
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Navbar.Link href="/">Inicio</Navbar.Link>
-        <Navbar.Link href="/about">Nosotros</Navbar.Link>
 
-        <Navbar.Link href="/contact">Contacto</Navbar.Link>
+
+        <Navbar.Link href="/" className="mr-10 text-2xl font-bold">
+          Inicio
+        </Navbar.Link>
+        <Navbar.Link href="/about" className="mr-10 text-2xl font-bold">
+          Nosotros
+        </Navbar.Link>
+
+        <Navbar.Link href="/contact" className="mr-10 text-2xl font-bold">
+          Contacto
+        </Navbar.Link>
+
         <div className="text-2xl font-bold" style={{ marginRight: 40 }}>
           <Dropdown
             arrowIcon={false}
@@ -51,6 +56,7 @@ function Header() {
             <Dropdown.Divider />
           </Dropdown>
         </div>
+
         <Navbar.Link href="/navbars">
           <ShoppingCartOutlinedIcon className="text-4xl " />
         </Navbar.Link>
