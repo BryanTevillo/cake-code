@@ -42,18 +42,20 @@ function Header() {
               Crea tu pastel
             </Navbar.Link>
           </Dropdown.Header>
-          <Dropdown.Item>Pasteles</Dropdown.Item>
+          <Navbar.Link href="/navbars">
+            <Dropdown.Item>Pasteles</Dropdown.Item>
+          </Navbar.Link>
           <Dropdown.Item>Galletas</Dropdown.Item>
           <Dropdown.Item>Cupcakes</Dropdown.Item>
           <Dropdown.Divider />
         </Dropdown>
         <Navbar.Link href="/navbars">
-          <ShoppingCartOutlinedIcon />
+          <ShoppingCartOutlinedIcon className="text-4xl " />
         </Navbar.Link>
         <Navbar.Link href="/navbars">
-          <PersonOutlineOutlinedIcon />
+          <PersonOutlineOutlinedIcon className="text-4xl " />
         </Navbar.Link>
-        <Navbar.Link href="/navbars">
+        <Navbar.Link href="/navbars" className="text-4xl mr-20">
           <SearchOutlinedIcon />
         </Navbar.Link>
 
