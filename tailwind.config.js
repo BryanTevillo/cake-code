@@ -15,6 +15,9 @@ module.exports = {
       },
       colors: {
         footer: "#E8D2FB",
+        pink_lite: "#FFDDCC",
+        purple_card: "#F3CCF3",
+        blue_card: "#CAEDFF",
       },
     },
   },

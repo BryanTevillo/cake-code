@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#titulo {
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+#subtitulo {
+  background-color: #caedff;
+  text-align: justify;
+  padding: 40px;
+
+  font-size: 20px;
+}
