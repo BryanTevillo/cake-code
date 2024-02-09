@@ -28,27 +28,29 @@ function Header() {
         <Navbar.Link href="/about">Nosotros</Navbar.Link>
 
         <Navbar.Link href="/contact">Contacto</Navbar.Link>
-        <Dropdown
-          arrowIcon={false}
-          inline
-          label="Categorias"
-          className="bg-orange-100"
-        >
-          <Dropdown.Header>
-            <Navbar.Link
-              href="/Categorias/CreaTuPastel"
-              className="block text-sm"
-            >
-              Crea tu pastel
+        <div className="text-2xl font-bold" style={{ marginRight: 40 }}>
+          <Dropdown
+            arrowIcon={false}
+            inline
+            label="Categorias"
+            className="bg-orange-100"
+          >
+            <Dropdown.Header>
+              <Navbar.Link
+                href="/Categorias/CreaTuPastel"
+                className="block text-sm"
+              >
+                Crea tu pastel
+              </Navbar.Link>
+            </Dropdown.Header>
+            <Navbar.Link href="/navbars">
+              <Dropdown.Item>Pasteles</Dropdown.Item>
             </Navbar.Link>
-          </Dropdown.Header>
-          <Navbar.Link href="/navbars">
-            <Dropdown.Item>Pasteles</Dropdown.Item>
-          </Navbar.Link>
-          <Dropdown.Item>Galletas</Dropdown.Item>
-          <Dropdown.Item>Cupcakes</Dropdown.Item>
-          <Dropdown.Divider />
-        </Dropdown>
+            <Dropdown.Item>Galletas</Dropdown.Item>
+            <Dropdown.Item>Cupcakes</Dropdown.Item>
+            <Dropdown.Divider />
+          </Dropdown>
+        </div>
         <Navbar.Link href="/navbars">
           <ShoppingCartOutlinedIcon className="text-4xl " />
         </Navbar.Link>
