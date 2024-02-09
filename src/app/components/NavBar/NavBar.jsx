@@ -20,6 +20,7 @@ function Header() {
 
       <Navbar.Toggle />
       <Navbar.Collapse>
+
         <Navbar.Link href="/navbars" className="mr-10 text-2xl font-bold">
           Inicio
         </Navbar.Link>
@@ -38,9 +39,14 @@ function Header() {
             size="3xl"
             className="bg-orange-100  "
           >
-            <Dropdown.Header>
-              <span className="block text-sm">Crea tu pastel</span>
-            </Dropdown.Header>
+           <Dropdown.Header>
+            <Navbar.Link
+              href="/Categorias/CreaTuPastel"
+              className="block text-sm"
+            >
+              Crea tu pastel
+            </Navbar.Link>
+          </Dropdown.Header>
             <Dropdown.Item className="text-xl">Crea tu pastel</Dropdown.Item>
             <Dropdown.Item className="text-xl">Pasteles</Dropdown.Item>
             <Dropdown.Item className="text-xl">Galletas</Dropdown.Item>
@@ -48,6 +54,7 @@ function Header() {
             <Dropdown.Divider />
           </Dropdown>
         </div>
+
         <Navbar.Link href="/navbars">
           <ShoppingCartOutlinedIcon className="text-4xl " />
         </Navbar.Link>
