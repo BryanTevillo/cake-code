@@ -5,6 +5,7 @@ import { Dropdown, Navbar } from "flowbite-react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Logo from "../../../../public/logosinFondo.png";
 import Image from "next/image";
 function Header() {
@@ -20,8 +21,6 @@ function Header() {
 
       <Navbar.Toggle />
       <Navbar.Collapse>
-
-
         <Navbar.Link href="/" className="mr-10 text-2xl font-bold">
           Inicio
         </Navbar.Link>
@@ -37,11 +36,12 @@ function Header() {
           <Dropdown
             arrowIcon={false}
             inline
-            label="Categorias"
+            label={"Categorias"}
             className="bg-orange-100"
           >
             <Dropdown.Header>
               <Navbar.Link
+                style={{ fontSize: 18 }}
                 href="/Categorias/CreaTuPastel"
                 className="block text-sm"
               >
@@ -49,22 +49,22 @@ function Header() {
               </Navbar.Link>
             </Dropdown.Header>
             <Navbar.Link href="/navbars">
-              <Dropdown.Item>Pasteles</Dropdown.Item>
+              <Dropdown.Item style={{ fontSize: 18 }}>Pasteles</Dropdown.Item>
             </Navbar.Link>
-            <Dropdown.Item>Galletas</Dropdown.Item>
-            <Dropdown.Item>Cupcakes</Dropdown.Item>
+            <Dropdown.Item style={{ fontSize: 18 }}>Galletas</Dropdown.Item>
+            <Dropdown.Item style={{ fontSize: 18 }}>Cupcakes</Dropdown.Item>
             <Dropdown.Divider />
           </Dropdown>
         </div>
 
         <Navbar.Link href="/navbars">
-          <ShoppingCartOutlinedIcon className="text-4xl " />
+          <ShoppingCartOutlinedIcon style={{ fontSize: 36 }} />
         </Navbar.Link>
         <Navbar.Link href="/navbars">
-          <PersonOutlineOutlinedIcon className="text-4xl " />
+          <PersonOutlineOutlinedIcon style={{ fontSize: 36 }} />
         </Navbar.Link>
-        <Navbar.Link href="/navbars" className="text-4xl mr-20">
-          <SearchOutlinedIcon />
+        <Navbar.Link href="/navbars">
+          <SearchOutlinedIcon className=" mr-20" style={{ fontSize: 36 }} />
         </Navbar.Link>
 
         <Navbar.Toggle />
