@@ -12,44 +12,50 @@ function Header() {
     <Navbar
       fluid={true}
       rounded={true}
-      className={[opensans, " bg-orange-100 px-7 text-xl font-bold"]}
+      className={[opensans, " bg-orange-100 px-7 text-xl "]}
     >
-      <Navbar.Brand href="https://flowbite.com/">
-        <Image
-          src={Logo}
-          className="mr-3 h-6 sm:h-20 sm:w-auto"
-          alt="cake-code Logo"
-        />
+      <Navbar.Brand href="https://github.com/BryanTevillo/cake-code.git">
+        <Image src={Logo} className="size-28" alt="cake-code Logo" />
       </Navbar.Brand>
 
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Navbar.Link href="/navbars">Inicio</Navbar.Link>
-        <Navbar.Link href="/navbars">Nosotros</Navbar.Link>
+        <Navbar.Link href="/navbars" className="mr-10 text-2xl font-bold">
+          Inicio
+        </Navbar.Link>
+        <Navbar.Link href="/navbars" className="mr-10 text-2xl font-bold">
+          Nosotros
+        </Navbar.Link>
 
-        <Navbar.Link href="/navbars">Contacto</Navbar.Link>
-        <Dropdown
-          arrowIcon={false}
-          inline
-          label="Categorias"
-          className="bg-orange-100"
-        >
-          <Dropdown.Header>
-            <span className="block text-sm">Crea tu pastel</span>
-          </Dropdown.Header>
-          <Dropdown.Item>Pasteles</Dropdown.Item>
-          <Dropdown.Item>Galletas</Dropdown.Item>
-          <Dropdown.Item>Cupcakes</Dropdown.Item>
-          <Dropdown.Divider />
-        </Dropdown>
+        <Navbar.Link href="/navbars" className="mr-10 text-2xl font-bold">
+          Contacto
+        </Navbar.Link>
+        <div className="text-2xl font-bold" style={{ marginRight: 40 }}>
+          <Dropdown
+            arrowIcon={false}
+            inline
+            label="Categorias"
+            size="3xl"
+            className="bg-orange-100  "
+          >
+            <Dropdown.Header>
+              <span className="block text-sm">Crea tu pastel</span>
+            </Dropdown.Header>
+            <Dropdown.Item className="text-xl">Crea tu pastel</Dropdown.Item>
+            <Dropdown.Item className="text-xl">Pasteles</Dropdown.Item>
+            <Dropdown.Item className="text-xl">Galletas</Dropdown.Item>
+            <Dropdown.Item className="text-xl">Cupcakes</Dropdown.Item>
+            <Dropdown.Divider />
+          </Dropdown>
+        </div>
         <Navbar.Link href="/navbars">
-          <ShoppingCartOutlinedIcon />
+          <ShoppingCartOutlinedIcon className="text-4xl " />
         </Navbar.Link>
         <Navbar.Link href="/navbars">
-          <PersonOutlineOutlinedIcon />
+          <PersonOutlineOutlinedIcon className="text-4xl " />
         </Navbar.Link>
         <Navbar.Link href="/navbars">
-          <SearchOutlinedIcon />
+          <SearchOutlinedIcon className="text-4xl mr-20" />
         </Navbar.Link>
 
         <Navbar.Toggle />
