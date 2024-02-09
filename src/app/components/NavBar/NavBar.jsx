@@ -24,10 +24,10 @@ function Header() {
 
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Navbar.Link href="/navbars">Inicio</Navbar.Link>
-        <Navbar.Link href="/navbars">Nosotros</Navbar.Link>
+        <Navbar.Link href="/">Inicio</Navbar.Link>
+        <Navbar.Link href="/about">Nosotros</Navbar.Link>
 
-        <Navbar.Link href="/navbars">Contacto</Navbar.Link>
+        <Navbar.Link href="/contact">Contacto</Navbar.Link>
         <Dropdown
           arrowIcon={false}
           inline
@@ -35,7 +35,12 @@ function Header() {
           className="bg-orange-100"
         >
           <Dropdown.Header>
-            <span className="block text-sm">Crea tu pastel</span>
+            <Navbar.Link
+              href="/Categorias/CreaTuPastel"
+              className="block text-sm"
+            >
+              Crea tu pastel
+            </Navbar.Link>
           </Dropdown.Header>
           <Dropdown.Item>Pasteles</Dropdown.Item>
           <Dropdown.Item>Galletas</Dropdown.Item>

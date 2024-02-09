@@ -26,7 +26,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="mb-6 min">
+          <div className="mb-6">
             <h5 className="mb-2.5 sticky top-0 font-bold uppercase  text-neutral-800 dark:text-neutral text-xl">
               Redes Sociales
             </h5>
