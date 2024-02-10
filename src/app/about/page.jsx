@@ -55,19 +55,19 @@ export default function page() {
             </p>
             <ul>
               <li>
-                <CircleIcon className="text-xs" />
+                <CircleIcon style={{ fontSize: 10 }} />
                 Responsabilidad
               </li>
               <li>
-                <CircleIcon className="text-xs" />
+                <CircleIcon style={{ fontSize: 10 }} />
                 Compromiso
               </li>
               <li>
-                <CircleIcon className="text-xs" />
+                <CircleIcon style={{ fontSize: 10 }} />
                 Ética
               </li>
               <li>
-                <CircleIcon className="text-xs" />
+                <CircleIcon style={{ fontSize: 10 }} />
                 Innovación
               </li>
             </ul>
