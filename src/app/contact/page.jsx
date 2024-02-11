@@ -44,9 +44,9 @@ function page() {
                     Dulces clientes: ¡asegúrense de brindarnos la mayor cantidad
                     de información posible sobre su solicitud! Para que podamos
                     responderle rápidamente, debemos tener la fecha del evento,
-                    la cantidad de porciones y una imagen de su inspiración.
-                    Respondemos a los formularios de consulta en el orden en que
-                    aparecen.
+                    la cantidad de porciones y una pequeña descripción de cómo
+                    le gustaría su pastel. Respondemos a los formularios de
+                    consulta en el orden en que aparecen.
                   </p>
                   <p class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Nota: Los datos con asterisco (*) son obligatorios.
