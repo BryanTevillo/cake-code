@@ -14,7 +14,7 @@ export default function page() {
       <h1 className={luckiestguy.className} id="titulo">
         acerca de nosotros
       </h1>
-      <div className="grid   justify-items-center md:grid-cols-2">
+      <div className="grid justify-items-center md:grid-cols-2">
         <div style={{ marginBottom: 50 }}>
           <Card href="#" className="max-w-lg rounded-3xl bg-pink_lite">
             <h5 className="text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">
