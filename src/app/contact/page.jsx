@@ -3,16 +3,13 @@
 import { Label, TextInput } from "flowbite-react";
 import { Card } from "flowbite-react";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
-//Revisar el tipo de letra con el equipo
 const opensans = Open_Sans({ subsets: ["latin"] });
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
-import imgDireccion from "../../../public/direccion.png";
-import Image from "next/image";
-import { CenterFocusStrong } from "@mui/icons-material";
+import "./styles.css";
 
 function page() {
   return (
-    <div>
+    <div id="body">
       <div className="flex justify-center items-center">
         <Card
           style={{
