@@ -29,25 +29,27 @@ export default function page() {
           acerca de nosotros
         </h1>
         <div className={opensans.className}>
-          <div className="grid justify-items-center md:grid-cols-2">
-            <div style={{ marginBottom: 50, marginLeft: 300, width: 600 }}>
-              <Card
-                href="#"
-                className="max-w-lg rounded-3xl bg-pink_lite mr-100"
-              >
-                <h5 className="text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">
-                  Mision
-                </h5>
-                <p className="font-normal text-black-700 dark:text-gray-400">
-                  Somos una empresa dedicada a la pastelería y repostería donde
-                  las ideas nuevas que nuestros clientes tienen son nuestra
-                  mejor receta, nosotros nos comprometemos a realizar los
-                  mejores productos donde la calidad es lo que nos diferencia de
-                  la competencia. Compartiendo no solo la mejor calidad en el
-                  servicio si no que también la pasión que tenemos al hacer
-                  nuestros productos.
-                </p>
-              </Card>
+          <div className="grid justify-items-center md:grid-cols-2 sm:max-w">
+            <div className="row-span-1">
+              <div style={{ marginBottom: 50, marginLeft: 300, width: 600 }}>
+                <Card
+                  href="#"
+                  className="max-w-lg rounded-3xl bg-pink_lite mr-100"
+                >
+                  <h5 className="text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">
+                    Mision
+                  </h5>
+                  <p className="font-normal text-black-700 dark:text-gray-400">
+                    Somos una empresa dedicada a la pastelería y repostería
+                    donde las ideas nuevas que nuestros clientes tienen son
+                    nuestra mejor receta, nosotros nos comprometemos a realizar
+                    los mejores productos donde la calidad es lo que nos
+                    diferencia de la competencia. Compartiendo no solo la mejor
+                    calidad en el servicio si no que también la pasión que
+                    tenemos al hacer nuestros productos.
+                  </p>
+                </Card>
+              </div>
             </div>
             <div className="row-span-2" style={{ marginBottom: 50 }}>
               <Image
