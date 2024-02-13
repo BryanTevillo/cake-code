@@ -5,6 +5,7 @@ import { Dropdown, Navbar } from "flowbite-react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Logo from "../../../../public/logosinFondo.png";
 import Image from "next/image";
 function Header() {
@@ -20,7 +21,6 @@ function Header() {
 
       <Navbar.Toggle />
       <Navbar.Collapse>
-
         <Navbar.Link href="/navbars" className="mr-10 text-2xl font-bold">
           Inicio
         </Navbar.Link>
@@ -33,20 +33,20 @@ function Header() {
         </Navbar.Link>
         <div className="text-2xl font-bold" style={{ marginRight: 40 }}>
           <Dropdown
-            arrowIcon={false}
+            arrowIcon={true}
             inline
             label="Categorias"
             size="3xl"
             className="bg-orange-100  "
           >
-           <Dropdown.Header>
-            <Navbar.Link
-              href="/Categorias/CreaTuPastel"
-              className="block text-sm"
-            >
-              Crea tu pastel
-            </Navbar.Link>
-          </Dropdown.Header>
+            <Dropdown.Header>
+              <Navbar.Link
+                href="/Categorias/CreaTuPastel"
+                className="block text-sm"
+              >
+                Crea tu pastel
+              </Navbar.Link>
+            </Dropdown.Header>
             <Dropdown.Item className="text-xl">Crea tu pastel</Dropdown.Item>
             <Dropdown.Item className="text-xl">Pasteles</Dropdown.Item>
             <Dropdown.Item className="text-xl">Galletas</Dropdown.Item>
