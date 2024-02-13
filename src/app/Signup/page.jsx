@@ -10,12 +10,13 @@ export default function Signup() {
   return (
     
     <div className="grid  justify-items-center ">
-        <Card style={{margin:50}} className="max-w-lg">
+        <div className={luckiestguy.className} id ="titulo">
+                <Label htmlFor="email1" value="REGISTRATE" />
+        </div>
+        <Card style={{margin:50}} className="max-w-lg ">
       <form className="flex flex-col gap-4">
         <div>
-            <div className={luckiestguy.className}>
-                <Label htmlFor="email1" value="REGISTRATE" />
-            </div>
+            
             <div className="mb-1 block">
                 <Label htmlFor="nombre1" value="Nombre(s)*" />
             </div>
