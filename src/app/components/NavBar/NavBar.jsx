@@ -21,9 +21,7 @@ function Header() {
 
       <Navbar.Toggle />
       <Navbar.Collapse>
-
         <Navbar.Link href="/" className="mr-10 text-2xl font-bold">
-
           Inicio
         </Navbar.Link>
         <Navbar.Link href="/about" className="mr-10 text-2xl font-bold">
@@ -43,10 +41,7 @@ function Header() {
           >
             <Dropdown.Header>
               <Navbar.Link
-
-
                 style={{ fontSize: 18 }}
-
                 href="/Categorias/CreaTuPastel"
                 className="block text-sm"
               >
@@ -54,12 +49,15 @@ function Header() {
               </Navbar.Link>
             </Dropdown.Header>
 
-            <Navbar.Link href="/navbars">
+            <Navbar.Link href="/Categorias/Pastel">
               <Dropdown.Item style={{ fontSize: 18 }}>Pasteles</Dropdown.Item>
             </Navbar.Link>
-            <Dropdown.Item style={{ fontSize: 18 }}>Galletas</Dropdown.Item>
-            <Dropdown.Item style={{ fontSize: 18 }}>Cupcakes</Dropdown.Item>
-
+            <Navbar.Link href="/Categorias/Galletas">
+              <Dropdown.Item style={{ fontSize: 18 }}>Galletas</Dropdown.Item>
+            </Navbar.Link>
+            <Navbar.Link href="/Categorias/cupcakes">
+              <Dropdown.Item style={{ fontSize: 18 }}>Cupcakes</Dropdown.Item>
+            </Navbar.Link>
             <Dropdown.Divider />
           </Dropdown>
         </div>
@@ -67,7 +65,7 @@ function Header() {
         <Navbar.Link href="/navbars">
           <ShoppingCartOutlinedIcon style={{ fontSize: 36 }} />
         </Navbar.Link>
-        <Navbar.Link href="/navbars">
+        <Navbar.Link href="/Login">
           <PersonOutlineOutlinedIcon style={{ fontSize: 36 }} />
         </Navbar.Link>
         <Navbar.Link href="/navbars">
