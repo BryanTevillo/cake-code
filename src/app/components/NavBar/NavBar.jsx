@@ -5,7 +5,7 @@ import { Dropdown, Navbar } from "flowbite-react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
 import Logo from "../../../../public/logosinFondo.png";
 import Image from "next/image";
 function Header() {
@@ -21,48 +21,57 @@ function Header() {
 
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Navbar.Link href="/navbars" className="mr-10 text-2xl font-bold">
+
+        <Navbar.Link href="/" className="mr-10 text-2xl font-bold">
+
           Inicio
         </Navbar.Link>
-        <Navbar.Link href="/navbars" className="mr-10 text-2xl font-bold">
+        <Navbar.Link href="/about" className="mr-10 text-2xl font-bold">
           Nosotros
         </Navbar.Link>
 
-        <Navbar.Link href="/navbars" className="mr-10 text-2xl font-bold">
+        <Navbar.Link href="/contact" className="mr-10 text-2xl font-bold">
           Contacto
         </Navbar.Link>
+
         <div className="text-2xl font-bold" style={{ marginRight: 40 }}>
           <Dropdown
             arrowIcon={true}
             inline
-            label="Categorias"
-            size="3xl"
-            className="bg-orange-100  "
+            label={"Categorias"}
+            className="bg-orange-100"
           >
             <Dropdown.Header>
               <Navbar.Link
+
+
+                style={{ fontSize: 18 }}
+
                 href="/Categorias/CreaTuPastel"
                 className="block text-sm"
               >
                 Crea tu pastel
               </Navbar.Link>
             </Dropdown.Header>
-            <Dropdown.Item className="text-xl">Crea tu pastel</Dropdown.Item>
-            <Dropdown.Item className="text-xl">Pasteles</Dropdown.Item>
-            <Dropdown.Item className="text-xl">Galletas</Dropdown.Item>
-            <Dropdown.Item className="text-xl">Cupcakes</Dropdown.Item>
+
+            <Navbar.Link href="/navbars">
+              <Dropdown.Item style={{ fontSize: 18 }}>Pasteles</Dropdown.Item>
+            </Navbar.Link>
+            <Dropdown.Item style={{ fontSize: 18 }}>Galletas</Dropdown.Item>
+            <Dropdown.Item style={{ fontSize: 18 }}>Cupcakes</Dropdown.Item>
+
             <Dropdown.Divider />
           </Dropdown>
         </div>
 
         <Navbar.Link href="/navbars">
-          <ShoppingCartOutlinedIcon className="text-4xl " />
+          <ShoppingCartOutlinedIcon style={{ fontSize: 36 }} />
         </Navbar.Link>
         <Navbar.Link href="/navbars">
-          <PersonOutlineOutlinedIcon className="text-4xl " />
+          <PersonOutlineOutlinedIcon style={{ fontSize: 36 }} />
         </Navbar.Link>
         <Navbar.Link href="/navbars">
-          <SearchOutlinedIcon className="text-4xl mr-20" />
+          <SearchOutlinedIcon className=" mr-20" style={{ fontSize: 36 }} />
         </Navbar.Link>
 
         <Navbar.Toggle />
