@@ -1,0 +1,17 @@
+#carrusel {
+  width: 100%;
+  border: none;
+}
+
+#aboutus {
+  background-color: #ffb0cd;
+  opacity: 80%;
+  /* width: 700px; */
+  height: 400px;
+}
+
+#subtitulo_pp {
+  text-align: center;
+  padding: 40px;
+  font-size: 30px;
+}
