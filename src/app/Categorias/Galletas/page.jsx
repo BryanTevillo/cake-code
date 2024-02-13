@@ -1,3 +1,6 @@
+"use client";
+
+import { Card } from "flowbite-react";
 import { Luckiest_Guy } from "next/font/google";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 import "./styles.css";
