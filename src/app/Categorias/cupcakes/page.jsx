@@ -19,7 +19,7 @@ export default function Cupcakes() {
         CUP CAKES
       </h1>
 
-      <div className="grid md:grid-cols-2 sm:grid-cols-3">
+      <div className="grid justify-items-center md:grid-cols-3">
         {/* card1 */}
         <div>
           <Card className="max-w-sm">
