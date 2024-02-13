@@ -1,3 +1,18 @@
 #titulo {
   background-color: #ffddcc;
 }
+
+#waves {
+  width: 100vw;
+}
+#titulo-card {
+  font-size: 80px;
+}
+#card-image {
+  height: fit-content;
+  width: fit-content;
+  align-items: center;
+}
+#image {
+  width: 900px;
+}
