@@ -1,7 +1,9 @@
 #titulo {
   background-color: #ffddcc;
 }
-
+#sub1 {
+  background-color: #ffb0cd;
+}
 #waves {
   width: 100vw;
 }
@@ -14,5 +16,6 @@
   align-items: center;
 }
 #image {
-  width: 900px;
+  height: 800px;
+  width: 700px;
 }
