@@ -12,31 +12,46 @@ export default function Home() {
   return (
     <main>
       <div>
-        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 border-none rounded-none">
-          <Carousel id="carrusel" slideInterval={2000}>
-            <Image className="max-width:100" src={carrusel1} alt="" />
-            <Image className="max-width:100" src={carrusel2} alt="" />
-            <Image className="max-width:100" src={carrusel3} alt="" />
-            <Image className="max-width:100" src={carrusel2} alt="" />
-          </Carousel>
+        <div>
+          <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 border-none rounded-none">
+            <Carousel id="carrusel" slideInterval={2000}>
+              <Image className="max-width:100" src={carrusel1} alt="" />
+              <Image className="max-width:100" src={carrusel2} alt="" />
+              <Image className="max-width:100" src={carrusel3} alt="" />
+              <Image className="max-width:100" src={carrusel2} alt="" />
+            </Carousel>
+          </div>
         </div>
-      </div>
-      <div className="grid justify-items-center" id="aboutus">
-        <div className="font-bold text-lg">
-          <p className={opensans.className}>SIRVIENDO DESDE 2006</p>
+        <div id="aboutus" className="grid justify-items-center">
+          <div id="subtitulo_txt">
+            <div className="font-bold text-lg">
+              <p className={opensans.className}>SIRVIENDO DESDE 2006</p>
+            </div>
+            <h1 className={luckiestguy.className} id="subtitulo_pp">
+              Acerca de nosotros
+            </h1>
+            {/* sm:px-96 md:px-0 */}
+            <div style={{ marginBottom: 50 }} className="sm:pl-80 sm:pr-80 ">
+              <p className={opensans.className}>
+                Pastelería mexicana dedicada a consentir a los amantes de la
+                repostería, que estén interesados en adquirir algún postre como
+                pastel, cupcake o galletas, para cualquier tipo de evento y que
+                además disfruten de la posibilidad de personalizar el postre a
+                su gusto.
+              </p>
+            </div>
+            <div>
+              <b>
+                <a href="/about">
+                  <u className={opensans.className}>Conoce al equipo</u>
+                </a>
+              </b>
+            </div>
+          </div>
         </div>
-        <h1 className={luckiestguy.className} id="subtitulo_pp">
-          Acerca de nosotros
-        </h1>
-        <p className={opensans.className}>
-          Pastelería mexicana dedicada a consentir a los amantes de la
-          repostería, que estén interesados en adquirir algún postre como
-          pastel, cupcake o galletas, para cualquier tipo de evento y que además
-          disfruten de la posibilidad de personalizar el postre a su gusto.
-        </p>
-        <b>
-          <u className={opensans.className}>Conoce al equipo</u>
-        </b>
+        <div id="bordemasvendido">
+          <h1>Aqui va lo mas vendido</h1>
+        </div>
       </div>
     </main>
   );
