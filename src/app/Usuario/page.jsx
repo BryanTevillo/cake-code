@@ -3,13 +3,11 @@
 import { Button, Card, Checkbox, Label, TextInput } from 'flowbite-react';
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 import CreditCardIcon from '@mui/icons-material/CreditCard';
-import AvisoModal from '../Privacy/AvisoModal';
 const opensans = Open_Sans({ subsets: ["latin"] });
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 
-export default function Signup() {
+function User() {
   return (
-    
     <div className="grid  justify-items-center ">
         <div className={luckiestguy.className} id ="titulo">
                 <Label htmlFor="email1" value="REGISTRATE" />
@@ -24,54 +22,7 @@ export default function Signup() {
             <TextInput id="nombre1" type="" placeholder="nombre" required />
         </div>
 
-        <div>
-            <div className="mb-1 block">
-                <Label htmlFor="apellido1" value="Apellidos*" />
-            </div>
-            <TextInput id="apellido1" type="" placeholder="apellido" required />
-        </div>
-
-        <div>
-            <div className="mb-1 block">
-                <Label htmlFor="telefono1" value="Teléfono*" />
-            </div>
-            <TextInput id="telefono1" type="" placeholder="(###) ### ## ##" required />
-        </div>
-
-        <div>
-            <div className="mb-1 block">
-                <Label htmlFor="email1" value="Correo electrónico*" />
-            </div>
-            <TextInput id="email1" type="email" placeholder="nombre@dominio.com" required />
-        </div>
-
-        <div>
-            <div className="mb-1 block">
-                <Label htmlFor="password1" value="Contraseña" />
-            </div>
-            <TextInput id="password1" type="password" placeholder="********" required />
-        </div>
-
-        <div>
-            <div className="mb-1 block">
-                <Label htmlFor="adress1" value="Dirección*" />
-            </div>
-            <TextInput id="adress1" type="" placeholder="Calle / número" required />
-        </div>
-
-        <div>
-            <div className="mb-1 block">
-                <Label htmlFor="postal1" value="Dirección*" />
-            </div>
-            <TextInput id="postal1" type="" placeholder="#####" required />
-        </div>
-
-        <Button type="direccion">AGREGAR OTRA DIRECCIÓN  DE ENVÍO</Button>
-
-        <div>
-        <Label htmlFor="tarjeta1" value="Agregar una tarjeta de crédito o débito  " />
-        <CreditCardIcon />
-        </div>
+       
         <div>
             <div className="mb-1 block">
                 <Label htmlFor="tarjeta1" value="Número de tarjeta*" />
@@ -103,7 +54,7 @@ export default function Signup() {
 
             <div className="flex items-center gap-2">
             <Checkbox id="privacy" />
-            <Label htmlFor="privacy">Lee y firma nuestra <AvisoModal></AvisoModal></Label>
+            <Label htmlFor="privacy">Lee y firma nuestro acuerdo de privacidad</Label>
             </div>
             <Button type="tarjeta">CREAR CUENTA</Button>
             
@@ -112,3 +63,5 @@ export default function Signup() {
     </div>
   )
 }
+
+export default User

@@ -1,4 +1,4 @@
- 
+'use client'; 
 // import React from 'react'; 
 // import Popup from 'reactjs-popup'; 
 // import 'reactjs-popup/dist/index.css'; 
@@ -17,14 +17,17 @@
 // };
 import React from 'react'
 
+import AvisoModal from './AvisoModal';
 function Privacy() {
   return (
     <div>
+        <AvisoModal></AvisoModal>
+
         <h1>Aviso de privacidad</h1>
         <h1>Fecha de última actualización: [12/02/24]</h1>
         <h1>Cake Code</h1>
     
-        <div className="mb-1 block">En Cake-Code, nos comprometemos a proteger y respetar su privacidad. Este Aviso de Privacidad explica cómo recopilamos, utilizamos y protegemos la información personal que pueda proporcionarnos a través de nuestro sitio web.
+        <div>En Cake-Code, nos comprometemos a proteger y respetar su privacidad. Este Aviso de Privacidad explica cómo recopilamos, utilizamos y protegemos la información personal que pueda proporcionarnos a través de nuestro sitio web.
         <p>
         La presente Política de Privacidad describe cómo Cake Code recopila, utiliza y protege los datos personales proporcionados por sus usuarios al utilizar nuestra página.
         </p>
