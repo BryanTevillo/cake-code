@@ -12,26 +12,27 @@ import Cake2 from "../../../../public/pastel-creatupastel2.png";
 export default function CreaTuPastel() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 " id="titulo">
+      <div className="grid grid-cols-2 gap-4 ml-0" id="titulo">
         {/* <h1 className={luckiestguy.className}>
           Hola, soy una pagina de pasteles
         </h1> */}
-        <div className="grid grid-cols-2 gap-4  ">
-          <div className="">
-            <Image src={Cake1} className=" md:size-auto  mt-10" id="image" />
+        <div className="grid grid-cols-2 gap-4 ml-0 ">
+          <div className="mt-24">
+            <Image src={Cake1} className="   mt-10" id="image" />
           </div>
           <div className="size-32">
             <Image src={Cake2} className="md:size-auto pt-12 mt-12" />
           </div>
         </div>
-        <Card className="max-w-xl" id="titulo">
+
+        <Card className="max-w-xl " id="titulo">
           <div>
-            <Image
+            {/* <Image
               src={pinceles}
               alt="image 1"
               id="card-image"
               className="absolute bg-local"
-            />
+            /> */}
             <div className="">
               <h2 className={[luckiestguy.className]} id="titulo-card">
                 Crea tu pastel
@@ -46,18 +47,18 @@ export default function CreaTuPastel() {
           >
             Crea el pastel de tus sueños
           </p>
-          <div className="mt-4 flex space-x-3 lg:mt-6">
-            <a
-              href="#"
-              className="items-center rounded-lg bg-cyan-700 px-12 py-4 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+          <div class="flex justify-center">
+            <button
+              type="submit"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              Crear Ahora
-            </a>
+              Crear ahora
+            </button>
           </div>
         </Card>
       </div>
       {/* <Image src={pinceles}></Image> */}
-      <div className="h-8">
+      <div className="relative h-36" id="titulo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
@@ -93,9 +94,14 @@ export default function CreaTuPastel() {
           ></path>
         </svg>
       </div>
-      <h2 className="" id="subtitulo">
-        Soy un subtitulo
-      </h2>
+      <div className="grid grid-cols-2 gap-4 h-80" id="sub1">
+        <div className="text-left h-100" id="titulo-card">
+          <h2 className={[luckiestguy.className]}>¿Qué es crea tu pastel?</h2>
+        </div>
+        <div>
+          <p></p>
+        </div>
+      </div>
       <h2 className={[opensans, " static "]} id="subtitulo">
         Soy un subtitulo de pasteles
       </h2>
