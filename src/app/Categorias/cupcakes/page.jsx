@@ -1,8 +1,9 @@
 "use client";
 
 import { Card } from "flowbite-react";
-import { Luckiest_Guy } from "next/font/google";
+import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
+const opensans = Open_Sans({ subsets: ["latin"] });
 import "./styles.css";
 import Image from "next/image";
 import cupcake1 from "../../../../public/cupcake/algodon.jpg";
@@ -19,21 +20,21 @@ export default function Cupcakes() {
         CUP CAKES
       </h1>
 
-      <div className="grid justify-items-center md:grid-cols-3">
+      <div className="grid justify-items-center md:grid-cols-3" id="cuerpo">
         {/* card1 */}
-        <div>
+        <div className={opensans.className}>
           <Card className="max-w-sm">
             <Image src={cupcake1} alt="cupcake1" />
             <h5 className="text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Cupcake con chantilli sabor algodon de azucar
             </h5>
-            <p className="text-center font-normal text-gray-700 dark:text-gray-400">
+            <p className="text-center font-normal text-gray-700 dark:text-gray-800">
               $35.00 c/u
             </p>
-            <div class="flex justify-center">
+            <div className="flex justify-center">
               <button
                 type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Agregar al carrito
               </button>
@@ -51,10 +52,10 @@ export default function Cupcakes() {
             <p className="text-center font-normal text-gray-700 dark:text-gray-400">
               $35.00 c/u
             </p>
-            <div class="flex justify-center">
+            <div className="flex justify-center">
               <button
                 type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Agregar al carrito
               </button>
@@ -72,10 +73,10 @@ export default function Cupcakes() {
             <p className="text-center font-normal text-gray-700 dark:text-gray-400">
               $35.00 c/u
             </p>
-            <div class="flex justify-center">
+            <div className="flex justify-center">
               <button
                 type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Agregar al carrito
               </button>
@@ -93,10 +94,10 @@ export default function Cupcakes() {
             <p className="text-center font-normal text-gray-700 dark:text-gray-400">
               $35.00 c/u
             </p>
-            <div class="flex justify-center">
+            <div className="flex justify-center">
               <button
                 type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Agregar al carrito
               </button>
@@ -114,10 +115,10 @@ export default function Cupcakes() {
             <p className="text-center font-normal text-gray-700 dark:text-gray-400">
               $35.00 c/u
             </p>
-            <div class="flex justify-center">
+            <div className="flex justify-center">
               <button
                 type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Agregar al carrito
               </button>
@@ -135,10 +136,10 @@ export default function Cupcakes() {
             <p className="text-center font-normal text-gray-700 dark:text-gray-400">
               $35.00 c/u
             </p>
-            <div class="flex justify-center">
+            <div className="flex justify-center">
               <button
                 type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Agregar al carrito
               </button>
