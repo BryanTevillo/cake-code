@@ -9,18 +9,15 @@
 }
 
 #bordemasvendido {
-  background-color: #ffddcc;
-  width: auto;
-  height: 1200;
+  background: #ffddcc;
 }
 
 #subtitulo_pp {
-  justify-content: center;
-  padding: 40px;
-  font-size: 30px;
+  font-size: 50px;
+  text-align: center;
 }
 
 #subtitulo_txt {
   text-align: center;
-  padding: 50px;
+  font-size: 25px;
 }

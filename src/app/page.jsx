@@ -6,6 +6,7 @@ import carrusel3 from "../../public/carrusel3.png";
 import "./stylespaginaprincipal.css";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
+import { Height } from "@mui/icons-material";
 const opensans = Open_Sans({ subsets: ["latin"] });
 
 export default function Home() {
@@ -22,37 +23,47 @@ export default function Home() {
             </Carousel>
           </div>
         </div>
-        <div id="aboutus" className="grid justify-items-center">
-          <div id="subtitulo_txt">
-            <div className="font-bold text-lg">
-              <p className={opensans.className}>SIRVIENDO DESDE 2006</p>
-            </div>
-            <h1 className={luckiestguy.className} id="subtitulo_pp">
-              Acerca de nosotros
-            </h1>
-            {/* sm:px-96 md:px-0 */}
-            <div style={{ marginBottom: 50 }} className="sm:pl-80 sm:pr-80 ">
-              <p className={opensans.className}>
-                Pastelería mexicana dedicada a consentir a los amantes de la
-                repostería, que estén interesados en adquirir algún postre como
-                pastel, cupcake o galletas, para cualquier tipo de evento y que
-                además disfruten de la posibilidad de personalizar el postre a
-                su gusto.
-              </p>
-            </div>
-            <div>
-              <b>
-                <a href="/about">
-                  <u className={opensans.className}>Conoce al equipo</u>
-                </a>
-              </b>
-            </div>
+        <div
+          id="aboutus"
+          className="grid justify-items-center sm:h-[300px] md:h-auto "
+        >
+          <div
+            className="font-bold text-lg"
+            style={{ marginTop: 60, marginBottom: 30 }}
+          >
+            <p className={opensans.className}>SIRVIENDO DESDE 2006</p>
+          </div>
+          <div id="subtitulo_pp">
+            <h1 className={luckiestguy.className}>Acerca de nosotros</h1>
+          </div>
+          <div style={{ marginBottom: 50, marginTop: 30 }} className="lg:px-80">
+            <p className={opensans.className} id="subtitulo_txt">
+              Pastelería mexicana dedicada a consentir a los amantes de la
+              repostería, que estén interesados en adquirir algún postre como
+              pastel, cupcake o galletas, para cualquier tipo de evento y que
+              además disfruten de la posibilidad de personalizar el postre a su
+              gusto.
+            </p>
+          </div>
+          <div style={{ marginBottom: 45 }} className="text-xl">
+            <b>
+              <a href="/about">
+                <u className={opensans.className}>Conoce al equipo</u>
+              </a>
+            </b>
           </div>
         </div>
-        <div id="bordemasvendido">
-          <h1>Aqui va lo mas vendido</h1>
+        <div className="border-[100px] sm:h-[40rem] border-[#FFD1BD]">
+          <div id="subtitulo_pp">
+            <h1 className={luckiestguy.className}>Los postres más vendidos</h1>
+          </div>
         </div>
       </div>
     </main>
   );
 }
+
+//className="w-full"
+//max-w-scree-lx mx-auto
+//sm:h-[40rem]
+// id="bordemasvendido"
