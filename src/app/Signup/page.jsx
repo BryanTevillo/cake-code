@@ -61,7 +61,7 @@ export default function Signup() {
 
         <div>
             <div className="mb-1 block">
-                <Label htmlFor="postal1" value="Dirección*" />
+                <Label htmlFor="postal1" value="Codigo Postal*" />
             </div>
             <TextInput id="postal1" type="" placeholder="#####" required />
         </div>
