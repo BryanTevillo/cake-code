@@ -1,5 +1,7 @@
 "use client";
 
+import { Pagination } from "flowbite-react";
+import { useState } from "react";
 import { Card } from "flowbite-react";
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
@@ -14,12 +16,14 @@ import cupcake5 from "../../../../public/cupcake/oreo.jpg";
 import cupcake6 from "../../../../public/cupcake/redvelvet.jpg";
 
 export default function Cupcakes() {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const onPageChange = (page) => setCurrentPage(page);
   return (
     <div>
       <h1 className={luckiestguy.className} id="titulo">
         CUP CAKES
       </h1>
-
       <div className="grid justify-items-center md:grid-cols-3" id="cuerpo">
         {/* card1 */}
         <div className={opensans.className}>
@@ -147,6 +151,14 @@ export default function Cupcakes() {
           </Card>
         </div>
         {/* termino card6 */}
+      </div>
+      <div className="flex overflow-x-auto sm:justify-center" id="carousel">
+        <Pagination
+          currentPage={currentPage}
+          totalPages={100}
+          onPageChange={onPageChange}
+          showIcons
+        />
       </div>
     </div>
   );

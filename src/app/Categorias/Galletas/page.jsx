@@ -1,8 +1,10 @@
 "use client";
-
+import { Pagination } from "flowbite-react";
+import { useState } from "react";
 import { Card } from "flowbite-react";
-import { Luckiest_Guy } from "next/font/google";
+import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
+const opensans = Open_Sans({ subsets: ["latin"] });
 import "./styles.css";
 import Image from "next/image";
 import Galleta1 from "../../../../public/galletas/amaranto.jpg";
@@ -13,15 +15,18 @@ import Galleta5 from "../../../../public/galletas/nuez.jpg";
 import Galleta6 from "../../../../public/galletas/paylimon.jpg";
 
 export default function Galletas() {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const onPageChange = (page) => setCurrentPage(page);
   return (
     <div>
       <h1 className={luckiestguy.className} id="titulo">
         GALLETAS
       </h1>
 
-      <div className="grid justify-items-center md:grid-cols-3">
+      <div className="grid justify-items-center md:grid-cols-3" id="cuerpo">
         {/* card1 */}
-        <div>
+        <div className={opensans.className}>
           <Card className="max-w-sm">
             <Image src={Galleta1} alt="Galleta1" />
             <h5 className="text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -146,6 +151,14 @@ export default function Galletas() {
           </Card>
         </div>
         {/* termino card6 */}
+      </div>
+      <div className="flex overflow-x-auto sm:justify-center" id="carousel">
+        <Pagination
+          currentPage={currentPage}
+          totalPages={100}
+          onPageChange={onPageChange}
+          showIcons
+        />
       </div>
     </div>
   );
