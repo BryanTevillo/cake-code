@@ -1,8 +1,10 @@
 "use client";
-
+import { Pagination } from "flowbite-react";
+import { useState } from "react";
 import { Card } from "flowbite-react";
-import { Luckiest_Guy } from "next/font/google";
+import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
+const opensans = Open_Sans({ subsets: ["latin"] });
 import "./styles.css";
 import Image from "next/image";
 import Galleta1 from "../../../../public/galletas/amaranto.jpg";
@@ -13,145 +15,175 @@ import Galleta5 from "../../../../public/galletas/nuez.jpg";
 import Galleta6 from "../../../../public/galletas/paylimon.jpg";
 
 export default function Galletas() {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const onPageChange = (page) => setCurrentPage(page);
   return (
     <div>
       <h1 className={luckiestguy.className} id="titulo">
-        Galletas
+        GALLETAS
       </h1>
-      <div className="grid justify-items-center md:grid-cols-3">
-        {/* card1 */}
-        <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <Image className="p-5 rounded-t-lg" src={Galleta1} alt="Galleta1" />
-          <div className="p-1">
-            <h5 className="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Amaranto con chocolate
-            </h5>
-            <p className="text-center mb-3 font-normal dark:text-gray-400">
-              $15.00 c/u
-            </p>
-            <div class="flex justify-center">
-              <button
-                type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Agregar al carrito
-              </button>
-            </div>
+      <div id="cuerpo">
+        <div className="grid justify-items-center md:grid-cols-3">
+          {/* card1 */}
+          <div className={opensans.className}>
+            <Card className="max-w-xs my-4">
+              <Image
+                src={Galleta1}
+                alt="Galleta1"
+                className="w-[250px] h-[310px]"
+              />
+              <h5 className="text-center text-xl font-bold  text-gray-900 dark:text-white">
+                Amaranto con chocolate
+              </h5>
+              <p className="text-center font-normal text-gray-700 dark:text-gray-400">
+                $20.00 c/u
+              </p>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </Card>
           </div>
-        </div>
-        {/* terminar card1 */}
-
-        {/* card2 */}
-        <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <Image className="p-5 rounded-t-lg" src={Galleta2} alt="Galleta1" />
-          <div className="p-1">
-            <h5 className="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Chocolate con relleno de crema
-            </h5>
-            <p className="text-center mb-3 font-normal dark:text-gray-400">
-              $20.00 c/u
-            </p>
-            <div class="flex justify-center">
-              <button
-                type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        {/* terminar card2 */}
-
-        {/* card3 */}
-        <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 resize-y">
+          {/* termino card1 */}
+          {/* card2 */}
           <div>
-            <Image className="p-5 rounded-t-lg" src={Galleta3} alt="Galleta1" />{" "}
+            <Card className="max-w-xs my-4">
+              <Image
+                src={Galleta2}
+                alt="Galleta2"
+                className="w-[250px] h-[310px]"
+              />
+              <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
+                Nuez con azucar glass
+              </h5>
+              <p className="text-center font-normal text-gray-700 dark:text-gray-400">
+                $10.00 c/u
+              </p>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </Card>
           </div>
-          <div className="p-1">
-            <h5 className="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Chocolate blanco con lavanda
-            </h5>
-            <p className="text-center mb-3 font-normal dark:text-gray-400">
-              $15.00
-            </p>
+          {/* termino card2 */}
+          {/* card3 */}
+          <div>
+            <Card className="max-w-xs my-4">
+              <Image
+                src={Galleta3}
+                alt="Galleta3"
+                className="w-[250px] h-[310px]"
+              />
+              <h5 className="text-center text-xl font-bold  text-gray-900 dark:text-white">
+                Chocolate blanco y lavanda
+              </h5>
+              <p className="text-center font-normal text-gray-700 dark:text-gray-400">
+                $15.00 c/u
+              </p>
+              <div class="flex justify-center">
+                <button
+                  type="submit"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </Card>
           </div>
-          <div class="flex justify-center">
-            <button
-              type="submit"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Agregar al carrito
-            </button>
+          {/* termino card3 */}
+          {/* card4 */}
+          <div>
+            <Card className="max-w-xs my-4">
+              <Image
+                src={Galleta4}
+                alt="Galleta4"
+                className="w-[250px] h-[310px]"
+              />
+              <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
+                Avena con granola
+              </h5>
+              <p className="text-center font-normal text-gray-700 dark:text-gray-400">
+                $35.00 c/u
+              </p>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </Card>
           </div>
+          {/* termino card4 */}
+          {/* card5 */}
+          <div>
+            <Card className="max-w-xs my-4">
+              <Image
+                src={Galleta5}
+                alt="Galleta5"
+                className="w-[250px] h-[310px]"
+              />
+              <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
+                Galleta de oreo
+              </h5>
+              <p className="text-center font-normal text-gray-700 dark:text-gray-400">
+                $35.00 c/u
+              </p>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </Card>
+          </div>
+          {/* termino card5 */}
+          {/* card6 */}
+          <div>
+            <Card className="max-w-xs my-4">
+              <Image
+                src={Galleta6}
+                alt="Galleta6"
+                className="w-[250px] h-[310px]"
+              />
+              <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
+                Galleta sabor pay de limon
+              </h5>
+              <p className="text-center font-normal text-gray-700 dark:text-gray-400">
+                $16.00 c/u
+              </p>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </Card>
+          </div>
+          {/* termino card6 */}
         </div>
-        {/* terminar card3 */}
-
-        {/* card4 */}
-        <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <Image className="p-5 rounded-t-lg" src={Galleta4} alt="Galleta1" />
-          <div className="p-1">
-            <h5 className="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Avena con granola
-            </h5>
-            <p className="text-center mb-3 font-normal dark:text-gray-400">
-              $16.00 c/u
-            </p>
-            <div class="flex justify-center">
-              <button
-                type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
+        <div className="flex overflow-x-auto sm:justify-center">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={100}
+            onPageChange={onPageChange}
+            showIcons
+          />
         </div>
-        {/* terminar card4 */}
-
-        {/* card5 */}
-        <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <Image className="p-5 rounded-t-lg" src={Galleta5} alt="Galleta1" />
-          <div className="p-1">
-            <h5 className="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Nuéz con azucar glass
-            </h5>
-            <p className="text-center mb-3 font-normal dark:text-gray-400">
-              $15.00 c/u
-            </p>
-            <div class="flex justify-center">
-              <button
-                type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        {/* terminar card5 */}
-
-        {/* card6 */}
-        <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <Image className="p-5 rounded-t-lg" src={Galleta6} alt="Galleta1" />
-          <div className="p-1">
-            <h5 className="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Galletas con sabor pay de limon
-            </h5>
-            <p className="text-center mb-3 font-normal dark:text-gray-400">
-              $15.00 c/u
-            </p>
-            <div class="flex justify-center">
-              <button
-                type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        {/* terminar card6 */}
       </div>
     </div>
   );

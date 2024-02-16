@@ -3,17 +3,33 @@
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
-import AvisoModal from "../Privacy/AvisoModal";
+
+import AvisoModal from "../components/Privacy/ModalPrivacy";
+import "./styles.css";
+
 const opensans = Open_Sans({ subsets: ["latin"] });
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 
 export default function Signup() {
   return (
-    <div className="grid  justify-items-center ">
+
+    <div id="signup" className="grid  justify-items-center ">
       <div className={luckiestguy.className} id="titulo">
-        <Label htmlFor="email1" value="REGISTRATE" />
+        REGISTRATE
       </div>
-      <Card style={{ margin: 50 }} className="max-w-lg ">
+      <Card
+        id="divrosa"
+        style={{
+          marginLeft: 100,
+          marginRight: 100,
+          marginTop: 10,
+          marginBottom: 50,
+          width: 500,
+          padding: 30,
+        }}
+        className="max-w-lg "
+      >
+
         <form className="flex flex-col gap-4">
           <div>
             <div className="mb-1 block">
@@ -79,7 +95,9 @@ export default function Signup() {
 
           <div>
             <div className="mb-1 block">
-              <Label htmlFor="postal1" value="Dirección*" />
+
+              <Label htmlFor="postal1" value="Codigo Postal*" />
+
             </div>
             <TextInput id="postal1" type="" placeholder="#####" required />
           </div>

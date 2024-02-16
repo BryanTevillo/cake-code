@@ -46,7 +46,7 @@ function Header() {
             arrowIcon={true}
             inline
             label={"Categorias"}
-            className="bg-orange-100 hover:"
+            className="bg-orange-100"
           >
             <Dropdown.Header>
               <Navbar.Link
