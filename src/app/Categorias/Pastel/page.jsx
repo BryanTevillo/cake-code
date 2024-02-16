@@ -28,7 +28,11 @@ export default function Pasteles() {
           {/* card1 */}
           <div className={opensans.className}>
             <Card className="max-w-xs my-4">
-              <Image src={Pastel1} alt="Pastel1" />
+              <Image
+                src={Pastel1}
+                alt="Pastel1"
+                className="w-[250px] h-[310px]"
+              />
               <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
                 Oreo con vainilla
               </h5>
@@ -49,7 +53,11 @@ export default function Pasteles() {
           {/* card2 */}
           <div>
             <Card className="max-w-xs my-4">
-              <Image src={Pastel2} alt="Pastel2" />
+              <Image
+                src={Pastel2}
+                alt="Pastel2"
+                className="w-[250px] h-[310px]"
+              />
               <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
                 Chocolate con frutos rojos
               </h5>
@@ -70,7 +78,11 @@ export default function Pasteles() {
           {/* card3 */}
           <div>
             <Card className="max-w-xs my-4">
-              <Image src={Pastel3} alt="Pastel3" />
+              <Image
+                src={Pastel3}
+                alt="Pastel3"
+                className="w-[280px] h-[310px]"
+              />
               <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
                 Chocolate para Baby shower
               </h5>
@@ -91,7 +103,11 @@ export default function Pasteles() {
           {/* card4 */}
           <div>
             <Card className="max-w-xs my-4">
-              <Image src={Pastel4} alt="Pastel4" />
+              <Image
+                src={Pastel4}
+                alt="Pastel4"
+                className="w-[250px] h-[310px]"
+              />
               <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
                 Chocolate con cerezas
               </h5>
@@ -112,7 +128,11 @@ export default function Pasteles() {
           {/* card5 */}
           <div>
             <Card className="max-w-xs my-4">
-              <Image src={Pastel5} alt="Pastel5" />
+              <Image
+                src={Pastel5}
+                alt="Pastel5"
+                className="w-[250px] h-[310px]"
+              />
               <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
                 Café con flor de chocolate
               </h5>
@@ -133,7 +153,11 @@ export default function Pasteles() {
           {/* card6 */}
           <div>
             <Card className="max-w-xs my-4">
-              <Image src={Pastel6} alt="Pastel6" />
+              <Image
+                src={Pastel6}
+                alt="Pastel6"
+                className="w-[250px] h-[310px]"
+              />
               <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
                 Unicornio sabor chocolate
               </h5>
