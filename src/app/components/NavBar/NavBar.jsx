@@ -21,32 +21,32 @@ function Header() {
 
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Navbar.Link href="/" className="mr-10 text-2xl text-black font-bold">
+        <Navbar.Link
+          href="/"
+          className=" md:mr-1 xl:mr-10 text-2xl text-black font-bold"
+        >
           Inicio
         </Navbar.Link>
         <Navbar.Link
           href="/about"
-          className="mr-10 text-2xl text-black font-bold"
+          className=" md:mr-1 xl:mr-10 text-2xl text-black font-bold"
         >
           Nosotros
         </Navbar.Link>
 
         <Navbar.Link
           href="/contact"
-          className="mr-10 text-2xl text-black font-bold"
+          className=" md:mr-1 xl:mr-10 text-2xl text-black font-bold"
         >
           Contacto
         </Navbar.Link>
 
-        <div
-          className="text-2xl font-bold text-black"
-          style={{ marginRight: 40 }}
-        >
+        <div className="text-2xl font-bold text-black ">
           <Dropdown
             arrowIcon={true}
             inline
             label={"Categorias"}
-            className="bg-orange-100"
+            className="bg-orange-100 "
           >
             <Dropdown.Header>
               <Navbar.Link
@@ -73,7 +73,7 @@ function Header() {
 
         <Navbar.Link href="/navbars">
           <ShoppingCartOutlinedIcon
-            className="text-black"
+            className="text-black  ml-0 md:ml-4 xl:ml-20"
             style={{ fontSize: 36 }}
           />
         </Navbar.Link>
@@ -85,7 +85,7 @@ function Header() {
         </Navbar.Link>
         <Navbar.Link href="/navbars">
           <SearchOutlinedIcon
-            className=" mr-20 text-black"
+            className="  md:mr-0 xl:mr-20 text-black"
             style={{ fontSize: 36 }}
           />
         </Navbar.Link>

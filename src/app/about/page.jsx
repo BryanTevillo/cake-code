@@ -29,9 +29,12 @@ export default function page() {
           acerca de nosotros
         </h1>
         <div className={opensans.className}>
-          <div className="grid justify-items-center md:grid-cols-2 sm:max-w">
+          <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 sm:max-w place-content-center">
             <div className="row-span-1">
-              <div style={{ marginBottom: 50, marginLeft: 300, width: 600 }}>
+              <div
+                style={{ marginBottom: 50 }}
+                className="w-[25rem]  xl:ml-[300px] xl:w-[600px]"
+              >
                 <Card
                   href="#"
                   className="max-w-lg rounded-3xl bg-pink_lite mr-100"
@@ -55,7 +58,7 @@ export default function page() {
               <Image
                 src={Logo}
                 width={380}
-                style={{ marginLeft: 60 }}
+                className=" xl:ml-[60px]"
                 //className="mr-3 h-50 sm:h-21 sm:w-20"
                 alt="cake-code Logo"
               />
