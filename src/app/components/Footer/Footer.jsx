@@ -1,8 +1,14 @@
 "use client";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import AvisoModal from '../../Privacy/AvisoModal';
+import { useState } from "react";
+
+import AvisoModal from "../Privacy/AvisoModal";
+import Link from "next/link";
+
 function Footer() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <footer className=" sticky top-[100vh]  flex flex-col items-center bg-footer text-center dark:bg-footer lg:text-left ">
       <div className=" container p-6">
@@ -54,7 +60,18 @@ function Footer() {
 
             <ul className="mb-0 list-none text-center text-zinc-500  text-lg">
               <li>
-                <a href="#!"><AvisoModal></AvisoModal></a>
+                <a
+                  onClick={() => {
+                    setShowModal(true);
+                  }}
+                >
+                  Aviso de privacidad
+                </a>
+                {showModal && (
+                  <AvisoModal onClose={() => setShowModal(false)}>
+                    Hello from the modal!
+                  </AvisoModal>
+                )}
               </li>
               <li>
                 <a href="#!">Preguntas Frecuentes</a>
