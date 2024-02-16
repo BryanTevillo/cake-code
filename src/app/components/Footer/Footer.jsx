@@ -2,9 +2,9 @@
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { useState } from "react";
+import { Modal } from "flowbite-react";
 
-import AvisoModal from "../Privacy/AvisoModal";
-import Link from "next/link";
+import ModalPrivacy from "../Privacy/ModalPrivacy";
 
 function Footer() {
   const [showModal, setShowModal] = useState(false);
@@ -60,18 +60,16 @@ function Footer() {
 
             <ul className="mb-0 list-none text-center text-zinc-500  text-lg">
               <li>
-                <a
+                <a href="#"
                   onClick={() => {
                     setShowModal(true);
                   }}
                 >
                   Aviso de privacidad
                 </a>
-                {showModal && (
-                  <AvisoModal onClose={() => setShowModal(false)}>
-                    Hello from the modal!
-                  </AvisoModal>
-                )}
+                <Modal show={showModal} onClose={() => setShowModal(false)}>
+                  <ModalPrivacy></ModalPrivacy>
+                </Modal>
               </li>
               <li>
                 <a href="#!">Preguntas Frecuentes</a>

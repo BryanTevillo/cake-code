@@ -1,13 +1,12 @@
 "use client";
-import { Button, Modal } from "flowbite-react";
+import { Modal } from "flowbite-react";
 import { useState } from "react";
 
-export default function AvisoModal() {
-  const [openModal, setOpenModal] = useState(true);
+export default function ModalPrivacy() {
+  
 
   return (
     <>
-      <Modal show={openModal} onClose={() => setOpenModal(false)}>
         <Modal.Header>Aviso de privacidad</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
@@ -100,7 +99,6 @@ export default function AvisoModal() {
             Decline
           </Button>
         </Modal.Footer> */}
-      </Modal>
     </>
   );
 }
