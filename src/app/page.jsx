@@ -1,12 +1,20 @@
 import { Carousel } from "flowbite-react";
+import { Card } from "flowbite-react";
 import Image from "next/image";
 import carrusel1 from "../../public/carrusel1.png";
 import carrusel2 from "../../public/carrusel2.png";
 import carrusel3 from "../../public/carrusel3.png";
+import masvendido1 from "../../public/pastel-oreo.jpg";
+import masvendido2 from "../../public/cupcake/avellana.jpg";
+import masvendido3 from "../../public/galletas/lavanda.jpg";
+import masvendido4 from "../../public/cupcake/cafe.jpg";
+import categoria1 from "../../public/cupcake/brownie.jpg";
+import categoria2 from "../../public/pastel-chocolate.jpg";
+import categoria3 from "../../public/galletas/amaranto.jpg";
+import categoria4 from "../../public/personaliza.jpg";
 import "./stylespaginaprincipal.css";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
-import { Height } from "@mui/icons-material";
 const opensans = Open_Sans({ subsets: ["latin"] });
 
 export default function Home() {
@@ -23,21 +31,21 @@ export default function Home() {
             </Carousel>
           </div>
         </div>
-        <div
-          id="aboutus"
-          className="grid justify-items-center sm:h-[300px] md:h-auto "
-        >
+        <div className="grid justify-items-center sm:h-[40rem] bg-[#ffb0cd] opacity-80">
           <div
             className="font-bold text-lg"
             style={{ marginTop: 60, marginBottom: 30 }}
           >
             <p className={opensans.className}>SIRVIENDO DESDE 2006</p>
           </div>
-          <div id="subtitulo_pp">
+          <div className="text-6xl text-center">
             <h1 className={luckiestguy.className}>Acerca de nosotros</h1>
           </div>
-          <div style={{ marginBottom: 50, marginTop: 30 }} className="lg:px-80">
-            <p className={opensans.className} id="subtitulo_txt">
+          <div
+            style={{ marginBottom: 50, marginTop: 30 }}
+            className="lg:px-80 text-center text-2xl"
+          >
+            <p className={opensans.className}>
               Pastelería mexicana dedicada a consentir a los amantes de la
               repostería, que estén interesados en adquirir algún postre como
               pastel, cupcake o galletas, para cualquier tipo de evento y que
@@ -53,9 +61,222 @@ export default function Home() {
             </b>
           </div>
         </div>
-        <div className="border-[100px] sm:h-[40rem] border-[#FFD1BD]">
-          <div id="subtitulo_pp">
-            <h1 className={luckiestguy.className}>Los postres más vendidos</h1>
+        <div>
+          <div className="border-[90px] sm:h-[50rem] border-[#FFD1BD] bg-[#FFDDCC]">
+            <div
+              style={{ marginBottom: 50, marginTop: 30 }}
+              className="text-5xl text-center"
+            >
+              <h1 className={luckiestguy.className}>
+                Los postres más vendidos
+              </h1>
+            </div>
+            <div>
+              <div className="grid justify-items-center md:grid-cols-4">
+                <div>
+                  <Card
+                    className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
+                    renderImage={() => (
+                      <Image
+                        width={200}
+                        height={200}
+                        src={masvendido1}
+                        alt="Pastel de oreo"
+                        className="rounded-[30px]"
+                      />
+                    )}
+                  >
+                    <div className={opensans.className}>
+                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white text-center">
+                        Pastel de oreo
+                      </h5>
+                      <div>
+                        <p className="text-xl font-normal text-black-700 dark:text-gray-400 text-center">
+                          $200
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+                <div>
+                  <Card
+                    className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
+                    renderImage={() => (
+                      <Image
+                        width={200}
+                        height={200}
+                        src={masvendido2}
+                        alt="Cupcake de avellana"
+                        className="rounded-[30px]"
+                      />
+                    )}
+                  >
+                    <div className={opensans.className}>
+                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white text-center">
+                        Cupcake de avellana
+                      </h5>
+                      <div>
+                        <p className="text-xl font-normal text-black-700 dark:text-gray-400 text-center">
+                          $80
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+                <div>
+                  <Card
+                    className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
+                    renderImage={() => (
+                      <Image
+                        width={200}
+                        height={200}
+                        src={masvendido3}
+                        alt="Galletas de lavanda"
+                        className="rounded-[30px]"
+                      />
+                    )}
+                  >
+                    <div className={opensans.className}>
+                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white text-center">
+                        Galletas de lavanda
+                      </h5>
+                      <div>
+                        <p className="text-xl font-normal text-black-700 dark:text-gray-400 text-center">
+                          $100
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+                <div>
+                  <Card
+                    className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
+                    renderImage={() => (
+                      <Image
+                        width={200}
+                        height={200}
+                        src={masvendido4}
+                        alt="Cupcake de cafe"
+                        className="rounded-[30px]"
+                      />
+                    )}
+                  >
+                    <div className={opensans.className}>
+                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white text-center">
+                        Cupcake de cafe
+                      </h5>
+                      <div>
+                        <p className="text-xl font-normal text-black-700 dark:text-gray-400 text-center">
+                          $75
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              </div>
+              <div class="flex justify-center">
+                <button
+                  type="submit"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  <a href="/about">Ver más</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="border-x-[150px]  border-y-[70px] rounded-[330px] sm:h-[67rem] border-[#FFFFFF] bg-[#F3CCF3]">
+            <div
+              className="text-7xl text-center"
+              style={{ marginBottom: 50, marginTop: 50 }}
+            >
+              <h1 className={luckiestguy.className}>Categorias</h1>
+            </div>
+            <div className="grid justify-items-center md:grid-cols-2 px-48">
+              <div>
+                <Card
+                  className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
+                  renderImage={() => (
+                    <Image
+                      src={categoria1}
+                      alt="Cupcake de brownie"
+                      className="rounded-[30px] w-[285px] h-[290px]"
+                    />
+                  )}
+                >
+                  <div className={opensans.className}>
+                    <a href="../Categorias/cupcakes">
+                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
+                        Cupcakes
+                      </h5>
+                    </a>
+                  </div>
+                </Card>
+              </div>
+              <div>
+                <Card
+                  className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
+                  renderImage={() => (
+                    <Image
+                      src={categoria2}
+                      alt="pastel de chocolate"
+                      className="rounded-[30px] w-[285px] h-[290px]"
+                    />
+                  )}
+                >
+                  <div className={opensans.className}>
+                    <a href="../Categorias/Pastel">
+                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
+                        Pastel
+                      </h5>
+                    </a>
+                  </div>
+                </Card>
+              </div>
+            </div>
+            <div className="grid justify-items-center md:grid-cols-2 px-48">
+              <div>
+                <Card
+                  className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
+                  renderImage={() => (
+                    <Image
+                      src={categoria3}
+                      alt="Galletas de amaranto"
+                      className="rounded-[30px] w-[285px] h-[290px]"
+                    />
+                  )}
+                >
+                  <div className={opensans.className}>
+                    <a href="../Categorias/Galletas">
+                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
+                        Galletas
+                      </h5>
+                    </a>
+                  </div>
+                </Card>
+              </div>
+              <div>
+                <Card
+                  className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
+                  renderImage={() => (
+                    <Image
+                      src={categoria4}
+                      alt="Personaliza tu pastel"
+                      className="rounded-[30px] w-[285px] h-[290px]"
+                    />
+                  )}
+                >
+                  <div className={opensans.className}>
+                    <a href="../Categorias/CreaTuPastel">
+                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
+                        Personaliza tu pastel
+                      </h5>
+                    </a>
+                  </div>
+                </Card>
+              </div>
+            </div>
           </div>
         </div>
       </div>
