@@ -18,6 +18,7 @@ module.exports = {
         pink_lite: "#FFDDCC",
         purple_card: "#F3CCF3",
         blue_card: "#CAEDFF",
+        button_primary: "#2196F3",
       },
     },
   },

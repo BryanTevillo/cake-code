@@ -1,10 +1,12 @@
 "use client";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
+
 import { useState } from "react";
 import { Modal } from "flowbite-react";
 
 import ModalPrivacy from "../Privacy/ModalPrivacy";
+
 
 function Footer() {
   const [showModal, setShowModal] = useState(false);
@@ -60,6 +62,7 @@ function Footer() {
 
             <ul className="mb-0 list-none text-center text-zinc-500  text-lg">
               <li>
+
                 <a href="#"
                   onClick={() => {
                     setShowModal(true);
@@ -70,6 +73,7 @@ function Footer() {
                 <Modal show={showModal} onClose={() => setShowModal(false)}>
                   <ModalPrivacy></ModalPrivacy>
                 </Modal>
+
               </li>
               <li>
                 <a href="#!">Preguntas Frecuentes</a>
