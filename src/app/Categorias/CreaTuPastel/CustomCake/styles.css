@@ -4,17 +4,19 @@
 #sub1 {
   background-color: #ffb0cd;
 }
+#bg2 {
+  background-color: #caedff;
+}
+#sub3 {
+  background-color: #b8dff3;
+}
 #waves {
   width: 100vw;
 }
 #titulo-card {
   font-size: 80px;
 }
-#card-image {
-  height: 800px;
-  width: 800px;
-  align-items: center;
-}
+
 #image {
   height: 600px;
   width: 700px;
