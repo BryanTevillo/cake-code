@@ -55,18 +55,18 @@ export default function CreaTuPastel() {
       <div className="relative h-36 -ml-5" id="titulo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 200"
+          viewBox="0 5 1440 200"
           className="absolute"
         >
           <path
             fill="#FFDDCC"
-            fill-opacity="1"
+            fill-opacity=".8"
             d="M0,96L21.8,112C43.6,128,87,160,131,149.3C174.5,139,218,85,262,64C305.5,43,349,53,393,69.3C436.4,85,480,107,524,122.7C567.3,139,611,149,655,144C698.2,139,742,117,785,101.3C829.1,85,873,75,916,64C960,53,1004,43,1047,58.7C1090.9,75,1135,117,1178,138.7C1221.8,160,1265,160,1309,154.7C1352.7,149,1396,139,1418,133.3L1440,128L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"
           ></path>
         </svg>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
+          viewBox="0 80 1440 320"
           className="absolute"
         >
           <path
@@ -78,7 +78,7 @@ export default function CreaTuPastel() {
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
+          viewBox="0 50 1440 320"
           className="absolute"
         >
           <path
@@ -126,7 +126,7 @@ export default function CreaTuPastel() {
                 <h2 className={luckiestguy.className}>Elige el sabor</h2>
               </div>
             </div>
-            <Image src={Flecha1} height={150}></Image>
+            <Image className="" src={Flecha1} height={150}></Image>
           </div>
         </div>
       </div>

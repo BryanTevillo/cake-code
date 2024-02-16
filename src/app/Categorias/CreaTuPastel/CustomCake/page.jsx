@@ -4,7 +4,7 @@ import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const opensans = Open_Sans({ subsets: ["latin"] });
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 import Image from "next/image";
-import pinkCake from "../../../../../public/customC/pinkCake.png";
+import pinkCake from "../../../../public/customC/pinkCake.png";
 import ProgressMobileStepper from "./Progreso";
 import "./styles.css";
 
