@@ -43,7 +43,7 @@ export default function Home() {
           </div>
           <div
             style={{ marginBottom: 50, marginTop: 30 }}
-            className="lg:px-80 text-center text-2xl"
+            className="lg:px-80 text-center text-3xl"
           >
             <p className={opensans.className}>
               Pastelería mexicana dedicada a consentir a los amantes de la
@@ -174,10 +174,10 @@ export default function Home() {
                   </Card>
                 </div>
               </div>
-              <div class="flex justify-center">
+              <div className="flex justify-center">
                 <button
                   type="submit"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  class="text-white text-xl bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-8 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:"
                 >
                   <a href="/about">Ver más</a>
                 </button>
@@ -186,9 +186,9 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <div className="border-x-[150px]  border-y-[70px] rounded-[330px] sm:h-[67rem] border-[#FFFFFF] bg-[#F3CCF3]">
+          <div className="justify-items-center md:border-x-[150px] border-y-[70px] md:rounded-[330px] md:h-[60rem] border-[#FFFFFF] bg-[#F3CCF3] min-h-full">
             <div
-              className="text-7xl text-center"
+              className="text-5xl text-center"
               style={{ marginBottom: 50, marginTop: 50 }}
             >
               <h1 className={luckiestguy.className}>Categorias</h1>
@@ -201,7 +201,7 @@ export default function Home() {
                     <Image
                       src={categoria1}
                       alt="Cupcake de brownie"
-                      className="rounded-[30px] w-[285px] h-[290px]"
+                      className="rounded-[30px] w-[235px] h-[240px]"
                     />
                   )}
                 >
@@ -221,7 +221,7 @@ export default function Home() {
                     <Image
                       src={categoria2}
                       alt="pastel de chocolate"
-                      className="rounded-[30px] w-[285px] h-[290px]"
+                      className="rounded-[30px] w-[235px] h-[240px]"
                     />
                   )}
                 >
@@ -243,7 +243,7 @@ export default function Home() {
                     <Image
                       src={categoria3}
                       alt="Galletas de amaranto"
-                      className="rounded-[30px] w-[285px] h-[290px]"
+                      className="rounded-[30px] w-[235px] h-[240px]"
                     />
                   )}
                 >
@@ -263,7 +263,7 @@ export default function Home() {
                     <Image
                       src={categoria4}
                       alt="Personaliza tu pastel"
-                      className="rounded-[30px] w-[285px] h-[290px]"
+                      className="rounded-[30px] w-[235px] h-[240px]"
                     />
                   )}
                 >
