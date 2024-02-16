@@ -7,61 +7,55 @@ import { Card } from "flowbite-react";
 import "./styles.css";
 import Image from "next/image";
 import pinceles from "../../../../public/pincel.svg";
-import Cake1 from "../../../../public/pastel-creatupastel.png";
-import Cake2 from "../../../../public/pastel-creatupastel2.png";
+import Cake1 from "../../../../public/customC/pastel-creatupastel.png";
+import Cake2 from "../../../../public/customC/pastel-creatupastel3.png";
+import Flecha1 from "../../../../public/customC/flecha1.png";
+import Link from "next/link";
 export default function CreaTuPastel() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 ml-0" id="titulo">
-        {/* <h1 className={luckiestguy.className}>
-          Hola, soy una pagina de pasteles
-        </h1> */}
-        <div className="grid grid-cols-2 gap-4 ml-0 ">
-          <div className="mt-24">
-            <Image src={Cake1} className="   mt-10" id="image" />
-          </div>
-          <div className="size-32">
-            <Image src={Cake2} className="md:size-auto pt-12 mt-12" />
+      <div className="grid grid-cols-2 gap-4 " id="titulo">
+        <div className=" mt-36  ">
+          <div className=" -mb-8 -ml-5 ">
+            <Image height={900} width={900} src={Cake1} className="" />
           </div>
         </div>
 
-        <Card className="max-w-xl " id="titulo">
-          <div>
-            {/* <Image
-              src={pinceles}
-              alt="image 1"
-              id="card-image"
-              className="absolute bg-local"
-            /> */}
-            <div className="">
-              <h2 className={[luckiestguy.className]} id="titulo-card">
-                Crea tu pastel
-              </h2>
-            </div>
-          </div>
-          <p
-            className={[
-              opensans.className,
-              " text-xl font-normal text-gray-700 dark:text-gray-400",
-            ]}
+        <div className=" place-items-center  mt-36 ml-20">
+          <Card
+            className=" w-2/3 border-none rounded-none shadow-none "
+            id="titulo"
           >
-            Crea el pastel de tus sueños
-          </p>
-          <div class="flex justify-center">
-            <button
-              type="submit"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            <div className="text-8xl tracking-wide ">
+              <h2 className={[luckiestguy.className]}>Crea tu pastel</h2>
+            </div>
+
+            <p
+              className={[
+                opensans.className,
+                " text-3xl font-normal text-gray-700 dark:text-gray-400",
+              ]}
             >
-              Crear ahora
-            </button>
-          </div>
-        </Card>
+              Crea el pastel de tus sueños
+            </p>
+            <div className="flex justify-center">
+              <Link href="../Categorias/CreaTuPastel/CustomCake">
+                <button
+                  type="submit"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Crear ahora
+                </button>
+              </Link>
+            </div>
+          </Card>
+        </div>
       </div>
       {/* <Image src={pinceles}></Image> */}
-      <div className="relative h-36" id="titulo">
+      <div className="relative h-36 -ml-5" id="titulo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
+          viewBox="0 0 1440 200"
           className="absolute"
         >
           <path
@@ -94,17 +88,48 @@ export default function CreaTuPastel() {
           ></path>
         </svg>
       </div>
-      <div className="grid grid-cols-2 gap-4 h-80" id="sub1">
-        <div className="text-left h-100" id="titulo-card">
+      <div className="grid grid-cols-2 gap-4  place-content-around " id="sub1">
+        <div className="text-center h-100 mt-36 mb-10 w-5/6" id="titulo-card">
           <h2 className={[luckiestguy.className]}>¿Qué es crea tu pastel?</h2>
         </div>
-        <div>
-          <p></p>
+        <div className="place-content-around text-justify text-2xl w-5/6 mt-36 mb-10">
+          <p>
+            En un mundo en donde el tiempo es lo más valioso, queríamos hacer el
+            proceso de ordenar un pastel personalizado más sencillo y eficiente
+            para usted! Hicimos un sistema instantáneo para usted, en el que
+            puede elegir TODO, desde sabores, diseños y toppings.
+          </p>
+
+          <p>
+            Todo lo hemos seleccionado pensando en las necesidades de nuestros
+            clientes y las tendencias en repostería, agregamos diseños muy
+            llamativos que se llevan bien con todos los toppings seleccionados!
+          </p>
+          <p>Sigue cada paso y diseña un hermoso pastel hecho solo para ti!</p>
         </div>
       </div>
-      <h2 className={[opensans, " static "]} id="subtitulo">
-        Soy un subtitulo de pasteles
-      </h2>
+      <div
+        className="grid grid-cols-3 gap-4  place-content-around"
+        id="subtitulo"
+      >
+        <div className="order-2">
+          <Image height={700} src={Cake2}></Image>
+        </div>
+        <div className="order-1 text-4xl mt-36 ml-36" id="">
+          <div className="grid grid-cols-2">
+            <div>
+              <div className="w-1/3 text-center">
+                <h2 className={luckiestguy.className}>Elige los toppings</h2>
+              </div>
+
+              <div className="w-1/3 text-center mt-36">
+                <h2 className={luckiestguy.className}>Elige el sabor</h2>
+              </div>
+            </div>
+            <Image src={Flecha1} height={150}></Image>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
