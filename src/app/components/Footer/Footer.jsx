@@ -1,7 +1,7 @@
 "use client";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import AvisoModal from '../../Privacy/AvisoModal';
+import AvisoModal from "../../Privacy/AvisoModal";
 function Footer() {
   return (
     <footer className=" sticky top-[100vh]  flex flex-col items-center bg-footer text-center dark:bg-footer lg:text-left ">
@@ -54,7 +54,9 @@ function Footer() {
 
             <ul className="mb-0 list-none text-center text-zinc-500  text-lg">
               <li>
-                <a href="#!"><AvisoModal></AvisoModal></a>
+                <a href="#!">
+                  <AvisoModal></AvisoModal>
+                </a>
               </li>
               <li>
                 <a href="#!">Preguntas Frecuentes</a>
