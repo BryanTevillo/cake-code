@@ -2,13 +2,19 @@
 
 import { Button, Card, Checkbox, Label, TextInput } from 'flowbite-react';
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
+import "./style.css";
 const opensans = Open_Sans({ subsets: ["latin"] });
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 export default function Login() {
   return (
     
-    <div className="grid   justify-items-center md:grid-cols-2">
-        <Card style={{margin:50}} className="max-w-lg">
+    <div id="login" className="grid   justify-items-center md:grid-cols-2">
+        <Card style={{marginLeft: 100,
+            marginRight: 100,
+            marginTop: 50,
+            marginBottom: 50,
+            width: 500,
+            padding: 30,}} className="max-w-lg">
       <form className="flex flex-col gap-4">
         <div>
         <div className={luckiestguy.className}>
@@ -37,7 +43,12 @@ export default function Login() {
     </Card>
 
     <div className="row-span-2 " style={{ marginBottom: 50 }}>
-    <Card style={{margin:50}} className="max-w-sm">
+    <Card style={{marginLeft: 100,
+            marginRight: 100,
+            marginTop: 50,
+            marginBottom: 50,
+            width: 500,
+            padding: 30,}} className="max-w-sm">
       <form className="flex flex-col gap-4">
 
           <div className={luckiestguy.className}>
