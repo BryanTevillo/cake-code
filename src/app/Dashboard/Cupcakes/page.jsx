@@ -10,7 +10,7 @@ function Cupcakes() {
       <div>
         <div className="grid md:grid-cols-2 sm:grid-cols-1 ">
           <div className="justify-self-start">
-            <form className="w-[20rem] mx-auto  md:w-[40rem]">
+            <form className="w-[15rem]   md:w-[40rem]">
               <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
                 Search
               </label>
