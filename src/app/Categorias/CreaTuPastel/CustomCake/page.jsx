@@ -11,7 +11,7 @@ import "./styles.css";
 export default function tamaño() {
   return (
     <>
-      <div className="grid grid-cols-2 text-right " id="titulo">
+      <div className="grid  md:grid-cols-2 text-right " id="titulo">
         <div className="" id="titulo-card">
           <h1 className={luckiestguy.className}>Vamos a crear tu pastel!</h1>
           <h2 className={opensans.className}>Sigue los pasos</h2>
@@ -57,24 +57,12 @@ export default function tamaño() {
         </svg>
       </div>
 
-      <div className="grid grid-cols-8">
-        <div className="bg-">
-          <h1 className={opensans.className}>1. Tamaño</h1>
-        </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      {/* <div className="h-22" id="sub1">
+      <div className="h-22" id="sub1">
         <ProgressMobileStepper></ProgressMobileStepper>
-      </div> */}
+      </div>
       <div>
-        <div className="h-22" id="sub1">
-          <h1 className="text-zinc-800">1. Tamaño</h1>
+        <div className="h-36" id="sub1">
+          <h1 className="text-zinc-800">1. Tamañoo</h1>
         </div>
       </div>
     </>
