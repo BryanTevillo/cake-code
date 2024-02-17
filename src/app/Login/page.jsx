@@ -9,12 +9,7 @@ export default function Login() {
   return (
     
     <div id="login" className="grid   justify-items-center md:grid-cols-2">
-        <Card style={{marginLeft: 100,
-            marginRight: 100,
-            marginTop: 50,
-            marginBottom: 50,
-            width: 500,
-            padding: 30,}} className="max-w-lg">
+        <Card className="max-w-lg w-[300px] mt-[50px] mb-50">
       <form className="flex flex-col gap-4">
         <div>
         <div className={luckiestguy.className}>
@@ -43,12 +38,7 @@ export default function Login() {
     </Card>
 
     <div className="row-span-2 " style={{ marginBottom: 50 }}>
-    <Card style={{marginLeft: 100,
-            marginRight: 100,
-            marginTop: 50,
-            marginBottom: 50,
-            width: 500,
-            padding: 30,}} className="max-w-sm">
+    <Card className="max-w-sm w-[300px] mt-[50px]">
       <form className="flex flex-col gap-4">
 
           <div className={luckiestguy.className}>
