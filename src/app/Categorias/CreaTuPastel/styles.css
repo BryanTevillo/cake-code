@@ -1,8 +1,26 @@
 #titulo {
   background-color: #ffddcc;
 }
+
 #sub1 {
   background-color: #ffb0cd;
+}
+#sub3 {
+  background-color: #b8dff3;
+}
+#sub4 {
+  background-color: #f1ecf5;
+}
+#sub5 {
+  background-color: #ffddcc;
+}
+#bg-gradient {
+  background: linear-gradient(
+    #caedff 0%,
+    #caedff 65%,
+    #b8dff3 65%,
+    #b8dff3 100%
+  );
 }
 #waves {
   width: 100vw;
