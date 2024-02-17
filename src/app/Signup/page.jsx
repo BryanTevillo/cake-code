@@ -4,30 +4,28 @@ import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 
-import AvisoModal from "../components/Privacy/ModalPrivacy";
+import { useState } from "react";
+import { Modal } from "flowbite-react";
+import ModalPrivacy from "../components/Privacy/ModalPrivacy";
 import "./styles.css";
 
 const opensans = Open_Sans({ subsets: ["latin"] });
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 
 export default function Signup() {
+
+  const [showModal, setShowModal] = useState(false);
+
   return (
 
-    <div id="signup" className="grid  justify-items-center ">
+    <div id="signup" className="grid justify-items-center ">
       <div className={luckiestguy.className} id="titulo">
         REGISTRATE
       </div>
       <Card
         id="divrosa"
-        style={{
-          marginLeft: 100,
-          marginRight: 100,
-          marginTop: 10,
-          marginBottom: 50,
-          width: 500,
-          padding: 30,
-        }}
-        className="max-w-lg "
+       
+        className="max-w-lg w-[300px] mt-[50px] mb-50 md:w-[700px] xl: mb-[50px]"
       >
 
         <form className="flex flex-col gap-4">
@@ -157,14 +155,24 @@ export default function Signup() {
           <Button type="tarjeta">AGREGAR OTRA TARJETA</Button>
 
           <div className="flex items-center gap-2">
-            <Checkbox id="privacy" />
+            <Checkbox id="privacyCheck" />
             <Label htmlFor="privacy">
-              Lee y firma nuestra <AvisoModal></AvisoModal>
+              Lee y firma nuestro <a href="#"
+                  onClick={() => {
+                    setShowModal(true);
+                  }}
+                >
+                  Aviso de privacidad
+                </a>
+                <Modal show={showModal} onClose={() => setShowModal(false)}>
+                  <ModalPrivacy></ModalPrivacy>
+                </Modal>
             </Label>
           </div>
           <Button type="tarjeta">CREAR CUENTA</Button>
         </form>
       </Card>
+      
     </div>
   );
 }

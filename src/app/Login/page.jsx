@@ -8,8 +8,8 @@ const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 export default function Login() {
   return (
     
-    <div id="login" className="grid   justify-items-center md:grid-cols-2">
-        <Card className="max-w-lg w-[300px] mt-[50px] mb-50">
+    <div className="grid justify-items-center md:grid-cols-1 xl:grid-cols-2">
+        <Card className="max-w-lg w-[300px] mt-[50px] mb-50 md:w-[700px] xl: mb-[50px]">
       <form className="flex flex-col gap-4">
         <div>
         <div className={luckiestguy.className}>
@@ -33,12 +33,12 @@ export default function Login() {
         <div>
             <p>¿Olvidaste tu contraseña?</p>
         </div>
-        <Button type="signin">INICIAR SESIÓN</Button>
+        <Button className="bg-button_primary" type="signin">INICIAR SESIÓN</Button>
       </form>
     </Card>
 
-    <div className="row-span-2 " style={{ marginBottom: 50 }}>
-    <Card className="max-w-sm w-[300px] mt-[50px]">
+    <div className="row-span-2 mb-[50px] " >
+    <Card className="max-w w-[300px] mt-[50px] md:w-[600px] xl:w-[500px]">
       <form className="flex flex-col gap-4">
 
           <div className={luckiestguy.className}>
@@ -48,7 +48,7 @@ export default function Login() {
             <p> Al crear una cuenta podrás registrar una opción de pago y una dirección de envio, lo que te facilitará futuras compras en nuestro sitio.</p>
           </div>
 
-        <Button type="signup">CREAR CUENTA</Button>
+        <Button className="bg-button_primary" type="signup">CREAR CUENTA</Button>
       </form>
     </Card>
     </div>
