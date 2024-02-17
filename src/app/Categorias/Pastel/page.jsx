@@ -23,7 +23,7 @@ export default function Pasteles() {
       <h1 className={luckiestguy.className} id="titulo">
         PASTELES
       </h1>
-      <div id="cuerpo">
+      <div>
         <div className="grid justify-items-center md:grid-cols-3">
           {/* card1 */}
           <div className={opensans.className}>

@@ -24,7 +24,7 @@ export default function Cupcakes() {
       <h1 className={luckiestguy.className} id="titulo">
         CUP CAKES
       </h1>
-      <div id="cuerpo">
+      <div>
         <div className="grid justify-items-center md:grid-cols-3">
           {/* card1 */}
           <div className={opensans.className}>
@@ -177,7 +177,7 @@ export default function Cupcakes() {
           </div>
           {/* termino card6 */}
         </div>
-        <div className="flex overflow-x-auto sm:justify-center" id="carousel">
+        <div className="flex overflow-x-auto sm:justify-center">
           <Pagination
             currentPage={currentPage}
             totalPages={100}
