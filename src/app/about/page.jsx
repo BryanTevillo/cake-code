@@ -8,18 +8,17 @@ import Logo from "../../../public/pastel-about.png";
 import Image from "next/image";
 import CircleIcon from "@mui/icons-material/Circle";
 import "./styles.css";
-import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
-import imagenpaula from "../../../public/imagenpaula.png";
+import imagenpaula from "../../../public/fotos/imagenpaula.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import imagenitz from "../../../public/imagenitz.png";
-import imagenale from "../../../public/imagenale.png";
-import imagenfer from "../../../public/imagenfer.png";
-import imagenbryan from "../../../public/imagenbryan.png";
+import imagenitz from "../../../public/fotos/imagenitz.png";
+import imagenale from "../../../public/fotos/imagenale.png";
+import imagenfer from "../../../public/fotos/imagenfer.png";
+import imagenbryan from "../../../public/fotos/imagenbryan.jpg";
 
 export default function page() {
   return (
@@ -118,6 +117,34 @@ export default function page() {
         <h2 className={luckiestguy.className} id="subtitulo_about">
           Conoce al equipo de trabajo
         </h2>
+        {/* Aqui empieza el desvergue text-center */}
+        <>
+          <div className="grid justify-items-center grid-cols-2">
+            <div>
+              <Image
+                style={{ marginLeft: 10 }}
+                src={imagenpaula}
+                alt="Foto de Paula"
+                className="rounded-full w-[190px] h-[250px]"
+              />
+              <p className="text-lg text-center font-bold tracking-tight text-gray-900 dark:text-white">
+                <a href="../about/paula">Ana Paula Garfias Rios</a>
+              </p>
+            </div>
+            <div>
+              <Image
+                style={{ marginLeft: 10 }}
+                src={imagenitz}
+                alt="Foto de Itzel"
+                className="rounded-full w-[190px] h-[250px]"
+              />
+              <p className="text-lg text-center font-bold tracking-tight text-gray-900 dark:text-white">
+                <a href="../about/itz">Itzel Pérez Rodríguez</a>
+              </p>
+            </div>
+          </div>
+        </>
+        {/* Aqui termina el desvergue */}
         <div className="grid justify-items-center md:grid-cols-3">
           <div style={{ width: 450, marginBottom: 50 }}>
             <Card style={{ background: "#e8d2fb", height: 1020 }}>
