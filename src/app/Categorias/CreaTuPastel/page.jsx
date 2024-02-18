@@ -6,10 +6,11 @@ const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 import { Card } from "flowbite-react";
 import "./styles.css";
 import Image from "next/image";
-import pinceles from "../../../../public/pincel.svg";
 import Cake1 from "../../../../public/customC/pastel-creatupastel.png";
 import Cake2 from "../../../../public/customC/pastel-creatupastel3.png";
-import Flecha1 from "../../../../public/customC/flecha1.png";
+import Cake3 from "../../../../public/customC/cake6.jpg";
+import Cake4 from "../../../../public/customC/flowerCake.jpg";
+import Cake5 from "../../../../public/customC/watercolorFairy.jpg";
 import Link from "next/link";
 export default function CreaTuPastel() {
   return (
@@ -18,32 +19,38 @@ export default function CreaTuPastel() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 " id="titulo">
           <div className=" mt-36 order-1  ">
             <div className=" -mb-8 -ml-5  ">
-              <Image height={900} width={900} src={Cake1} className="" />
+              <Image
+                height={900}
+                width={900}
+                src={Cake1}
+                alt="pastel de fresas"
+                className=""
+              />
             </div>
           </div>
 
           <div className=" place-items-center ml-5 -mb-40 md:mt-36 md:ml-20 md:mb-0 md:order-2 ">
             <Card
-              className="  md:w-2/3 border-none rounded-none shadow-none "
+              className="   border-none rounded-none shadow-none "
               id="titulo"
             >
-              <div className="text-6xl md:text-8xl tracking-wide ">
+              <div className="text-6xl md:text-8xl tracking-wide  bg-local bg-cover  bg-[url('/customC/mancha_naranja.png')]">
                 <h2 className={[luckiestguy.className]}>Crea tu pastel</h2>
+                <p
+                  className={[
+                    opensans.className,
+                    " text-xl md:text-3xl font-normal text-gray-700 dark:text-gray-400",
+                  ]}
+                >
+                  Crea el pastel de tus sueños
+                </p>
               </div>
 
-              <p
-                className={[
-                  opensans.className,
-                  " text-xl md:text-3xl font-normal text-gray-700 dark:text-gray-400",
-                ]}
-              >
-                Crea el pastel de tus sueños
-              </p>
               <div className="flex justify-center">
                 <Link href="../Categorias/CreaTuPastel/CustomCake">
                   <button
                     type="submit"
-                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg  px-5 py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
                     Crear ahora
                   </button>
@@ -52,7 +59,7 @@ export default function CreaTuPastel() {
             </Card>
           </div>
         </div>
-        {/* <Image src={pinceles}></Image> */}
+
         <div className="relative  md:h-36 -ml-5" id="titulo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -93,53 +100,69 @@ export default function CreaTuPastel() {
           className="grid grid-cols-1 md:grid-cols-2 gap-4  place-content-around "
           id="sub1"
         >
-          <div className="text-center md:h-100 mt-20 text-5xl md:text-8xl tracking-wide md:mt-36  md:w-5/6">
+          <div className="text-center mt-20 text-5xl md:text-8xl tracking-wide md:mt-40 md:ml-7 md:w-5/6">
             <h2 className={[luckiestguy.className]}>¿Qué es crea tu pastel?</h2>
           </div>
-          <div className="place-content-around text-lg text-left mb-10 ml-5 mr-5 md:text-justify md:text-2xl md:w-5/6 md:mt-36 ">
+          <div className="place-content-around text-lg text-left mb-10 ml-5 mr-5 md:text-justify md:text-2xl md:w-5/6 md:mt-32 ">
             <p>
               En un mundo en donde el tiempo es lo más valioso, queríamos hacer
               el proceso de ordenar un pastel personalizado más sencillo y
               eficiente para usted!
             </p>
-            <p className="mt-5 md:mt-0">
+            <p className="mt-5 md:mt-5">
               Hicimos un sistema instantáneo para usted, en el que puede elegir
               TODO, desde sabores, diseños y toppings.
             </p>
 
-            <p className="mt-5 md:mt-0">
+            <p className="mt-5 md:mt-5">
               Todo lo hemos seleccionado pensando en las necesidades de nuestros
               clientes y las tendencias en repostería, agregamos diseños muy
               llamativos que se llevan bien con todos los toppings
               seleccionados!
             </p>
-            <p className="mt-5 md:mt-0">
+            <p className="mt-5 md:mt-5">
               Sigue cada paso y diseña un hermoso pastel hecho solo para ti!
             </p>
           </div>
         </div>
         <div
-          className="grid grid-cols-1 grid-rows-3  md:grid-cols-3 md:grid-rows-2 gap-4  md:place-content-around"
+          className="grid grid-cols-1 grid-rows-3  md:grid-cols-1 md:grid-rows-2 gap-y-0  "
           id="subtitulo"
         >
           <div
-            className="order-2 row-span-3 min-h-60 -mx-10 -mb-10 md:order-2 "
+            className="order-2 row-span-2 md:row-span-2 min-h-60  -mx-10 -mb-10   "
             id="bg-gradient"
           >
-            <Image className="min-h-60 min-w-60" src={Cake2}></Image>
+            <div className="md:ml-[500px]">
+              <Image
+                className="min-h-60 min-w-60 "
+                src={Cake2}
+                alt="pastel rosa"
+              ></Image>
+            </div>
           </div>
-          <div className="order-1 md:text-4xl md:mt-36 ml-36" id="">
-            <div className="grid md:grid-cols-2 place-content-around">
-              <div>
-                <div className="md:w-1/3 text-left">
-                  <h2 className={luckiestguy.className}>Elige los toppings</h2>
+          <div className="order-1 md:text-4xl md:mt-10 md:ml-36" id="">
+            <div className="grid grid-cols-1  justify-start place-content-around">
+              <div className="grid grid-cols-2 justify-center">
+                <div>
+                  <div className="mt-8  mb-3 text-center h-20 ml-0 w-2/3 md:w-5/12 md:h-36 md:mt-0 md:text-6xl bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.png')]">
+                    <h2 className={luckiestguy.className}>
+                      Elige los toppings
+                    </h2>
+                  </div>
+                  <div className=" mt-8 ml-4 text-center h-20 ml-0 w-2/3 md:w-5/12 md:h-36 md:mt-20 md:text-6xl   bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.png')]">
+                    <h2 className={luckiestguy.className}>Elige el sabor</h2>
+                  </div>
                 </div>
-
-                <div className="md:w-1/3 text-center md:mt-36">
-                  <h2 className={luckiestguy.className}>Elige el sabor</h2>
+                <div>
+                  <div className=" mb-3 text-center h-20 ml-10 mt-8 w-2/3 md:w-5/12 md:h-36 md:mt-0 md:text-6xl bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.png')]">
+                    <h2 className={luckiestguy.className}>Elige tu relleno</h2>
+                  </div>
+                  <div className=" mb-3 text-center h-20 ml-5 mt-8 w-2/3 md:w-5/12 md:h-36 md:mt-20 md:text-6xl bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.png')]">
+                    <h2 className={luckiestguy.className}>Elige tu diseño</h2>
+                  </div>
                 </div>
               </div>
-              <Image className="" src={Flecha1} height={150}></Image>
             </div>
           </div>
         </div>
@@ -179,41 +202,48 @@ export default function CreaTuPastel() {
             ></path>
           </svg>
         </div>
-        <div>
+        <div id="">
           <div
-            className="text-center md:h-100 mt-20 text-3xl md:text-8xl tracking-wide md:mt-36  md:w-5/6"
-            id="sub4"
+            className="text-center mt-20 text-3xl md:text-8xl tracking-wide md:mt-20  "
+            id=""
           >
             <h1 className={luckiestguy.className}>Recomendaciones</h1>
           </div>
-          <div className="mt-7 ml-10 mr-10 mb-10 p-10 rounded-lg" id="sub5">
+          <div
+            className="mt-7 ml-10 mr-10 mb-10 p-10 rounded-lg drop-shadow-xl md:mt-10"
+            id="sub5"
+          >
             <div className={opensans.className}>
-              <h2 className="text-md">
+              <h2 className="text-md md:text-6xl md:mt-10">
                 01 Para elegir el sabor, considera lo siguiente
               </h2>
-              <p className="mt-3 ml-10 pl-5 text-sm">
+              <p className="mt-3 ml-10 pl-5 text-sm md:text-5xl md:ml-40 md:mt-10">
                 Elige un sabor que pueda gustarles a todos
               </p>
-              <p className="mt-3 ml-10 pl-5 text-sm">
+              <p className="mt-3 ml-10 pl-5 text-sm md:text-5xl md:ml-40 md:mt-10">
                 Elige un sabor que te guste, debes amar tu pastel!
               </p>
             </div>
-            <div className="border-2 border-black mt-5 mb-5"></div>
+            <div className="border-2 border-black mt-5 mb-5 md:mt-16 md:mb-10"></div>
             <div className={opensans.className}>
-              <p className="text-md">02 Considera tener un esquema de</p>
-              <p className="text-md text-justify ml-5">
+              <p className="text-md md:text-6xl">
+                02 Considera tener un esquema de
+              </p>
+              <p className="text-md text-justify ml-5 md:text-6xl md:ml-20">
                 colores, eso ayudará a elegir la decoración del pastel!
               </p>
             </div>
-            <div className="border-2 border-black mt-5 mb-5"></div>
+            <div className="border-2 border-black mt-5 mb-5 md:mt-16 md:mb-16"></div>
             <div className={opensans.className}>
-              <p className="text-md">03 Elige al menos dos toppings!</p>
-              <p className="text-md text-justify ml-5">
+              <p className="text-md md:text-6xl ">
+                03 Elige al menos dos toppings!
+              </p>
+              <p className="text-md text-justify ml-5 md:text-6xl md:ml-20">
                 Todos los toppings combinan muy bien, haz que el pastel sea a tu
                 gusto!
               </p>
             </div>
-            <div className="flex justify-center mt-10">
+            <div className="flex justify-center mt-10 md:mt-16">
               <Link href="../Categorias/CreaTuPastel/CustomCake">
                 <button
                   type="submit"
@@ -224,7 +254,52 @@ export default function CreaTuPastel() {
               </Link>
             </div>
           </div>
-          <div></div>
+        </div>
+        <div>
+          <div className={luckiestguy.className}>
+            <h1 className="text-3xl text-center mb-10 md:text-8xl md:mt-16">
+              Diseños de otros clientes
+            </h1>
+          </div>
+          <div className="flex flex-col items-center md:flex-row ">
+            <div>
+              <Image
+                height={400}
+                width={300}
+                src={Cake3}
+                alt="pastel de chocolate"
+                sizes="(min-width: 66em) 33vw,
+                (min-width: 400px) 50vw,
+                100vw"
+              ></Image>
+            </div>
+            <div>
+              <Image
+                height={400}
+                width={300}
+                src={Cake4}
+                alt="pastel de flores"
+                className="mt-10"
+              ></Image>
+            </div>
+            <div>
+              <Image
+                height={400}
+                width={300}
+                src={Cake5}
+                alt="pastel de acuarelas"
+                className="mt-10"
+              ></Image>
+            </div>
+          </div>
+          <div className="flex justify-center mb-5 mt-10">
+            <button
+              type="submit"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Ver mas
+            </button>
+          </div>
         </div>
       </main>
     </>

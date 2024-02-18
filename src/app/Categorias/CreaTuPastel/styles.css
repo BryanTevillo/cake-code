@@ -9,7 +9,7 @@
   background-color: #b8dff3;
 }
 #sub4 {
-  background-color: #f1ecf5;
+  background-color: #eef6fb;
 }
 #sub5 {
   background-color: #ffddcc;
@@ -22,6 +22,7 @@
     #b8dff3 100%
   );
 }
+
 #waves {
   width: 100vw;
 }
