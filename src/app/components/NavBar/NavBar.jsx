@@ -6,7 +6,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
-import Logo from "../../../../public/logosinFondo.png";
+import Logo from "../../../../public/logosinFondo.webp";
 import Image from "next/image";
 function Header() {
   return (
