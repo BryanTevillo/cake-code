@@ -8,12 +8,12 @@ const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 const opensans = Open_Sans({ subsets: ["latin"] });
 import "./styles.css";
 import Image from "next/image";
-import cupcake1 from "../../../../public/cupcake/algodon.jpg";
-import cupcake2 from "../../../../public/cupcake/avellana.jpg";
-import cupcake3 from "../../../../public/cupcake/cafe.jpg";
-import cupcake4 from "../../../../public/cupcake/cereza.jpg";
-import cupcake5 from "../../../../public/cupcake/oreo.jpg";
-import cupcake6 from "../../../../public/cupcake/redvelvet.jpg";
+import cupcake1 from "../../../../public/cupcake/algodon.webp";
+import cupcake2 from "../../../../public/cupcake/avellana.webp";
+import cupcake3 from "../../../../public/cupcake/cafe.webp";
+import cupcake4 from "../../../../public/cupcake/cereza.webp";
+import cupcake5 from "../../../../public/cupcake/oreo.webp";
+import cupcake6 from "../../../../public/cupcake/redvelvet.webp";
 
 export default function Cupcakes() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -24,7 +24,7 @@ export default function Cupcakes() {
       <h1 className={luckiestguy.className} id="titulo">
         CUP CAKES
       </h1>
-      <div id="cuerpo">
+      <div>
         <div className="grid justify-items-center md:grid-cols-3">
           {/* card1 */}
           <div className={opensans.className}>
@@ -177,7 +177,7 @@ export default function Cupcakes() {
           </div>
           {/* termino card6 */}
         </div>
-        <div className="flex overflow-x-auto sm:justify-center" id="carousel">
+        <div className="flex overflow-x-auto sm:justify-center">
           <Pagination
             currentPage={currentPage}
             totalPages={100}
