@@ -8,12 +8,12 @@ const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 const opensans = Open_Sans({ subsets: ["latin"] });
 import "./styles.css";
 import Image from "next/image";
-import cupcake1 from "../../../../public/cupcake/algodon.jpg";
-import cupcake2 from "../../../../public/cupcake/avellana.jpg";
-import cupcake3 from "../../../../public/cupcake/cafe.jpg";
-import cupcake4 from "../../../../public/cupcake/cereza.jpg";
-import cupcake5 from "../../../../public/cupcake/oreo.jpg";
-import cupcake6 from "../../../../public/cupcake/redvelvet.jpg";
+import cupcake1 from "../../../../public/cupcake/algodon.webp";
+import cupcake2 from "../../../../public/cupcake/avellana.webp";
+import cupcake3 from "../../../../public/cupcake/cafe.webp";
+import cupcake4 from "../../../../public/cupcake/cereza.webp";
+import cupcake5 from "../../../../public/cupcake/oreo.webp";
+import cupcake6 from "../../../../public/cupcake/redvelvet.webp";
 
 export default function Cupcakes() {
   const [currentPage, setCurrentPage] = useState(1);

@@ -7,12 +7,14 @@ const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 const opensans = Open_Sans({ subsets: ["latin"] });
 import "./styles.css";
 import Image from "next/image";
-import Pastel1 from "../../../../public/pastel-oreo.jpg";
-import Pastel2 from "../../../../public/pastel-chocolate.jpg";
-import Pastel3 from "../../../../public/pastelbaby.jpg";
-import Pastel4 from "../../../../public/Pastelcerezas.jpg";
-import Pastel5 from "../../../../public/pastelchocoflor.jpg";
-import Pastel6 from "../../../../public/Pastelunicornio.jpg";
+import Pastel1 from "../../../../public/pastel-oreo.webp";
+import Pastel2 from "../../../../public/pastel-chocolate.webp";
+import Pastel3 from "../../../../public/pastelbaby.webp";
+import Pastel4 from "../../../../public/Pastelcerezas.webp";
+import Pastel5 from "../../../../public/pastelchocoflor.webp";
+import Pastel6 from "../../../../public/Pastelunicornio.webp";
+import { HiShoppingCart } from "react-icons/hi";
+import { Button } from "flowbite-react";
 
 export default function Pasteles() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -27,32 +29,31 @@ export default function Pasteles() {
         <div className="grid justify-items-center md:grid-cols-3">
           {/* card1 */}
           <div className={opensans.className}>
-            <Card className="max-w-xs my-4">
+            <div className="py-8 max-w-xs my-4 bg-[#ecf5fb]">
               <Image
                 src={Pastel1}
                 alt="Pastel1"
                 className="w-[250px] h-[310px]"
+                href="http://www.google.com"
               />
-              <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
+              <h5 className="my-2 text-center text-xl font-bold text-gray-900 dark:text-white">
                 Oreo con vainilla
               </h5>
               <p className="text-center font-normal text-gray-700 dark:text-gray-400">
                 $450.00
               </p>
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
+              <div className="my-2 flex justify-center px-0">
+                <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <HiShoppingCart className="mr-2 h-5 w-5" />
                   Agregar al carrito
-                </button>
+                </Button>
               </div>
-            </Card>
+            </div>
           </div>
           {/* termino card1 */}
           {/* card2 */}
           <div>
-            <Card className="max-w-xs my-4">
+            <Card className="max-w-xs my-4 bg-[#ecf5fb]">
               <Image
                 src={Pastel2}
                 alt="Pastel2"
@@ -64,20 +65,18 @@ export default function Pasteles() {
               <p className="text-center font-normal text-gray-700 dark:text-gray-400">
                 $350.00
               </p>
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
+              <div className="flex justify-center px-0">
+                <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <HiShoppingCart className="mr-2 h-5 w-5" />
                   Agregar al carrito
-                </button>
+                </Button>
               </div>
             </Card>
           </div>
           {/* termino card2 */}
           {/* card3 */}
           <div>
-            <Card className="max-w-xs my-4">
+            <Card className="max-w-xs my-4 bg-[#f3ccf3]">
               <Image
                 src={Pastel3}
                 alt="Pastel3"
@@ -89,13 +88,11 @@ export default function Pasteles() {
               <p className="text-center font-normal text-gray-700 dark:text-gray-400">
                 $250.00
               </p>
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
+              <div className="flex justify-center px-0">
+                <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <HiShoppingCart className="mr-2 h-5 w-5" />
                   Agregar al carrito
-                </button>
+                </Button>
               </div>
             </Card>
           </div>
@@ -114,13 +111,11 @@ export default function Pasteles() {
               <p className="text-center font-normal text-gray-700 dark:text-gray-400">
                 $450.00
               </p>
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
+              <div className="flex justify-center px-0">
+                <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <HiShoppingCart className="mr-2 h-5 w-5" />
                   Agregar al carrito
-                </button>
+                </Button>
               </div>
             </Card>
           </div>
@@ -139,13 +134,11 @@ export default function Pasteles() {
               <p className="text-center font-normal text-gray-700 dark:text-gray-400">
                 $370.00
               </p>
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
+              <div className="flex justify-center px-0">
+                <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <HiShoppingCart className="mr-2 h-5 w-5" />
                   Agregar al carrito
-                </button>
+                </Button>
               </div>
             </Card>
           </div>
@@ -164,24 +157,26 @@ export default function Pasteles() {
               <p className="text-center font-normal text-gray-700 dark:text-gray-400">
                 $450.00
               </p>
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
+              <div className="flex justify-center px-0">
+                <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <HiShoppingCart className="mr-2 h-5 w-5" />
                   Agregar al carrito
-                </button>
+                </Button>
               </div>
             </Card>
           </div>
           {/* termino card6 */}
         </div>
-        <div className="flex overflow-x-auto sm:justify-center">
+        <div className="my-8 flex overflow-x-auto sm:justify-center rounded-full">
           <Pagination
+            layout="pagination"
             currentPage={currentPage}
             totalPages={100}
             onPageChange={onPageChange}
+            previousLabel=""
+            nextLabel=""
             showIcons
+            className="rounded-full"
           />
         </div>
       </div>

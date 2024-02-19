@@ -1,5 +1,5 @@
 "use client";
-
+import ItemCount from "./contador/contador";
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 const opensans = Open_Sans({ subsets: ["latin"] });
@@ -11,10 +11,7 @@ import "./styles.css";
 
 export default function Producto() {
   return (
-    <div
-      className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 p-8 flex flex-row "
-      id="cuerpo"
-    >
+    <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 p-8 flex flex-row ">
       <div className=" mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-[50px]">
         <div className="md:flex">
           <div className="md:shrink-0 grid justify-items-center">
@@ -41,7 +38,7 @@ export default function Producto() {
               <Rating.Star />
               <Rating.Star filled={false} />
               <p className="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                4.95 out of 5
+                4.95 de 5
               </p>
             </Rating>
             <p className="mt-2 text-slate-500">
@@ -61,8 +58,10 @@ export default function Producto() {
             <div className="block mt-1 text-xl leading-tight font-bold text-black hover:underline grid justify-items-center">
               RESUMEN DE COMPRA
             </div>
-
-            <p className="py-5 px-0 mt-2 text-slate-500">CANTIDAD</p>
+            <div>
+              <p className="py-5 px-0 mt-2 text-slate-500">CANTIDAD</p>
+              <ItemCount />
+            </div>
             <div className=" py-5">
               <button
                 type="submit"

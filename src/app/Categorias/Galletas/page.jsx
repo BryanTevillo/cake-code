@@ -7,12 +7,12 @@ const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 const opensans = Open_Sans({ subsets: ["latin"] });
 import "./styles.css";
 import Image from "next/image";
-import Galleta1 from "../../../../public/galletas/amaranto.jpg";
-import Galleta2 from "../../../../public/galletas/chocolate-relleno.jpg";
-import Galleta3 from "../../../../public/galletas/lavanda.jpg";
-import Galleta4 from "../../../../public/galletas/granola.jpg";
-import Galleta5 from "../../../../public/galletas/nuez.jpg";
-import Galleta6 from "../../../../public/galletas/paylimon.jpg";
+import Galleta1 from "../../../../public/galletas/amaranto.webp";
+import Galleta2 from "../../../../public/galletas/chocolate-relleno.webp";
+import Galleta3 from "../../../../public/galletas/lavanda.webp";
+import Galleta4 from "../../../../public/galletas/granola.webp";
+import Galleta5 from "../../../../public/galletas/nuez.webp";
+import Galleta6 from "../../../../public/galletas/paylimon.webp";
 
 export default function Galletas() {
   const [currentPage, setCurrentPage] = useState(1);
