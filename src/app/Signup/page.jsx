@@ -23,7 +23,7 @@ export default function Signup() {
         REGISTRATE
       </div>
       <Card
-        id="divrosa"
+        id=""
        
         className="max-w-lg w-[300px] mt-[50px] mb-50 md:w-[700px] xl: mb-[50px]"
       >

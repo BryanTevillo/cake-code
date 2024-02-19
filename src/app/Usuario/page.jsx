@@ -21,7 +21,7 @@ function User() {
       </div>
         <div  className="grid justify-items-center md:grid-cols-1 xl:grid-cols-2">
           <div className="row-span-2 max-w-sm" >
-            <Card id="divrosa" 
+            <Card id="" 
           className=" max-w-sm w-[500px] mt-[50px] ml-[0px] mr-[10px] mb-[20px]  md:w-[900px] xl: w-[800px] mr-[50px] mt-[10px] mb-[50px]">
               <form  className="flex flex-col gap-4">
                 <Card  className="max-w-md">
@@ -57,7 +57,7 @@ function User() {
             </Card>
           </div>
           <div className="row-span-2 mb-[50px]">
-            <Card id="divrosa" 
+            <Card id="" 
           className=" max-w-sm w-[500px] mt-[10px] mb-[50px] ml-[10px] mr-[10px] md:w-[500px] xl: w-[800px] mb-[50px]">
               <form className="flex flex-col gap-4">
                 <Card className="max-w-md">
