@@ -114,14 +114,16 @@ export default function page() {
           <div>
             <div className="grid justify-items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
               <div className="mr-[20px] md:mx-[20px]">
-                <Image
-                  src={imagenpaula}
-                  alt="Foto de Paula"
-                  className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
-                />
-                <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="../about/paula">Ana Paula Garfias Rios</a>
-                </p>
+                <a href="../about/paula">
+                  <Image
+                    src={imagenpaula}
+                    alt="Foto de Paula"
+                    className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
+                  />
+                  <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
+                    Ana Paula Garfias Rios
+                  </p>
+                </a>
               </div>
               <div>
                 <a href="../about/itz">
@@ -130,42 +132,47 @@ export default function page() {
                     alt="Foto de Itzel"
                     className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
                   />
+                  <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
+                    Itzel Pérez Rodríguez
+                  </p>
                 </a>
-                <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="../about/itz">Itzel Pérez Rodríguez</a>
-                </p>
               </div>
               <div className="mr-[20px]">
-                <Image
-                  src={imagenale}
-                  alt="Foto de Alejandro"
-                  className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
-                />
-                <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="../about/alejandro">Alejandro de León Piñas</a>
-                </p>
+                <a href="../about/alejandro">
+                  <Image
+                    src={imagenale}
+                    alt="Foto de Alejandro"
+                    className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
+                  />
+
+                  <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
+                    Alejandro de León Piña
+                  </p>
+                </a>
               </div>
               <div>
-                <Image
-                  src={imagenbryan}
-                  alt="Foto de Bryan"
-                  className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
-                />
-                <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="../about/bryan">Bryan Tevillo Betancourt</a>
-                </p>
+                <a href="../about/bryan">
+                  <Image
+                    src={imagenbryan}
+                    alt="Foto de Bryan"
+                    className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
+                  />
+                  <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
+                    Bryan Tevillo Betancourt
+                  </p>
+                </a>
               </div>
               <div className="mb-[30px] col-span-2 md:col-span-1">
-                <Image
-                  src={imagenfer}
-                  alt="Foto de Fernanda"
-                  className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
-                />
-                <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="../about/fer">
+                <a href="../about/fer">
+                  <Image
+                    src={imagenfer}
+                    alt="Foto de Fernanda"
+                    className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
+                  />
+                  <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
                     Maria Fernanda Güemez <br /> Medina
-                  </a>
-                </p>
+                  </p>
+                </a>
               </div>
             </div>
           </div>

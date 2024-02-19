@@ -200,11 +200,13 @@ export default function Home() {
                 <Card
                   className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
                   renderImage={() => (
-                    <Image
-                      src={categoria1}
-                      alt="Cupcake de brownie"
-                      className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
-                    />
+                    <a href="../Categorias/cupcakes">
+                      <Image
+                        src={categoria1}
+                        alt="Cupcake de brownie"
+                        className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
+                      />
+                    </a>
                   )}
                 >
                   <div className={opensans.className}>
@@ -220,11 +222,13 @@ export default function Home() {
                 <Card
                   className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
                   renderImage={() => (
-                    <Image
-                      src={categoria2}
-                      alt="pastel de chocolate"
-                      className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
-                    />
+                    <a href="../Categorias/Pastel">
+                      <Image
+                        src={categoria2}
+                        alt="pastel de chocolate"
+                        className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
+                      />
+                    </a>
                   )}
                 >
                   <div className={opensans.className}>
@@ -242,11 +246,13 @@ export default function Home() {
                 <Card
                   className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
                   renderImage={() => (
-                    <Image
-                      src={categoria3}
-                      alt="Galletas de amaranto"
-                      className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
-                    />
+                    <a href="../Categorias/Galletas">
+                      <Image
+                        src={categoria3}
+                        alt="Galletas de amaranto"
+                        className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
+                      />
+                    </a>
                   )}
                 >
                   <div className={opensans.className}>
@@ -262,11 +268,13 @@ export default function Home() {
                 <Card
                   className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
                   renderImage={() => (
-                    <Image
-                      src={categoria4}
-                      alt="Personaliza tu pastel"
-                      className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
-                    />
+                    <a href="../Categorias/CreaTuPastel">
+                      <Image
+                        src={categoria4}
+                        alt="Personaliza tu pastel"
+                        className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
+                      />
+                    </a>
                   )}
                 >
                   <div className={opensans.className}>

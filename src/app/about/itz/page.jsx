@@ -81,7 +81,7 @@ export default function page() {
           </CardActions>
         </Card>
         <div>
-          <div className="text-center text-3xl bg-[#FFD1BD] rounded-[200px] md:rounded-none md:mt-[30px]">
+          <div className="text-center text-3xl tracking-wide rounded-[200px] md:rounded-none md:mt-[30px]">
             <p className={luckiestguy.className}>Diseños desarrollados</p>
           </div>
           <br />
