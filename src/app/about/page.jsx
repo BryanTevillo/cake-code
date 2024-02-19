@@ -52,7 +52,6 @@ export default function page() {
                 src={Logo}
                 width={380}
                 className=" xl:ml-[60px]"
-                //className="mr-3 h-50 sm:h-21 sm:w-20"
                 alt="cake-code Logo"
               />
               <Card
@@ -118,7 +117,7 @@ export default function page() {
                 <Image
                   src={imagenpaula}
                   alt="Foto de Paula"
-                  className="rounded-full w-[170px] h-[200px]"
+                  className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
                 />
                 <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="../about/paula">Ana Paula Garfias Rios</a>
@@ -140,7 +139,7 @@ export default function page() {
                 <Image
                   src={imagenale}
                   alt="Foto de Alejandro"
-                  className="rounded-full w-[170px] h-[200px]"
+                  className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
                 />
                 <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="../about/alejandro">Alejandro de León Piñas</a>
@@ -150,7 +149,7 @@ export default function page() {
                 <Image
                   src={imagenbryan}
                   alt="Foto de Bryan"
-                  className="rounded-full w-[170px] h-[200px]"
+                  className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
                 />
                 <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="../about/bryan">Bryan Tevillo Betancourt</a>
@@ -160,7 +159,7 @@ export default function page() {
                 <Image
                   src={imagenfer}
                   alt="Foto de Fernanda"
-                  className="rounded-full w-[170px] h-[200px]"
+                  className="rounded-full w-[170px] h-[200px] hover:w-[200px] hover:h-[230px] hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)]"
                 />
                 <p className="text-base text-center font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="../about/fer">
