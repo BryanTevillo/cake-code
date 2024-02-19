@@ -10,28 +10,22 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
-import imagenitz from "../../../../public/fotos/imagenitz.webp";
+import imagenale from "../../../../public/fotos/imagenale.webp";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import carr1 from "../../../../public/carrusel2/creatupastel.webp";
-import carr2 from "../../../../public/carrusel2/tamaño.webp";
-import carr3 from "../../../../public/carrusel2/sabor.webp";
-import carr4 from "../../../../public/carrusel2/diseño.webp";
-import carr5 from "../../../../public/carrusel2/toppings1.webp";
-import carr6 from "../../../../public/carrusel2/toppings2.webp";
-import carr7 from "../../../../public/carrusel2/topper.webp";
-import carr8 from "../../../../public/carrusel2/tarjeta.webp";
-import carr9 from "../../../../public/carrusel2/confirmacion.webp";
+import carr1 from "../../../../public/carrusel2/perfildeusuario.webp";
+import carr2 from "../../../../public/carrusel2/iniciodesesion.webp";
+import carr3 from "../../../../public/carrusel2/registrate.webp";
 
 export default function page() {
   return (
     <div>
       <div className="grid justify-items-center md:grid-cols-2">
-        <Card className="bg-[#ffeecc] h-[1000px] my-[30px] md:mx-[40px] xl:w-[500px]">
+        <Card className="bg-[#b8dff3] h-[1000px] my-[30px] md:mx-[40px] xl:w-[500px]">
           <Image
             className="h-[400px] w-[300px] rounded-[250px] mx-[40px] md:mt-[40px] xl:mx-[70px] xl:w-[400] xl:h-[420px]"
-            src={imagenitz}
-            alt="Foto de Itzel"
+            src={imagenale}
+            alt="Foto de Alejandro"
           />
           <CardContent className="mx-[40px]">
             <Typography
@@ -41,22 +35,23 @@ export default function page() {
               component="div"
             >
               <div className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white xl:ml-[50px]">
-                Itzel Pérez Rodríguez
+                Alejandro de León Piña
               </div>
             </Typography>
             <div className={opensans.className}>
-              <p>Desarrolladora Java Full Stack</p>
-              <p>Tlalpan, CDMX</p>
-              <p>itzelperez.rq@gmail.com</p>
+              <p>Desarrollador Java Full Stack</p>
+              <p>Coyoacán, CDMX</p>
+              <p>alejandrodeleon904@gmail.com</p>
             </div>
             <br />
             <Typography className={opensans.className}>
-              Hola soy Itzel, Química egresada de la UNAM y Desarrolladora Java
-              FullStack en construcción, que esta entusiasmada por desarrollar
-              su carrera profesional en el ámbito tecnológico. Soy una persona
-              detallista, orientada al trabajo en equipo, y estoy ansiosa por
-              formar parte de un equipo de desarrollo donde pueda poner a prueba
-              mis habilidades y conocimientos técnicos.
+              Soy una persona muy comprometida con los proyectos en los que
+              estoy involucrado. Mi pasión por seguir aprendiendo me llevó a
+              estudiar Física en la que tuve mi primer contacto con la
+              programación y la resolución analítica de problemas. Baso mis
+              decisiones en esta frase: "Destiny is not a matter of chance, it
+              is a matter of choice; it is not a thing to be waited for, it is a
+              thing to be achieved."
             </Typography>
           </CardContent>
           <CardActions className="mx-[40px]">
@@ -64,7 +59,7 @@ export default function page() {
               sx={{ color: "black" }}
               size="small"
               target="_blank"
-              href="https://github.com/ItzelPr03"
+              href="https://github.com/AlexLionP"
               className={opensans.className}
             >
               <GitHubIcon fontSize="large"></GitHubIcon>Github
@@ -73,7 +68,7 @@ export default function page() {
               sx={{ color: "black" }}
               size="small"
               target="_blank"
-              href="http://www.linkedin.com/in/itzel-perez-rodriguez"
+              href="http://www.linkedin.com/in/alejandro-de-leon-pina"
               className={opensans.className}
             >
               <LinkedInIcon fontSize="large"></LinkedInIcon>LinkedIn
@@ -101,36 +96,6 @@ export default function page() {
                 className="h-[750px] w-[450px] md:h-[40rem] md:w-[50rem]"
                 src={carr3}
                 alt="Diseña tu pastel"
-              />
-              <Image
-                className="h-[1000px] md:h-[50rem]"
-                src={carr4}
-                alt="Diseña tu pastel"
-              />
-              <Image
-                className="h-[1000px] md:h-[50rem]"
-                src={carr5}
-                alt="Diseña tu pastel"
-              />
-              <Image
-                className="h-[1000px] md:h-[50rem]"
-                src={carr6}
-                alt="Diseña tu pastel"
-              />
-              <Image
-                className="h-[750px] w-[450px] md:h-[30rem] md:w-[50rem]"
-                src={carr7}
-                alt="Diseña tu pastel"
-              />
-              <Image
-                className="h-[750px] w-[450px] md:h-[40rem] md:w-[50rem]"
-                src={carr8}
-                alt="Diseña tu pastel"
-              />
-              <Image
-                className="h-[1000px] md:h-[50rem]"
-                src={carr9}
-                alt="Confirmacion"
               />
             </Carousel>
           </div>

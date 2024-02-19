@@ -10,22 +10,22 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
-import imagenpaula from "../../../../public/fotos/imagenpaula.webp";
+import imagenfer from "../../../../public/fotos/imagenfer.webp";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import carr1 from "../../../../public/carrusel2/paginainicio.webp";
-import carr2 from "../../../../public/carrusel2/contacto.webp";
-import carr3 from "../../../../public/carrusel2/acercadenosotros.webp";
+import carr1 from "../../../../public/carrusel2/pasteles.webp";
+import carr2 from "../../../../public/carrusel2/galletas.webp";
+import carr3 from "../../../../public/carrusel2/cupcakes.webp";
 
 export default function page() {
   return (
     <div>
       <div className="grid justify-items-center md:grid-cols-2">
-        <Card className="bg-[#e8d2fb] h-[1000px] my-[30px] md:mx-[40px] xl:w-[500px]">
+        <Card className="bg-[#f3ccf3] h-[1000px] my-[30px] md:mx-[40px] xl:w-[500px]">
           <Image
             className="h-[400px] w-[300px] rounded-[250px] mx-[40px] md:mt-[40px] xl:mx-[70px] xl:w-[400] xl:h-[420px]"
-            src={imagenpaula}
-            alt="Foto de Paula"
+            src={imagenfer}
+            alt="Foto de Fernanda"
           />
           <CardContent className="mx-[40px]">
             <Typography
@@ -34,23 +34,24 @@ export default function page() {
               variant="h5"
               component="div"
             >
-              <div className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white xl:ml-[50px]">
-                Ana Paula Garfias Rios
+              <div className="text-xl font-bold tracking-tight text-gray-900 dark:text-white xl:ml-[20px]">
+                Maria Fernanda Güemez Medina
               </div>
             </Typography>
             <div className={opensans.className}>
               <p>Desarrolladora Java Full Stack</p>
-              <p>Morelia, Mich</p>
-              <p>paulagarfias4@gmail.com</p>
+              <p>Mérida, Yucatán</p>
+              <p>fernanda.guemez@gmail.com</p>
             </div>
             <br />
             <Typography className={opensans.className}>
-              Hola soy Paula, ingeniera idustrial. Me considero una persona
-              proactiva, con grandes interenses en seguirme preparando para el
-              futuro. A la par tengo una gran afición por las tecnologías y su
-              funcionalidad en el mundo actual por ello estoy estudiando y
-              preparandome para desenvolverme como ingeniera software con
-              amplios conocimientos en ciencia de datos.
+              Soy una persona capaz, proactiva, organizada, me caracterizo por
+              mi capacidad para solucionar problemas. Busco un puesto desafiante
+              donde pueda continuar aprendiendo y dar lo mejor de mí.
+              Actualmente me encuentro capacitándome como Desarrolladora Java
+              Full Stack y me interesa seguir formándome como Desarrolladora.
+              Adicionalmente soy Ingeniera ambiental con 10 años de experiencia
+              en el cumplimiento de leyes, normas ambientales y de seguridad.
             </Typography>
           </CardContent>
           <CardActions className="mx-[40px]">
@@ -58,7 +59,7 @@ export default function page() {
               sx={{ color: "black" }}
               size="small"
               target="_blank"
-              href="https://github.com/anapaulagarfias"
+              href="https://github.com/FernandaGuemez"
               className={opensans.className}
             >
               <GitHubIcon fontSize="large"></GitHubIcon>Github
@@ -67,7 +68,7 @@ export default function page() {
               sx={{ color: "black" }}
               size="small"
               target="_blank"
-              href="https://www.linkedin.com/in/paulagarfias"
+              href="https://www.linkedin.com/in/maria-fernanda-g%C3%BC%C3%A9mez-medina-568140291/"
               className={opensans.className}
             >
               <LinkedInIcon fontSize="large"></LinkedInIcon>LinkedIn
@@ -79,22 +80,22 @@ export default function page() {
             <p className={luckiestguy.className}>Diseños desarrollados</p>
           </div>
           <br />
-          <div className="h-[1000px] md:h-[50rem] mb-[30px]">
+          <div className="h-[900px] w-[450px] md:h-[50rem] mb-[30px]">
             <Carousel slideInterval={10000}>
               <Image
-                className="h-[1000px] md:h-[50rem]"
+                className="h-[900px] md:h-[50rem]"
                 src={carr1}
-                alt="Pagina de inicio"
+                alt="Diseña tu pastel"
               />
               <Image
-                className="h-[750px] w-[450px] md:h-[30rem] md:w-[50rem]"
+                className="h-[900px] md:h-[40rem] md:w-[30rem]"
                 src={carr2}
-                alt="Pagina de contacto"
+                alt="Diseña tu pastel"
               />
               <Image
-                className="h-[750px] w-[450px] md:h-[40rem] md:w-[50rem]"
+                className="h-[900px] w-[450px] md:h-[40rem] md:w-[40rem]"
                 src={carr3}
-                alt="Pagina de about us"
+                alt="Diseña tu pastel"
               />
             </Carousel>
           </div>
