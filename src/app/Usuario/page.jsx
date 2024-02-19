@@ -9,27 +9,20 @@ const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 
 function User() {
   return (
-    <div id="usuario" className="grid  justify-items-center ">
+  <div> 
+    <div id="usuario" className="grid justify-items-center ">
       <div className={luckiestguy.className} id ="titulo">
         TUS DATOS
       </div>
-        <div  className="grid   justify-items-center md:grid-cols-2">
-          <div className="row-span-2 " style={{ marginBottom: 50 }}>
-            <Card id="divrosa" style={{
-            marginLeft: 100,
-            marginRight: 100,
-            marginTop: 10,
-            marginBottom: 10,
-            width: 500,
-            padding: 30,
-            
-          }}
-          className=" sm:h-full">
+        <div  className="grid justify-items-center md:grid-cols-1 xl:grid-cols-2">
+          <div className="row-span-2 max-w-sm" >
+            <Card id="divrosa" 
+          className=" max-w-sm w-[500px] mt-[50px] ml-[0px] mr-[10px] mb-[20px]  md:w-[900px] xl: w-[800px] mr-[50px] mt-[10px] mb-[50px]">
               <form  className="flex flex-col gap-4">
                 <Card  className="max-w-md">
                   <div className="max-w-md">
                       <div className="mb-2 block">
-                        <Label htmlFor="username" value="Datos de contacto" />
+                        Datos de contacto
                       </div>
                       <TextInput id="username_contact" placeholder="Bonnie Green" addon="Nombre:" required />
                       <TextInput id="telefono" placeholder="(###) #######" addon="Número de teléfono:" required />
@@ -40,7 +33,7 @@ function User() {
                 <Card  className="max-w-md">
                   <div className="max-w-md">
                     <div className="mb-2 block">
-                      <Label htmlFor="username_adress" value="Información de envío" />
+                      Información de envío
                     </div>
                     <p>Dirección predeterminada</p>
                     <TextInput id="adress" placeholder="Ejemplo" addon="Dirección:" required />
@@ -50,30 +43,22 @@ function User() {
                     <TextInput id="adress" placeholder="Ejemplo" addon="Dirección:" required />
                     <TextInput id="postal_code" placeholder="(###) #######" addon="Código postal:" required />
                     <br />
-                    <Button type="tarjeta">HACERLA MI DIRECCIÓN PREDETERMINADA</Button>
+                    <Button className="bg-button_primary" type="tarjeta">HACERLA MI DIRECCIÓN PREDETERMINADA</Button>
                     <br />
-                    <Button type="tarjeta">AGREGAR OTRA DIRECCIÓN DE ENVÍO</Button>
+                    <Button className="bg-button_primary" type="tarjeta">AGREGAR OTRA DIRECCIÓN DE ENVÍO</Button>
                   </div>
                 </Card>
               </form>
             </Card>
           </div>
-          <div className="row-span-2 " style={{ marginBottom: 50 }}>
-            <Card id="divrosa" style={{
-            marginLeft: 100,
-            marginRight: 100,
-            marginTop: 10,
-            marginBottom: 80,
-            width: 500,
-            padding: 30,
-            
-          }}
-          className="">
+          <div className="row-span-2 mb-[50px]">
+            <Card id="divrosa" 
+          className=" max-w-sm w-[500px] mt-[10px] mb-[50px] ml-[10px] mr-[10px] md:w-[500px] xl: w-[800px] mb-[50px]">
               <form className="flex flex-col gap-4">
                 <Card className="max-w-md">
                   <div className="max-w-md">
                     <div  className="mb-2 block">
-                      <Label htmlFor="pay_options" value="Opciones de pago" />
+                      Opciones de pago
                     </div>
                     <p>Opción de pago predeterminada</p>
                     <TextInput id="pay_card" placeholder="...#### (VISA)" addon="Tarjeta de débito que termina en:" required />
@@ -81,9 +66,9 @@ function User() {
                     <p>Opción de pago adicional</p>
                     <TextInput id="pay_card" placeholder="...#### (MASTERCARD)" addon="Tarjeta de crédito que termina en:" required />
                     <br />
-                    <Button type="tarjeta">HACERLA MI OPCIÓN DE PAGO PREDETERMINADA</Button>
+                    <Button className="bg-button_primary" type="tarjeta">HACERLA MI OPCIÓN DE PAGO PREDETERMINADA</Button>
                     <br />
-                    <Button type="tarjeta">AGREGAR OTRA TARJETA</Button>
+                    <Button className="bg-button_primary" type="tarjeta">AGREGAR OTRA TARJETA</Button>
                   </div>
                 </Card>
               </form>
@@ -91,6 +76,91 @@ function User() {
           </div>  
         </div>
     </div>
+
+    
+     <div>
+      <div className="h-[0px]  md:h-[0px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 5 1440 200"
+            className="absolute"
+          >
+            <path
+              fill="#FFDDCC"
+              fill-opacity=".8"
+              d="M0,96L21.8,112C43.6,128,87,160,131,149.3C174.5,139,218,85,262,64C305.5,43,349,53,393,69.3C436.4,85,480,107,524,122.7C567.3,139,611,149,655,144C698.2,139,742,117,785,101.3C829.1,85,873,75,916,64C960,53,1004,43,1047,58.7C1090.9,75,1135,117,1178,138.7C1221.8,160,1265,160,1309,154.7C1352.7,149,1396,139,1418,133.3L1440,128L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 80 1440 320"
+            className="absolute"
+          >
+            <path
+              fill="#FFDDCC"
+              fill-opacity=".7"
+              d="M0,128L21.8,154.7C43.6,181,87,235,131,266.7C174.5,299,218,309,262,293.3C305.5,277,349,235,393,208C436.4,181,480,171,524,149.3C567.3,128,611,96,655,117.3C698.2,139,742,213,785,240C829.1,267,873,245,916,218.7C960,192,1004,160,1047,160C1090.9,160,1135,192,1178,192C1221.8,192,1265,160,1309,170.7C1352.7,181,1396,235,1418,261.3L1440,288L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"
+            ></path>
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 50 1440 320"
+            className="absolute"
+          >
+            <path
+              fill="#FFDDCC"
+              fill-opacity=".5"
+              d="M0,160L30,176C60,192,120,224,180,208C240,192,300,128,360,133.3C420,139,480,213,540,224C600,235,660,181,720,176C780,171,840,213,900,208C960,203,1020,149,1080,133.3C1140,117,1200,139,1260,160C1320,181,1380,203,1410,213.3L1440,224L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+            ></path>
+          </svg>
+        </div>
+        <div className="h-[400px] grid justify-items-center" id="usuario2">
+        <div></div>
+        <div className={luckiestguy.className} id ="titulo">
+          TU HISTORIAL DE COMPRAS
+        </div>
+        </div>
+
+        <div className="h-[12px]  md:h-[25px] xl:h-[30px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 5 1440 200"
+            className="absolute"
+          >
+            <path
+              fill="#CAEDFF"
+              fill-opacity=".8"
+              d="M0,96L21.8,112C43.6,128,87,160,131,149.3C174.5,139,218,85,262,64C305.5,43,349,53,393,69.3C436.4,85,480,107,524,122.7C567.3,139,611,149,655,144C698.2,139,742,117,785,101.3C829.1,85,873,75,916,64C960,53,1004,43,1047,58.7C1090.9,75,1135,117,1178,138.7C1221.8,160,1265,160,1309,154.7C1352.7,149,1396,139,1418,133.3L1440,128L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 80 1440 320"
+            className="absolute"
+          >
+            <path
+              fill="#CAEDFF"
+              fill-opacity=".7"
+              d="M0,128L21.8,154.7C43.6,181,87,235,131,266.7C174.5,299,218,309,262,293.3C305.5,277,349,235,393,208C436.4,181,480,171,524,149.3C567.3,128,611,96,655,117.3C698.2,139,742,213,785,240C829.1,267,873,245,916,218.7C960,192,1004,160,1047,160C1090.9,160,1135,192,1178,192C1221.8,192,1265,160,1309,170.7C1352.7,181,1396,235,1418,261.3L1440,288L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"
+            ></path>
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 50 1440 320"
+            className="absolute"
+          >
+            <path
+              fill="#CAEDFF"
+              fill-opacity=".5"
+              d="M0,160L30,176C60,192,120,224,180,208C240,192,300,128,360,133.3C420,139,480,213,540,224C600,235,660,181,720,176C780,171,840,213,900,208C960,203,1020,149,1080,133.3C1140,117,1200,139,1260,160C1320,181,1380,203,1410,213.3L1440,224L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+            ></path>
+          </svg>
+        </div>
+        <div className="h-[70px] md:h-[150px] xl:h-[205px]" id="divrosa"></div>
+      </div> 
+  </div> 
   )
 }
 
