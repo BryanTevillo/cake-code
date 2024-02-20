@@ -4,18 +4,20 @@ import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const opensans = Open_Sans({ subsets: ["latin"] });
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 import { Card, Button } from "flowbite-react";
-import Link from "next/link";
+import React from "react";
+
 import Image from "next/image";
-
 import pinkCake from "../../../../../public/customC/pinkCake.webp";
-import chico from "../../../../../public/customC/chico.png";
-import mediano from "../../../../../public/customC/mediano.png";
-import grande from "../../../../../public/customC/grande.png";
-import ProgressMobileStepper from "./Progreso";
-
+import Topp1 from "../../../../../public/customC/flores1.webp";
+import Topp2 from "../../../../../public/customC/dripObs.webp";
+import Topp3 from "../../../../../public/customC/flores2.webp";
+import Topp4 from "../../../../../public/customC/perlas.webp";
+import Topp5 from "../../../../../public/customC/dripBlanco.webp";
+import Topp6 from "../../../../../public/customC/galletasChoco.webp";
+import ProgressToppings2 from "./Progreso";
 import "./styles.css";
 
-export default function tamaño() {
+export default function toppings2() {
   return (
     <>
       <main>
@@ -43,7 +45,7 @@ export default function tamaño() {
           </div>
           <div>
             <Image
-              className=" w-full  h-auto mt-10 md:mt-0 xl:w-[500px] xl:mt-16  "
+              className=" w-full  h-auto -mb-20 mt-10 md:-mb-30 md:mt-0 xl:w-[500px] xl:mt-16  "
               src={pinkCake}
             ></Image>
           </div>
@@ -91,10 +93,9 @@ export default function tamaño() {
                 " text-3xl text-center text-gray-700 pt-12 md:text-6xl md:pt-24 xl:pt-28",
             ]}
           >
-            1. Tamaño
+            5. Toppings (2)
           </p>
         </div>
-
         <div className="relative md:h-10 xl:h-16 -ml-5" id="sub1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -131,94 +132,148 @@ export default function tamaño() {
             ></path>
           </svg>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:py-10 md:px-10 bg-[#eef6fb] justify-items-center gap-4 ">
           <div className="mt-20 ">
-            <Card className="w-auto md:w-[400px] xl:w-[350px] border-none rounded-none ">
+            <Card className="w-[350px] md:w-[400px] md:h-[480px] xl:w-[350px] border-none rounded-none ">
               <Image
-                src={chico}
+                src={Topp1}
                 className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
               ></Image>
 
               <p
                 className={[
                   opensans.className +
-                    " text-xl md:text-3xl xl:text-2xl font-normal md:text-center text-gray-700 dark:text-gray-400",
+                    " text-2xl text-center md:text-3xl xl:text-2xl font-normal md:text-center text-gray-700 dark:text-gray-400",
                 ]}
               >
-                Chico - 15 cm (12-15 Rebanadas)
-              </p>
-              <p className="font-bold text-2xl md:text-3xl xl:text-2xl text-center">
-                {" "}
-                $1380.00
+                Flores 1
               </p>
 
               <div className="flex justify-center">
-                <Link href="../Categorias/CreaTuPastel/CustomCake">
-                  <Button className="bg-button_primary" type="signin">
-                    SELECCIONAR
-                  </Button>
-                </Link>
+                <Button className="bg-button_primary" type="signin">
+                  SELECCIONAR
+                </Button>
               </div>
             </Card>
           </div>
           <div className="mt-10 md:mt-20">
-            <Card className=" w-auto md:w-[400px] xl:w-[350px] border-none rounded-none  ">
+            <Card className=" w-[350px] md:w-[400px] md:h-[480px] xl:w-[350px] border-none rounded-none  ">
               <Image
-                src={mediano}
+                src={Topp2}
                 className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
               ></Image>
 
               <p
                 className={[
                   opensans.className,
-                  " text-xl md:text-3xl md:text-center xl:text-2xl font-normal text-gray-700 dark:text-gray-400",
+                  " text-2xl text-center md:text-3xl md:text-center xl:text-2xl font-normal text-gray-700 dark:text-gray-400",
                 ]}
               >
-                Mediano - 18 cm (20 Rebanadas)
-              </p>
-              <p className="font-bold text-2xl md:text-3xl xl:text-2xl text-center">
-                $2762.00
+                Drip de chocolate
               </p>
 
               <div className="flex justify-center">
-                <Link href="../Categorias/CreaTuPastel/CustomCake">
-                  <Button className="bg-button_primary" type="signin">
-                    SELECCIONAR
-                  </Button>
-                </Link>
+                <Button className="bg-button_primary" type="signin">
+                  SELECCIONAR
+                </Button>
               </div>
             </Card>
           </div>
-          <div className="mb-10 mt-10 md:mb-0 md:mt-20 md:col-span-2 xl:col-span-1">
-            <Card className=" w-auto md:w-[400px] xl:w-[350px] border-none rounded-none  ">
+          <div className=" mt-10  md:mt-20  ">
+            <Card className=" w-[350px] md:w-[400px] md:h-[480px] xl:w-[350px] border-none rounded-none  ">
               <Image
-                src={grande}
+                src={Topp3}
                 className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
               ></Image>
 
               <p
                 className={[
                   opensans.className,
-                  " text-xl md:text-3xl md:text-center xl:text-2xl font-normal text-gray-700 dark:text-gray-400",
+                  " text-2xl text-center md:text-3xl md:text-center xl:text-2xl font-normal text-gray-700 dark:text-gray-400",
                 ]}
               >
-                Grande - 20 cm (25-30 Rebanadas)
-              </p>
-              <p className="font-bold text-2xl text-center md:text-3xl xl:text-2xl">
-                $3200.00
+                Flores 2
               </p>
 
               <div className="flex justify-center">
-                <Link href="../Categorias/CreaTuPastel/CustomCake">
-                  <Button className="bg-button_primary" type="signin">
-                    SELECCIONAR
-                  </Button>
-                </Link>
+                <Button className="bg-button_primary" type="signin">
+                  SELECCIONAR
+                </Button>
+              </div>
+            </Card>
+          </div>
+          <div className=" mt-10  md:mt-20 ">
+            <Card className=" w-[350px]  md:w-[400px] md:h-[480px] xl:w-[350px] border-none rounded-none  ">
+              <Image
+                src={Topp4}
+                className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
+              ></Image>
+
+              <p
+                className={[
+                  opensans.className,
+                  " text-2xl text-center md:text-3xl md:text-center xl:text-2xl font-normal text-gray-700 dark:text-gray-400",
+                ]}
+              >
+                Perlas de colores
+              </p>
+
+              <div className="flex justify-center">
+                <Button className="bg-button_primary" type="signin">
+                  SELECCIONAR
+                </Button>
+              </div>
+            </Card>
+          </div>
+          <div className=" mt-10  md:mt-20 ">
+            <Card className=" w-[350px]  md:w-[400px] md:h-[480px] xl:w-[350px] border-none rounded-none  ">
+              <Image
+                src={Topp5}
+                className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
+              ></Image>
+
+              <p
+                className={[
+                  opensans.className,
+                  " text-2xl text-center md:text-3xl md:text-center xl:text-2xl font-normal text-gray-700 dark:text-gray-400",
+                ]}
+              >
+                Drip de chocolate blanco
+              </p>
+
+              <div className="flex justify-center">
+                <Button className="bg-button_primary" type="signin">
+                  SELECCIONAR
+                </Button>
+              </div>
+            </Card>
+          </div>
+          <div className="mb-10 mt-10  md:mt-20 ">
+            <Card className=" w-[350px]  md:w-[400px] md:h-[480px] xl:w-[350px] border-none rounded-none  ">
+              <Image
+                src={Topp6}
+                className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
+              ></Image>
+
+              <p
+                className={[
+                  opensans.className,
+                  " text-2xl text-center md:text-3xl md:text-center xl:text-2xl font-normal text-gray-700 dark:text-gray-400",
+                ]}
+              >
+                Galletas y macarrones de chocolate
+              </p>
+
+              <div className="flex justify-center">
+                <Button className="bg-button_primary" type="signin">
+                  SELECCIONAR
+                </Button>
               </div>
             </Card>
           </div>
         </div>
-        <ProgressMobileStepper></ProgressMobileStepper>
+        <ProgressToppings2></ProgressToppings2>
       </main>
     </>
   );

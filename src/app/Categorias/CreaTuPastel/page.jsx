@@ -39,7 +39,7 @@ export default function CreaTuPastel() {
               </div>
 
               <div className="flex justify-center">
-                <Link href="../Categorias/CreaTuPastel/CustomCake">
+                <Link href="../Categorias/CreaTuPastel/Tamano">
                   <button
                     type="submit"
                     className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg  px-5 py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -171,7 +171,7 @@ export default function CreaTuPastel() {
         <div
           className="grid grid-cols-2    "
           style={{
-            paddingTop: 95,
+            paddingTop: 120,
             paddingLeft: 0,
             paddingRight: 0,
             paddingBottom: 0,
@@ -181,7 +181,7 @@ export default function CreaTuPastel() {
           <div className="mt-8  mb-3 text-center h-20 ml-5 w-2/4 md:w-2/5 md:h-44 md:mt-10 md:ml-20 md:text-3xl xl:text-3xl xl:h-32 xl:w-1/3 bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.webp')]">
             <h2 className={luckiestguy.className}>Elige los toppings</h2>
           </div>
-          <div className=" mt-8 ml-4 text-center h-20 ml-5 w-2/4 md:w-2/5 md:h-44 md:mt-10 md:ml-20 md:text-3xl xl:text-3xl xl:h-32 xl:w-1/3   bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.webp')]">
+          <div className=" mt-8 ml-4 text-center tracking-wide h-20 ml-5 w-2/4 md:w-2/5 md:h-44 md:mt-10 md:ml-20 md:text-3xl xl:text-3xl xl:h-32 xl:w-1/3   bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.webp')]">
             <h2 className={luckiestguy.className}>Elige el sabor</h2>
           </div>
 
@@ -280,7 +280,7 @@ export default function CreaTuPastel() {
               </p>
             </div>
             <div className="flex justify-center mt-10 md:mt-16">
-              <Link href="../Categorias/CreaTuPastel/CustomCake">
+              <Link href="../Categorias/CreaTuPastel/Tamano">
                 <button
                   type="submit"
                   className="md:w-[300px] md:h-[70px] md:text-4xl  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"

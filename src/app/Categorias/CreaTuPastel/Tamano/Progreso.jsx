@@ -4,8 +4,9 @@ import MobileStepper from "@mui/material/MobileStepper";
 import Button from "@mui/material/Button";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import Link from "next/link";
 
-export default function ProgressMobileStepper() {
+export default function ProgressTamano() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -25,14 +26,16 @@ export default function ProgressMobileStepper() {
       activeStep={activeStep}
       sx={{ maxWidth: 3000, flexGrow: 1 }}
       nextButton={
-        <Button size="large" onClick={handleNext} disabled={activeStep === 7}>
-          Next
-          {theme.direction === "rtl" ? (
-            <KeyboardArrowLeft />
-          ) : (
-            <KeyboardArrowRight />
-          )}
-        </Button>
+        <Link href={"/Categorias/CreaTuPastel/Sabor"}>
+          <Button size="large" onClick={handleNext} disabled={activeStep === 7}>
+            Sabor
+            {theme.direction === "rtl" ? (
+              <KeyboardArrowLeft />
+            ) : (
+              <KeyboardArrowRight />
+            )}
+          </Button>
+        </Link>
       }
       backButton={
         <Button size="large" onClick={handleBack} disabled={activeStep === 0}>
@@ -41,7 +44,6 @@ export default function ProgressMobileStepper() {
           ) : (
             <KeyboardArrowLeft />
           )}
-          Back
         </Button>
       }
     />
