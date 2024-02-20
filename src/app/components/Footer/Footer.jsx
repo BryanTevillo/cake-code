@@ -7,7 +7,6 @@ import { Modal } from "flowbite-react";
 
 import ModalPrivacy from "../Privacy/ModalPrivacy";
 
-
 function Footer() {
   const [showModal, setShowModal] = useState(false);
 
@@ -22,7 +21,7 @@ function Footer() {
 
             <ul className="mb-0 list-none text-center text-zinc-500 text-lg">
               <li>
-                <a href="#!" className=" text-lg">
+                <a href="/about" className=" text-lg">
                   Nosotros
                 </a>
               </li>
@@ -30,7 +29,7 @@ function Footer() {
                 <a href="#!">Categorias</a>
               </li>
               <li>
-                <a href="#!">Contactanos</a>
+                <a href="/contact">Contactanos</a>
               </li>
             </ul>
           </div>
@@ -43,13 +42,15 @@ function Footer() {
             <ul className="mb-0 list-none text-center text-zinc-500 text-lg">
               <li>
                 <InstagramIcon style={{ color: "gray" }}></InstagramIcon>
-                <a href="#!">Instagram</a>
+                <a href="https://www.instagram.com/cakecode_/">Instagram</a>
               </li>
               <li>
                 <FacebookOutlinedIcon
                   style={{ color: "gray" }}
                 ></FacebookOutlinedIcon>
-                <a href="#!">Facebook</a>
+                <a href="https://www.facebook.com/profile.php?id=61556768994870">
+                  Facebook
+                </a>
               </li>
               <br />
             </ul>
@@ -62,8 +63,8 @@ function Footer() {
 
             <ul className="mb-0 list-none text-center text-zinc-500  text-lg">
               <li>
-
-                <a href="#"
+                <a
+                  href="#"
                   onClick={() => {
                     setShowModal(true);
                   }}
@@ -73,7 +74,6 @@ function Footer() {
                 <Modal show={showModal} onClose={() => setShowModal(false)}>
                   <ModalPrivacy></ModalPrivacy>
                 </Modal>
-
               </li>
               <li>
                 <a href="#!">Preguntas Frecuentes</a>
@@ -88,7 +88,7 @@ function Footer() {
         © 2023 Copyright:
         <a
           className="text-neutral-800 dark:text-neutral-400"
-          href="https://tw-elements.com/"
+          href="https://github.com/BryanTevillo/cake-code.git"
         >
           Cake-Code
         </a>
