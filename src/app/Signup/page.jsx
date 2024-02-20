@@ -99,9 +99,9 @@ export default function Signup() {
             </div>
             <TextInput id="postal1" type="" placeholder="#####" required />
           </div>
-
-          <Button className="bg-button_primary" type="direccion">AGREGAR OTRA DIRECCIÓN DE ENVÍO</Button>
-
+          <div className="flex justify-center">
+          <Button className="bg-button_primary text-lg  md:w-[200px] md:h-[40px] md:text-4xl  text-center" type="direccion">Agregar otra dirección</Button>
+          </div>
           <div>
             <Label
               htmlFor="tarjeta1"
@@ -151,9 +151,9 @@ export default function Signup() {
               <TextInput id="CVCtarjeta1" type="" placeholder="***" required />
             </div>
           </div>
-
-          <Button className="bg-button_primary" type="tarjeta">AGREGAR OTRA TARJETA</Button>
-
+          <div className="flex justify-center">
+          <Button className="bg-button_primary text-lg  px-2 py-1  text-center" type="tarjeta">Agregar otra tarjeta</Button>
+          </div>
           <div className="flex items-center gap-2">
             <Checkbox id="privacyCheck" />
             <Label htmlFor="privacy">
@@ -169,7 +169,9 @@ export default function Signup() {
                 </Modal>
             </Label>
           </div>
-          <Button className="bg-button_primary" type="tarjeta">CREAR CUENTA</Button>
+          <div className="flex justify-center">
+          <Button href="/Usuario" className="bg-button_primary text-lg  px-2 py-1  text-center" type="tarjeta">Crear cuenta</Button>
+        </div>
         </form>
       </Card>
     </div>
