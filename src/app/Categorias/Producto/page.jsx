@@ -31,10 +31,10 @@ export default function Producto() {
             indicatorColor="secondary"
             aria-label="secondary tabs example"
           >
-            <Tab value="one" label="Inicio >" />
-            <Tab value="two" label="Categorias >" />
-            <Tab value="three" label="Pasteles >" />
-            <Tab value="four" label="Producto" />
+            <Tab className="px-0 md:px-3" value="one" label="Inicio >" />
+            <Tab className="px-0 md:px-3" value="two" label="Categorias >" />
+            <Tab className="px-0 md:px-3" value="three" label="Pasteles >" />
+            <Tab className="px-0 md:px-3" value="four" label="Producto" />
           </Tabs>
         </Box>
       </div>
