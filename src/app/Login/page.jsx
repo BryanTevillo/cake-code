@@ -33,7 +33,9 @@ export default function Login() {
         <div>
             <p>¿Olvidaste tu contraseña?</p>
         </div>
-        <Button className="bg-button_primary" type="signin">INICIAR SESIÓN</Button>
+        <div className="flex justify-center">
+        <Button href="/Usuario" className="bg-button_primary text-lg  px-2 py-1  text-center" type="signin">Iniciar sesión</Button>
+      </div>
       </form>
     </Card>
 
@@ -47,8 +49,9 @@ export default function Login() {
           <div>
             <p> Al crear una cuenta podrás registrar una opción de pago y una dirección de envio, lo que te facilitará futuras compras en nuestro sitio.</p>
           </div>
-
-        <Button className="bg-button_primary" type="signup">CREAR CUENTA</Button>
+        <div className="flex justify-center">
+        <Button href="/Signup" className="bg-button_primary text-lg  px-2 py-1  text-center" type="signup">Crear cuenta</Button>
+        </div>
       </form>
     </Card>
     </div>
