@@ -3,11 +3,12 @@
 import { Button, Card, Checkbox, Label, TextInput } from 'flowbite-react';
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 import "./style.css";
+import Divider from '@mui/material/Divider';
 import Image from "next/image";
-import Pastel1 from "../../../public/pastel-oreo.jpg";
-import Pastel2 from "../../../public/pastel-chocolate.jpg";
-import Pastel3 from "../../../public/pastelbaby.jpg";
-import Pastel4 from "../../../public/Pastelcerezas.jpg";
+import Pastel1 from "../../../public/pastel-oreo.webp";
+import Pastel2 from "../../../public/pastel-chocolate.webp";
+import Pastel3 from "../../../public/pastelbaby.webp";
+import Pastel4 from "../../../public/Pastelcerezas.webp";
 
 const opensans = Open_Sans({ subsets: ["latin"] });
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
@@ -20,14 +21,15 @@ function User() {
         TUS DATOS
       </div>
         <div  className="grid justify-items-center md:grid-cols-1 xl:grid-cols-2">
-          <div className="row-span-2 max-w-sm" >
+          <div className="row-span-2 max-w-sm xl:mr-[100px]" >
             <Card id="" 
           className=" max-w-sm w-[500px] mt-[50px] ml-[0px] mr-[10px] mb-[20px]  md:w-[900px] xl: w-[800px] mr-[50px] mt-[10px] mb-[50px]">
-              <form  className="flex flex-col gap-4">
-                <Card  className="max-w-md">
-                  <div className="max-w-md">
-                      <div className="mb-2 block">
+              <form  className="flex flex-col ">
+                <Card  className="max-w-md ">
+                  <div className="max-w-md space-y-5">
+                      <div className="mb-2 block font-bold">
                         Datos de contacto
+                        <Divider />
                       </div>
                       <TextInput id="username_contact" placeholder="Bonnie Green" addon="Nombre:" required />
                       <TextInput id="telefono" placeholder="(###) #######" addon="Número de teléfono:" required />
@@ -36,44 +38,60 @@ function User() {
                 </Card>
                 <br />
                 <Card  className="max-w-md">
-                  <div className="max-w-md">
-                    <div className="mb-2 block">
+                  <div className="max-w-md space-y-5">
+                    <div className="mb-2 block font-bold">
                       Información de envío
+                      <Divider />
                     </div>
-                    <p>Dirección predeterminada</p>
+                    <div className="font-semibold"p>Dirección predeterminada</div>
+                    <Divider />
                     <TextInput id="adress" placeholder="Ejemplo" addon="Dirección:" required />
                     <TextInput id="postal_code" placeholder="(###) #######" addon="Código postal:" required />
                     <br />
-                    <p>Dirección adicional</p>
+                    <div className="font-semibold">Dirección adicional</div>
+                    <Divider />
                     <TextInput id="adress" placeholder="Ejemplo" addon="Dirección:" required />
                     <TextInput id="postal_code" placeholder="(###) #######" addon="Código postal:" required />
                     <br />
-                    <Button className="bg-button_primary" type="tarjeta">HACERLA MI DIRECCIÓN PREDETERMINADA</Button>
+                    <div className="flex justify-center">
+                    <Button className="bg-button_primary text-lg  px-2 py-1 " type="tarjeta">Actualizar dirección</Button>
+                    </div>
                     <br />
-                    <Button className="bg-button_primary" type="tarjeta">AGREGAR OTRA DIRECCIÓN DE ENVÍO</Button>
+                    <div className="flex justify-center">
+                    <Button className="bg-button_primary text-lg  px-2 py-1" type="tarjeta">Agregar nueva dirección</Button>
+                  </div>
                   </div>
                 </Card>
               </form>
             </Card>
           </div>
-          <div className="row-span-2 mb-[50px]">
+          <div className="row-span-2 mb-[50px] xl:ml-[100px]">
             <Card id="" 
           className=" max-w-sm w-[500px] mt-[10px] mb-[50px] ml-[10px] mr-[10px] md:w-[500px] xl: w-[800px] mb-[50px]">
               <form className="flex flex-col gap-4">
                 <Card className="max-w-md">
                   <div className="max-w-md">
-                    <div  className="mb-2 block">
+                    <div  className="mb-2 block font-bold">
                       Opciones de pago
+                      <Divider />
+                      <br />
                     </div>
-                    <p>Opción de pago predeterminada</p>
+                    <div className="font-semibold" >Opción de pago predeterminada</div>
+                    <Divider />
+                    <br />
                     <TextInput id="pay_card" placeholder="...#### (VISA)" addon="Tarjeta de débito que termina en:" required />
                     <br />
-                    <p>Opción de pago adicional</p>
-                    <TextInput id="pay_card" placeholder="...#### (MASTERCARD)" addon="Tarjeta de crédito que termina en:" required />
+                    <div className="font-semibold">Opción de pago adicional</div>
                     <br />
-                    <Button className="bg-button_primary" type="tarjeta">HACERLA MI OPCIÓN DE PAGO PREDETERMINADA</Button>
+                    <TextInput id="pay_card" placeholder="...#### (VISA)" addon="Tarjeta de crédito que termina en:" required />
                     <br />
-                    <Button className="bg-button_primary" type="tarjeta">AGREGAR OTRA TARJETA</Button>
+                    <div className="flex justify-center">
+                    <Button className="bg-button_primary text-lg  px-2 py-1" type="tarjeta">Actualizar opción de pago</Button>
+                    </div>
+                    <br />
+                    <div className="flex justify-center">
+                    <Button className="bg-button_primary text-lg  px-2 py-1  text-center" type="tarjeta">Agregar nueva tarjeta</Button>
+                  </div>
                   </div>
                 </Card>
               </form>
@@ -84,7 +102,7 @@ function User() {
 
     
      <div>
-      <div className="h-[0px]  md:h-[0px]">
+      <div className="h-[23px]  md:h-[50px] xl:h-[70px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 5 1440 200"
@@ -120,9 +138,9 @@ function User() {
             ></path>
           </svg>
         </div>
-        <div className="min-h-full md:h-[1700px] grid justify-items-center" id="usuario2">
-        <div></div>
-        <div className={luckiestguy.className} id ="titulo">
+        <div className="min-h-full sm:h-[50px] md:h-[1700px] grid justify-items-center" id="usuario2">
+        
+        <div className={luckiestguy.className + " md:mt-[50px] xl:mt-[100px]"} id ="titulo">
           TU HISTORIAL DE COMPRAS
         </div>
         <div className="grid justify-items-center md:grid-cols-2 xl:grid-cols-3">
@@ -140,12 +158,8 @@ function User() {
                 $450.00
               </p>
               <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Comprar de nuevo
-                </button>
+               
+                <Button className="bg-button_primary text-lg  px-3 py-2  text-center" type="tarjeta">Comprar de nuevo</Button>
               </div>
             </Card>
           </div>
@@ -163,12 +177,7 @@ function User() {
                 $350.00
               </p>
               <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Comprar de nuevo
-                </button>
+              <Button className="bg-button_primary text-lg  px-3 py-2  text-center" type="tarjeta">Comprar de nuevo</Button>
               </div>
             </Card>
           </div>
@@ -186,12 +195,7 @@ function User() {
                 $250.00
               </p>
               <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Comprar de nuevo
-                </button>
+              <Button className="bg-button_primary text-lg  px-3 py-2  text-center" type="tarjeta">Comprar de nuevo</Button>
               </div>
             </Card>
           </div>
@@ -209,12 +213,7 @@ function User() {
                 $450.00
               </p>
               <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Comprar de nuevo
-                </button>
+              <Button className="bg-button_primary text-lg  px-3 py-2  text-center" type="tarjeta">Comprar de nuevo</Button>
               </div>
             </Card>
           </div>
