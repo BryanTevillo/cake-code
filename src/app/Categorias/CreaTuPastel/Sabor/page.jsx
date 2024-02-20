@@ -3,7 +3,7 @@
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const opensans = Open_Sans({ subsets: ["latin"] });
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
-import { Card, Button } from "flowbite-react";
+import { Card } from "flowbite-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,7 +11,6 @@ import pinkCake from "../../../../../public/customC/pinkCake.webp";
 import chico from "../../../../../public/customC/chico.png";
 import mediano from "../../../../../public/customC/mediano.png";
 import grande from "../../../../../public/customC/grande.png";
-import ProgressMobileStepper from "./Progreso";
 
 import "./styles.css";
 
@@ -28,7 +27,7 @@ export default function tamaño() {
             <h1
               className={[
                 luckiestguy.className +
-                  " text-5xl tracking-wide text-center md:text-6xl xl:text-7xl md:pt-16 xl:pt-20",
+                  " text-5xl tracking-wide text-center md:text-6xl xl:text-7xl xl:pt-20",
               ]}
             >
               Vamos a crear tu pastel!
@@ -91,7 +90,7 @@ export default function tamaño() {
                 " text-3xl text-center text-gray-700 pt-12 md:text-6xl md:pt-24 xl:pt-28",
             ]}
           >
-            1. Tamaño
+            2. Sabor
           </p>
         </div>
 
@@ -131,94 +130,6 @@ export default function tamaño() {
             ></path>
           </svg>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:py-10 md:px-10 bg-[#eef6fb] justify-items-center gap-4 ">
-          <div className="mt-20 ">
-            <Card className="w-auto md:w-[400px] xl:w-[350px] border-none rounded-none ">
-              <Image
-                src={chico}
-                className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
-              ></Image>
-
-              <p
-                className={[
-                  opensans.className +
-                    " text-xl md:text-3xl xl:text-2xl font-normal md:text-center text-gray-700 dark:text-gray-400",
-                ]}
-              >
-                Chico - 15 cm (12-15 Rebanadas)
-              </p>
-              <p className="font-bold text-2xl md:text-3xl xl:text-2xl text-center">
-                {" "}
-                $1380.00
-              </p>
-
-              <div className="flex justify-center">
-                <Link href="../Categorias/CreaTuPastel/CustomCake">
-                  <Button className="bg-button_primary" type="signin">
-                    SELECCIONAR
-                  </Button>
-                </Link>
-              </div>
-            </Card>
-          </div>
-          <div className="mt-10 md:mt-20">
-            <Card className=" w-auto md:w-[400px] xl:w-[350px] border-none rounded-none  ">
-              <Image
-                src={mediano}
-                className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
-              ></Image>
-
-              <p
-                className={[
-                  opensans.className,
-                  " text-xl md:text-3xl md:text-center xl:text-2xl font-normal text-gray-700 dark:text-gray-400",
-                ]}
-              >
-                Mediano - 18 cm (20 Rebanadas)
-              </p>
-              <p className="font-bold text-2xl md:text-3xl xl:text-2xl text-center">
-                $2762.00
-              </p>
-
-              <div className="flex justify-center">
-                <Link href="../Categorias/CreaTuPastel/CustomCake">
-                  <Button className="bg-button_primary" type="signin">
-                    SELECCIONAR
-                  </Button>
-                </Link>
-              </div>
-            </Card>
-          </div>
-          <div className="mb-10 mt-10 md:mb-0 md:mt-20 md:col-span-2 xl:col-span-1">
-            <Card className=" w-auto md:w-[400px] xl:w-[350px] border-none rounded-none  ">
-              <Image
-                src={grande}
-                className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
-              ></Image>
-
-              <p
-                className={[
-                  opensans.className,
-                  " text-xl md:text-3xl md:text-center xl:text-2xl font-normal text-gray-700 dark:text-gray-400",
-                ]}
-              >
-                Grande - 20 cm (25-30 Rebanadas)
-              </p>
-              <p className="font-bold text-2xl text-center md:text-3xl xl:text-2xl">
-                $3200.00
-              </p>
-
-              <div className="flex justify-center">
-                <Link href="../Categorias/CreaTuPastel/CustomCake">
-                  <Button className="bg-button_primary" type="signin">
-                    SELECCIONAR
-                  </Button>
-                </Link>
-              </div>
-            </Card>
-          </div>
-        </div>
-        <ProgressMobileStepper></ProgressMobileStepper>
       </main>
     </>
   );

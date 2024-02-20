@@ -6,8 +6,8 @@ const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 import { Card } from "flowbite-react";
 import "./styles.css";
 import Image from "next/image";
-import Cake1 from "../../../../public/customC/pastel-creatupastel.png";
-import Cake2 from "../../../../public/customC/pastel-creatupastel3.png";
+import Cake1 from "../../../../public/customC/pastel-creatupastel.webp";
+import Cake2 from "../../../../public/customC/pastel-creatupastel3.webp";
 import Cake3 from "../../../../public/customC/cake6.webp";
 import Cake4 from "../../../../public/customC/flowerCake.webp";
 import Cake5 from "../../../../public/customC/watercolorFairy.webp";
@@ -62,7 +62,7 @@ export default function CreaTuPastel() {
           </div>
         </div>
 
-        <div className="relative   md:h-10 xl:h-28 -ml-5" id="titulo">
+        <div className="relative   md:h-10 xl:h-16 -ml-5" id="titulo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 5 1440 200"
@@ -132,7 +132,7 @@ export default function CreaTuPastel() {
             </p>
           </div>
         </div>
-        <div className="relative   md:h-10 c -ml-5" id="sub-1">
+        <div className="relative   md:h-10 xl:h-16 -ml-5" id="sub1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 5 1440 200"
@@ -178,17 +178,17 @@ export default function CreaTuPastel() {
           }}
           id="subtitulo"
         >
-          <div className="mt-8  mb-3 text-center h-20 ml-5 w-2/4 md:w-2/5 md:h-44 md:mt-10 md:ml-20 md:text-3xl xl:text-3xl xl:h-32 xl:w-1/3 bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.png')]">
+          <div className="mt-8  mb-3 text-center h-20 ml-5 w-2/4 md:w-2/5 md:h-44 md:mt-10 md:ml-20 md:text-3xl xl:text-3xl xl:h-32 xl:w-1/3 bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.webp')]">
             <h2 className={luckiestguy.className}>Elige los toppings</h2>
           </div>
-          <div className=" mt-8 ml-4 text-center h-20 ml-5 w-2/4 md:w-2/5 md:h-44 md:mt-10 md:ml-20 md:text-3xl xl:text-3xl xl:h-32 xl:w-1/3   bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.png')]">
+          <div className=" mt-8 ml-4 text-center h-20 ml-5 w-2/4 md:w-2/5 md:h-44 md:mt-10 md:ml-20 md:text-3xl xl:text-3xl xl:h-32 xl:w-1/3   bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.webp')]">
             <h2 className={luckiestguy.className}>Elige el sabor</h2>
           </div>
 
-          <div className=" mb-3 text-center h-20 ml-10 mt-8 w-2/4 md:w-2/5 md:h-44  md:ml-40 md:mt-10 md:text-3xl xl:text-3xl xl:h-32 xl:w-1/3  bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.png')]">
+          <div className=" mb-3 text-center h-20 ml-10 mt-8 w-2/4 md:w-2/5 md:h-44  md:ml-40 md:mt-10 md:text-3xl xl:text-3xl xl:h-32 xl:w-1/3  bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.webp')]">
             <h2 className={luckiestguy.className}>Elige tu relleno</h2>
           </div>
-          <div className=" mb-3 text-center h-20 ml-10 mt-8 w-2/4 md:w-2/5 md:h-44 md:ml-40 md:mt-10 md:text-3xl xl:text-3xl xl:h-32 xl:w-1/3  bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.png')]">
+          <div className=" mb-3 text-center h-20 ml-10 mt-8 w-2/4 md:w-2/5 md:h-44 md:ml-40 md:mt-10 md:text-3xl xl:text-3xl xl:h-32 xl:w-1/3  bg-local bg-cover bg-center bg-[url('/customC/mancha_naranja.webp')]">
             <h2 className={luckiestguy.className}>Elige tu diseño</h2>
           </div>
 
@@ -257,17 +257,17 @@ export default function CreaTuPastel() {
                 opensans.className + "text-md md:text-6xl md:mt-10 xl:text-4xl",
               ]}
             >
-              <h2>1._ Para elegir el sabor, considera lo siguiente</h2>
+              <h2>1.- Para elegir el sabor, considera lo siguiente</h2>
 
               <ul className="list-disc pl-[40px] mt-[25px] xl:pl-[180px] xl:mt-[30px] md:pl-[90px] md:mt-[30px] ">
                 <li>Elige un sabor que pueda gustarles a todos</li>
-                <li>Elige un sabor que te guste, debes amar tu pastel!</li>
+                <li>Elige un sabor que te guste, ¡debes amar tu pastel!</li>
               </ul>
             </div>
             <div className="border-2 border-black mt-5 mb-5 md:mt-16 md:mb-10"></div>
             <div className={opensans.className}>
               <p className="text-md md:text-6xl xl:text-4xl">
-                2._ Considera tener un esquema de colores, eso ayudará a elegir
+                2.- Considera tener un esquema de colores, ¡eso ayudará a elegir
                 la decoración del pastel!
               </p>
               <p className="text-md text-justify ml-5 md:text-6xl md:ml-20 xl:text-4xl"></p>
@@ -275,8 +275,8 @@ export default function CreaTuPastel() {
             <div className="border-2 border-black mt-5 mb-5 md:mt-16 md:mb-16"></div>
             <div className={opensans.className}>
               <p className="text-md md:text-6xl xl:text-4xl">
-                3._ Elige al menos dos toppings! Todos los toppings combinan muy
-                bien, haz que el pastel sea a tu gusto!
+                3.- ¡Elige al menos dos toppings! Todos los toppings combinan
+                muy bien, ¡haz que el pastel sea a tu gusto!
               </p>
             </div>
             <div className="flex justify-center mt-10 md:mt-16">
