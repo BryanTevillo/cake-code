@@ -293,8 +293,3 @@ export default function Home() {
     </main>
   );
 }
-
-//className="w-full"
-//max-w-scree-lx mx-auto
-//sm:h-[40rem]
-// id="bordemasvendido"
