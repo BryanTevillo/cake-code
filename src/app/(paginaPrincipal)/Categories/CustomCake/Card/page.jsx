@@ -124,7 +124,7 @@ export default function Tarjeta() {
           ></path>
         </svg>
       </div>
-      <div id="bg2">
+      <div className="bg-[#eef6fb]">
         <div className=" pt-[100px] pl-[50px] pb-16 md:pt-[145px] md:pl-[80px] xl:pt-[200px] xl:pl-[120px]">
           <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
             <input
@@ -161,10 +161,7 @@ export default function Tarjeta() {
             </label>
           </div>
         </div>
-        <div
-          className="w-[350px] ml-10 mb-20 md:ml-32 md:w-[600px] md:h-[200px] "
-          id="bg2"
-        >
+        <div className="w-[350px] ml-10 pb-20 md:ml-32 md:w-[600px] md:h-[200px] bg-[#eef6fb]">
           <Label htmlFor="comment" className="text-2xl md:text-4xl ">
             Escribe tu mensaje:
             <Textarea

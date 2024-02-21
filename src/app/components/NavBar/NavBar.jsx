@@ -28,14 +28,14 @@ function Header() {
           Inicio
         </Navbar.Link>
         <Navbar.Link
-          href="/about"
+          href="/About"
           className=" md:mr-1 xl:mr-10 text-2xl text-black font-bold"
         >
           Nosotros
         </Navbar.Link>
 
         <Navbar.Link
-          href="/contact"
+          href="/Contact"
           className=" md:mr-1 xl:mr-10 text-2xl text-black font-bold"
         >
           Contacto
@@ -51,27 +51,27 @@ function Header() {
             <Dropdown.Header>
               <Navbar.Link
                 style={{ fontSize: 18 }}
-                href="/Categorias/CreaTuPastel"
+                href="/Categories/CustomCake"
                 className="block text-sm"
               >
                 Crea tu pastel
               </Navbar.Link>
             </Dropdown.Header>
 
-            <Navbar.Link href="/Categorias/Cakes">
+            <Navbar.Link href="/Categories/Cakes">
               <Dropdown.Item style={{ fontSize: 18 }}>Pasteles</Dropdown.Item>
             </Navbar.Link>
-            <Navbar.Link href="/Categorias/Cookies">
+            <Navbar.Link href="/Categories/Cookies">
               <Dropdown.Item style={{ fontSize: 18 }}>Galletas</Dropdown.Item>
             </Navbar.Link>
-            <Navbar.Link href="/Categorias/Cupcakes">
+            <Navbar.Link href="/Categories/Cupcakes">
               <Dropdown.Item style={{ fontSize: 18 }}>Cupcakes</Dropdown.Item>
             </Navbar.Link>
             <Dropdown.Divider />
           </Dropdown>
         </div>
 
-        <Navbar.Link href="/navbars">
+        <Navbar.Link href="/Usuario/Cart">
           <ShoppingCartOutlinedIcon
             className="text-black  ml-0 md:ml-4 xl:ml-20"
             style={{ fontSize: 36 }}
