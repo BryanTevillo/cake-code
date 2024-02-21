@@ -103,5 +103,3 @@ export default function page() {
     </div>
   );
 }
-
-//<div className="grid justify-items-center md:grid-cols-2">
