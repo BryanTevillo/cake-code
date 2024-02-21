@@ -1,5 +1,5 @@
 "use client";
-
+import ItemCountC from "../../../../components/CounterCustomC/CounterC";
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const opensans = Open_Sans({ subsets: ["latin"] });
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
@@ -7,18 +7,40 @@ import { Card, Button } from "flowbite-react";
 import Link from "next/link";
 import Image from "next/image";
 import pinkCake from "../../../../../../public/customC/pinkCake.webp";
-import mediano from "../../../../../../public/customC/mediano.png";
+import mediano from "../../../../../../public/customC/mediano.webp";
+import sabor from "../../../../../../public/customC/sabor.webp";
 import Cake2 from "../../../../../../public/customC/extrachoco.webp";
 import Topp2 from "../../../../../../public/customC/dripObs.webp";
 import Topp6 from "../../../../../../public/customC/galletasChoco.webp";
 import Topp1 from "../../../../../../public/customC/cumple.webp";
 import Carta from "../../../../../../public/customC/carta.webp";
 import ProgressResumen from "./Progreso";
+import { useState } from "react";
+import Alert from "@mui/material/Alert";
 
 import "./styles.css";
 export default function resumen() {
+  const [showAlert, setShowAlert] = useState(false);
+  const [value, setValue] = useState("one");
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const handleChageAlert = (qty) => {
+    setShowAlert(true);
+
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 1200);
+  };
   return (
     <main>
+      {showAlert && (
+        <Alert variant="filled" severity="success">
+          Haz añadido este producto al carrito
+        </Alert>
+      )}
       <div
         className="grid  grid-cols-1 md:grid-cols-2 "
         style={{ paddingBottom: 0 }}
@@ -102,7 +124,7 @@ export default function resumen() {
         >
           <path
             fill="#ffb0cd"
-            fill-opacity=".8"
+            fillOpacity=".8"
             d="M0,96L21.8,112C43.6,128,87,160,131,149.3C174.5,139,218,85,262,64C305.5,43,349,53,393,69.3C436.4,85,480,107,524,122.7C567.3,139,611,149,655,144C698.2,139,742,117,785,101.3C829.1,85,873,75,916,64C960,53,1004,43,1047,58.7C1090.9,75,1135,117,1178,138.7C1221.8,160,1265,160,1309,154.7C1352.7,149,1396,139,1418,133.3L1440,128L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"
           ></path>
         </svg>
@@ -113,7 +135,7 @@ export default function resumen() {
         >
           <path
             fill="#ffb0cd"
-            fill-opacity=".7"
+            fillOpacity=".7"
             d="M0,128L21.8,154.7C43.6,181,87,235,131,266.7C174.5,299,218,309,262,293.3C305.5,277,349,235,393,208C436.4,181,480,171,524,149.3C567.3,128,611,96,655,117.3C698.2,139,742,213,785,240C829.1,267,873,245,916,218.7C960,192,1004,160,1047,160C1090.9,160,1135,192,1178,192C1221.8,192,1265,160,1309,170.7C1352.7,181,1396,235,1418,261.3L1440,288L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"
           ></path>
         </svg>
@@ -125,7 +147,7 @@ export default function resumen() {
         >
           <path
             fill="#ffb0cd"
-            fill-opacity=".5"
+            fillOpacity=".5"
             d="M0,160L30,176C60,192,120,224,180,208C240,192,300,128,360,133.3C420,139,480,213,540,224C600,235,660,181,720,176C780,171,840,213,900,208C960,203,1020,149,1080,133.3C1140,117,1200,139,1260,160C1320,181,1380,203,1410,213.3L1440,224L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
           ></path>
         </svg>
@@ -139,6 +161,7 @@ export default function resumen() {
             <Image
               src={mediano}
               className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
+              alt="tamaño"
             ></Image>
 
             <p
@@ -163,17 +186,15 @@ export default function resumen() {
           </Card>
         </div>
         <div className="mt-10 md:mt-20">
-          <p className={[opensans.className + " text-xl  text-center"]}>
+          <p className={[opensans.className + " text-xl mb-2 text-center"]}>
             2. Sabor
           </p>
           <Card className=" w-[350px] h-[498px] md:w-[400px] md:h-[480px] xl:w-[350px] border-none rounded-none  ">
-            <h2
-              className={[
-                luckiestguy.className + " text-center text-4xl tracking-wide",
-              ]}
-            >
-              Sabor Seleccionado
-            </h2>
+            <Image
+              src={sabor}
+              className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
+              alt="sabor del pastel"
+            ></Image>
 
             <p
               className={[
@@ -202,6 +223,7 @@ export default function resumen() {
             <Image
               src={Cake2}
               className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
+              alt="diseño"
             ></Image>
 
             <p
@@ -230,6 +252,7 @@ export default function resumen() {
             <Image
               src={Topp2}
               className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
+              alt="Toppings"
             ></Image>
 
             <p
@@ -258,6 +281,7 @@ export default function resumen() {
             <Image
               src={Topp6}
               className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
+              alt="Toppings"
             ></Image>
 
             <p
@@ -286,6 +310,7 @@ export default function resumen() {
             <Image
               src={Topp1}
               className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
+              alt="topper"
             ></Image>
 
             <p
@@ -314,6 +339,7 @@ export default function resumen() {
             <Image
               src={Carta}
               className="w-[300px] h-[300px] md:pl-10 xl:pl-0"
+              alt="carta"
             ></Image>
 
             <p
@@ -334,6 +360,9 @@ export default function resumen() {
             </div>
           </Card>
         </div>
+      </div>
+      <div className="bg-[#eef6fb] pb-10">
+        <ItemCountC onAdd={handleChageAlert} />
       </div>
       <ProgressResumen></ProgressResumen>
     </main>

@@ -8,9 +8,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 import pinkCake from "../../../../../../public/customC/pinkCake.webp";
-import chico from "../../../../../../public/customC/chico.png";
-import mediano from "../../../../../../public/customC/mediano.png";
-import grande from "../../../../../../public/customC/grande.png";
+import chico from "../../../../../../public/customC/chico.webp";
+import mediano from "../../../../../../public/customC/mediano.webp";
+import grande from "../../../../../../public/customC/grande.webp";
 import ProgressMobileStepper from "./Progreso";
 
 import "./styles.css";

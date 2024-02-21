@@ -45,7 +45,7 @@ function HeaderDash() {
               </Navbar.Link>
             </Dropdown.Header>
 
-            <Navbar.Link href="/about">
+            <Navbar.Link href="/About">
               <Dropdown.Item style={{ fontSize: 18 }}>Nosotros</Dropdown.Item>
             </Navbar.Link>
             <Navbar.Link href="/Contact">
@@ -57,13 +57,13 @@ function HeaderDash() {
         </div>
 
         <Navbar.Link
-          href="/Dashboard/Productos"
+          href="/Dashboard/Products"
           className=" md:mr-1 xl:mr-10 text-2xl text-black font-bold"
         >
           Productos
         </Navbar.Link>
 
-        <Navbar.Link href="/Dashboard/LoginA">
+        <Navbar.Link href="/Dashboard/LoginD">
           <PersonOutlineOutlinedIcon
             className="text-black"
             style={{ fontSize: 36 }}

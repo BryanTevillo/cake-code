@@ -6,9 +6,9 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import Link from "next/link";
 
-export default function ProgressToppers() {
+export default function ProgressResumen() {
   const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(5);
+  const [activeStep, setActiveStep] = React.useState(7);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -26,26 +26,23 @@ export default function ProgressToppers() {
       activeStep={activeStep}
       sx={{ maxWidth: 3000, flexGrow: 1 }}
       nextButton={
-        <Link href={"/Categorias/CreaTuPastel/Tarjeta"}>
-          <Button size="large" onClick={handleNext} disabled={activeStep === 7}>
-            Tarjeta
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowLeft />
-            ) : (
-              <KeyboardArrowRight />
-            )}
-          </Button>
-        </Link>
+        <Button size="large" onClick={handleNext} disabled={activeStep === 7}>
+          {theme.direction === "rtl" ? (
+            <KeyboardArrowLeft />
+          ) : (
+            <KeyboardArrowRight />
+          )}
+        </Button>
       }
       backButton={
-        <Link href={"/Categorias/CreaTuPastel/Toppings2"}>
+        <Link href={"/Categories/CustomCake/Card"}>
           <Button size="large" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === "rtl" ? (
               <KeyboardArrowRight />
             ) : (
               <KeyboardArrowLeft />
             )}
-            Toppings (2)
+            Tarjeta
           </Button>
         </Link>
       }

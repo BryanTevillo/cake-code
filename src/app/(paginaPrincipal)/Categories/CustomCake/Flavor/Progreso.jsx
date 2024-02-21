@@ -5,10 +5,11 @@ import Button from "@mui/material/Button";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import Link from "next/link";
+import CreaTuPastel from "../page";
 
-export default function ProgressToppings1() {
+export default function ProgressSabor() {
   const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(3);
+  const [activeStep, setActiveStep] = React.useState(1);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -26,9 +27,9 @@ export default function ProgressToppings1() {
       activeStep={activeStep}
       sx={{ maxWidth: 3000, flexGrow: 1 }}
       nextButton={
-        <Link href={"/Categorias/CreaTuPastel/Toppings2"}>
-          <Button size="large" onClick={handleNext} disabled={activeStep === 7}>
-            Toppings (2)
+        <Link href={"/Categories/CustomCake/DesignC"}>
+          <Button size="large" onClick={handleNext} disabled={activeStep === 6}>
+            Diseño
             {theme.direction === "rtl" ? (
               <KeyboardArrowLeft />
             ) : (
@@ -38,14 +39,14 @@ export default function ProgressToppings1() {
         </Link>
       }
       backButton={
-        <Link href={"/Categorias/CreaTuPastel/Diseno"}>
+        <Link href={"/Categories/CustomCake/Size"}>
           <Button size="large" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === "rtl" ? (
               <KeyboardArrowRight />
             ) : (
               <KeyboardArrowLeft />
             )}
-            Diseño
+            Tamaño
           </Button>
         </Link>
       }

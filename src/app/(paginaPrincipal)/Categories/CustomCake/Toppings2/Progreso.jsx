@@ -26,7 +26,7 @@ export default function ProgressToppings2() {
       activeStep={activeStep}
       sx={{ maxWidth: 3000, flexGrow: 1 }}
       nextButton={
-        <Link href={"/Categorias/CreaTuPastel/Topper"}>
+        <Link href={"/Categories/CustomCake/Topper"}>
           <Button size="large" onClick={handleNext} disabled={activeStep === 7}>
             Toppers
             {theme.direction === "rtl" ? (
@@ -38,7 +38,7 @@ export default function ProgressToppings2() {
         </Link>
       }
       backButton={
-        <Link href={"/Categorias/CreaTuPastel/Toppings1"}>
+        <Link href={"/Categories/CustomCake/Toppings1"}>
           <Button size="large" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === "rtl" ? (
               <KeyboardArrowRight />

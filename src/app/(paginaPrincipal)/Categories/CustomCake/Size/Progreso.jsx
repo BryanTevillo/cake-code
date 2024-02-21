@@ -6,9 +6,9 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import Link from "next/link";
 
-export default function ProgressTarjeta() {
+export default function ProgressTamano() {
   const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(6);
+  const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -26,9 +26,9 @@ export default function ProgressTarjeta() {
       activeStep={activeStep}
       sx={{ maxWidth: 3000, flexGrow: 1 }}
       nextButton={
-        <Link href={"/Categorias/CreaTuPastel/Resumen"}>
+        <Link href={"/Categories/CustomCake/Flavor"}>
           <Button size="large" onClick={handleNext} disabled={activeStep === 7}>
-            Resumen{" "}
+            Sabor
             {theme.direction === "rtl" ? (
               <KeyboardArrowLeft />
             ) : (
@@ -38,16 +38,13 @@ export default function ProgressTarjeta() {
         </Link>
       }
       backButton={
-        <Link href={"/Categorias/CreaTuPastel/Topper"}>
-          <Button size="large" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowRight />
-            ) : (
-              <KeyboardArrowLeft />
-            )}
-            Toppers
-          </Button>
-        </Link>
+        <Button size="large" onClick={handleBack} disabled={activeStep === 0}>
+          {theme.direction === "rtl" ? (
+            <KeyboardArrowRight />
+          ) : (
+            <KeyboardArrowLeft />
+          )}
+        </Button>
       }
     />
   );
