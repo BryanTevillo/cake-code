@@ -63,7 +63,7 @@ function HeaderDash() {
           Productos
         </Navbar.Link>
 
-        <Navbar.Link href="/Dashboard/LoginA">
+        <Navbar.Link href="/Dashboard/LoginD">
           <PersonOutlineOutlinedIcon
             className="text-black"
             style={{ fontSize: 36 }}
