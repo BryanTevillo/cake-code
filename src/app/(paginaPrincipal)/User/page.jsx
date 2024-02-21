@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
+import { Button, Card, TextInput } from "flowbite-react";
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 import "./style.css";
 import Divider from "@mui/material/Divider";
