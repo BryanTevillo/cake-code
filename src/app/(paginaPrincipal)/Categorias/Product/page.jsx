@@ -1,9 +1,6 @@
 "use client";
 
-import ItemCount from "../../../components/contador/contador";
-import { Open_Sans, Luckiest_Guy } from "next/font/google";
-const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
-const opensans = Open_Sans({ subsets: ["latin"] });
+import ItemCount from "../../../components/Counter/counter";
 import Image from "next/image";
 import Pastel4 from "../../../../../public/Pastelcerezas.webp";
 import { Rating } from "flowbite-react";
@@ -13,7 +10,6 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { useState } from "react";
 import Alert from "@mui/material/Alert";
-
 import "./styles.css";
 
 export default function Producto() {
@@ -48,10 +44,34 @@ export default function Producto() {
             indicatorColor="secondary"
             aria-label="secondary tabs example"
           >
-            <Tab className="px-0 md:px-3" value="one" label="Inicio >" />
-            <Tab className="px-0 md:px-3" value="two" label="Categorias >" />
-            <Tab className="px-0 md:px-3" value="three" label="Pasteles >" />
-            <Tab className="px-0 md:px-3" value="four" label="Producto" />
+            <a href="/">
+              <Tab
+                className="px-0 md:px-3 capitalize text-base hover:underline hover:bg-button_primary hover:bg-opacity-20"
+                value="one"
+                label="Inicio >"
+              />
+            </a>
+            <a href="#">
+              <Tab
+                className="px-0 md:px-3 capitalize text-base hover:underline hover:bg-button_primary hover:bg-opacity-20"
+                value="two"
+                label="Categorias >"
+              />
+            </a>
+            <a href="../Categories/Cakes">
+              <Tab
+                className="px-0 md:px-3 capitalize text-base hover:underline hover:bg-button_primary hover:bg-opacity-20"
+                value="three"
+                label="Pasteles >"
+              />
+            </a>
+            <a href="#">
+              <Tab
+                className="px-0 md:px-3 capitalize text-base hover:underline hover:bg-button_primary hover:bg-opacity-20"
+                value="four"
+                label="Producto"
+              />
+            </a>
           </Tabs>
         </Box>
       </div>
@@ -82,7 +102,7 @@ export default function Producto() {
                 <Rating.Star />
                 <Rating.Star filled={false} />
                 <p className="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">
-                  4.95 de 5
+                  4 de 5
                 </p>
               </Rating>
               <p className="mt-2 text-slate-500">
@@ -96,7 +116,6 @@ export default function Producto() {
         </div>
         <div className="mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-[50px]">
           <div className="md:flex">
-            {/* otra caja */}
             <div className="md:shrink-0 grid justify-items-center" />
             <div className="p-8">
               <div className="block mt-1 text-xl leading-tight font-bold text-black hover:underline grid justify-items-center">

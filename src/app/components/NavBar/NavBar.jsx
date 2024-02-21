@@ -58,13 +58,13 @@ function Header() {
               </Navbar.Link>
             </Dropdown.Header>
 
-            <Navbar.Link href="/Categorias/Pastel">
+            <Navbar.Link href="/Categorias/Cakes">
               <Dropdown.Item style={{ fontSize: 18 }}>Pasteles</Dropdown.Item>
             </Navbar.Link>
-            <Navbar.Link href="/Categorias/Galletas">
+            <Navbar.Link href="/Categorias/Cookies">
               <Dropdown.Item style={{ fontSize: 18 }}>Galletas</Dropdown.Item>
             </Navbar.Link>
-            <Navbar.Link href="/Categorias/cupcakes">
+            <Navbar.Link href="/Categorias/Cupcakes">
               <Dropdown.Item style={{ fontSize: 18 }}>Cupcakes</Dropdown.Item>
             </Navbar.Link>
             <Dropdown.Divider />

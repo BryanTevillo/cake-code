@@ -7,23 +7,23 @@ const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 const opensans = Open_Sans({ subsets: ["latin"] });
 import "./styles.css";
 import Image from "next/image";
-import Pastel1 from "../../../../../public/pastel-oreo.webp";
-import Pastel2 from "../../../../../public/pastel-chocolate.webp";
-import Pastel3 from "../../../../../public/pastelbaby.webp";
-import Pastel4 from "../../../../../public/Pastelcerezas.webp";
-import Pastel5 from "../../../../../public/pastelchocoflor.webp";
-import Pastel6 from "../../../../../public/Pastelunicornio.webp";
+import Galleta1 from "../../../../../public/galletas/amaranto.webp";
+import Galleta2 from "../../../../../public/galletas/chocolate-relleno.webp";
+import Galleta3 from "../../../../../public/galletas/lavanda.webp";
+import Galleta4 from "../../../../../public/galletas/granola.webp";
+import Galleta5 from "../../../../../public/galletas/nuez.webp";
+import Galleta6 from "../../../../../public/galletas/paylimon.webp";
 import { HiShoppingCart } from "react-icons/hi";
 import { Button } from "flowbite-react";
 
-export default function Pasteles() {
+export default function Galletas() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const onPageChange = (page) => setCurrentPage(page);
   return (
     <div>
       <h1 className={[luckiestguy.className + " tracking-wider"]} id="titulo">
-        PASTELES
+        GALLETAS
       </h1>
       <div className="mb-[100px] md:mb-[170px] xl:mb-[200px] relative md:h-10 -ml-5">
         <svg
@@ -48,7 +48,6 @@ export default function Pasteles() {
             d="M0,128L21.8,154.7C43.6,181,87,235,131,266.7C174.5,299,218,309,262,293.3C305.5,277,349,235,393,208C436.4,181,480,171,524,149.3C567.3,128,611,96,655,117.3C698.2,139,742,213,785,240C829.1,267,873,245,916,218.7C960,192,1004,160,1047,160C1090.9,160,1135,192,1178,192C1221.8,192,1265,160,1309,170.7C1352.7,181,1396,235,1418,261.3L1440,288L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"
           ></path>
         </svg>
-
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 50 1440 320"
@@ -61,22 +60,62 @@ export default function Pasteles() {
           ></path>
         </svg>
       </div>
+      <div className="grid justify-items-end">
+        <form className="w-[20rem]    md:w-[30rem]  order-2 ">
+          <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
+            Search
+          </label>
+
+          <div className="relative">
+            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg
+                className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="search"
+              id="default-search"
+              className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Nombre del producto, sabor..."
+              required
+            />
+            <button
+              type="submit"
+              className="text-white absolute end-2.5 bottom-2.5 bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Buscar
+            </button>
+          </div>
+        </form>
+      </div>
       <div className="pt-50 grid justify-items-center md:grid-cols-3">
         {/* card1 */}
         <div className={opensans.className}>
           <Card className="max-w-xs my-4">
-            <a href="../Categorias/Producto">
+            <a href="../Categories/Product">
               <Image
-                src={Pastel1}
-                alt="Pastel1"
+                src={Galleta1}
+                alt="Galleta1"
                 className="w-[250px] h-[310px] hover:w-[260px] hover:h-[320px]"
               />
             </a>
             <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Oreo con vainilla
+              Amaranto con chocolate
             </h5>
             <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $450.00
+              $25.00 c/u
             </p>
             <div className="flex justify-center px-0">
               <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -90,18 +129,18 @@ export default function Pasteles() {
         {/* card2 */}
         <div>
           <Card className="max-w-xs my-4 ">
-            <a href="../Categorias/Producto">
+            <a href="../Categories/Product">
               <Image
-                src={Pastel2}
-                alt="Pastel2"
+                src={Galleta2}
+                alt="Galleta2"
                 className="w-[250px] h-[310px] hover:w-[260px] hover:h-[320px]"
               />
             </a>
             <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Chocolate con frutos rojos
+              Chocolate relleno con crema
             </h5>
             <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $350.00
+              $30.00 c/u
             </p>
             <div className="flex justify-center px-0">
               <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -115,18 +154,18 @@ export default function Pasteles() {
         {/* card3 */}
         <div>
           <Card className="max-w-xs my-4">
-            <a href="../Categorias/Producto">
+            <a href="../Categories/Product">
               <Image
-                src={Pastel3}
-                alt="Pastel3"
+                src={Galleta3}
+                alt="Galleta3"
                 className="w-[280px] h-[310px] hover:w-[260px] hover:h-[320px]"
               />
             </a>
             <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Chocolate para Baby shower
+              Chocolate blanco y lavanda
             </h5>
             <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $250.00
+              $20.00 c/u
             </p>
             <div className="flex justify-center px-0">
               <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -140,18 +179,18 @@ export default function Pasteles() {
         {/* card4 */}
         <div>
           <Card className="max-w-xs my-4">
-            <a href="../Categorias/Producto">
+            <a href="../Categories/Product">
               <Image
-                src={Pastel4}
-                alt="Pastel4"
+                src={Galleta4}
+                alt="Galleta4"
                 className="w-[250px] h-[310px] hover:w-[260px] hover:h-[320px]"
               />
             </a>
             <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Chocolate con cerezas
+              Granola y avena
             </h5>
             <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $450.00
+              $40.00 c/u
             </p>
             <div className="flex justify-center px-0">
               <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -165,18 +204,18 @@ export default function Pasteles() {
         {/* card5 */}
         <div>
           <Card className="max-w-xs my-4">
-            <a href="../Categorias/Producto">
+            <a href="../Categories/Product">
               <Image
-                src={Pastel5}
-                alt="Pastel5"
+                src={Galleta5}
+                alt="Galleta5"
                 className="w-[250px] h-[310px] hover:w-[260px] hover:h-[320px]"
               />
             </a>
             <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Café con flor de chocolate
+              Vainilla con azucar glass
             </h5>
             <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $370.00
+              $20.00 c/u
             </p>
             <div className="flex justify-center px-0">
               <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -190,18 +229,18 @@ export default function Pasteles() {
         {/* card6 */}
         <div>
           <Card className="max-w-xs my-4">
-            <a href="../Categorias/Producto">
+            <a href="../Categories/Product">
               <Image
-                src={Pastel6}
-                alt="Pastel6"
+                src={Galleta6}
+                alt="Galleta6"
                 className="w-[250px] h-[310px] hover:w-[260px] hover:h-[320px]"
               />
             </a>
             <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Unicornio sabor chocolate
+              Galleta de limón
             </h5>
             <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $450.00
+              $20.00 c/u
             </p>
             <div className="flex justify-center px-0">
               <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">

@@ -12,7 +12,7 @@ const ItemCount = ({ onAdd, initial = 0, stock = 7 }) => {
   };
 
   return (
-    <div className="count-container ">
+    <div className="count-container">
       <div className="count-container__contador ">
         <div
           className={`border border-button_primary rounded-l-2xl  ${
@@ -29,7 +29,6 @@ const ItemCount = ({ onAdd, initial = 0, stock = 7 }) => {
             -
           </button>
         </div>
-
         <span className="count-container__qty border border-button_primary">
           {qty}
         </span>
