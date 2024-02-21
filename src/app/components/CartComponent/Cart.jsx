@@ -1,82 +1,75 @@
 "use client";
-
-import { Card } from "flowbite-react";
-import Pastelcerezas from "../../../../public/Pastelcerezas.webp";
 import Image from "next/image";
-
+import PastelCereza from "@/../../public/Pastelcerezas.webp";
+import { Divider } from "@mui/material";
+import CountCar from "../CountCar/CountCar";
 function Cart() {
   return (
     <>
-      <Card className="max-w-sm" horizontal="true">
-        <Image
-          className="rounded-lg"
-          radioGroup=""
-          alt="Imagen de Pastel :D"
-          src={Pastelcerezas}
-          loading="eager"
-        ></Image>
-        <a href="#">
-          <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-            Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
-          </h5>
-        </a>
-        <div className="mb-5 mt-2.5 flex items-center">
-          <svg
-            className="h-5 w-5 text-yellow-300"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-          </svg>
-          <svg
-            className="h-5 w-5 text-yellow-300"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-          </svg>
-          <svg
-            className="h-5 w-5 text-yellow-300"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-          </svg>
-          <svg
-            className="h-5 w-5 text-yellow-300"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-          </svg>
-          <svg
-            className="h-5 w-5 text-yellow-300"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-          </svg>
-          <span className="ml-3 mr-2 rounded bg-cyan-100 px-2.5 py-0.5 text-xs font-semibold text-cyan-800 dark:bg-cyan-200 dark:text-cyan-800">
-            5.0
-          </span>
+      <li className="flex flex-col bg-white rounded-2xl">
+        <div className="flex justify-end mr-1.5 mt-1.5 ">
+          <button className="text-blue-600  hover:text-red-600">
+            <span className="sr-only">Eliminar</span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-4 w-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+              />
+            </svg>
+          </button>
         </div>
-        <div className="flex items-center justify-between">
-          <span className="text-3xl font-bold text-gray-900 dark:text-white">
-            $599
-          </span>
-          <a
-            href="#"
-            className="rounded-lg bg-cyan-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
-          >
-            Add to cart
-          </a>
+
+        <div className="flex items-center gap-5  ">
+          <Image
+            src={PastelCereza}
+            alt=""
+            className="size-16 rounded object-cover m-5"
+          />
+
+          <div>
+            <h3 className="text-sm text-gray-900">
+              Pastel de cereza de chocolate con fondan blanco
+            </h3>
+
+            <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
+              <div>
+                <dt className="inline">Peso:</dt>
+                <dd className="inline">5kg</dd>
+              </div>
+
+              <div>
+                <dt className="inline">Sabor:</dt>
+                <dd className="inline">Chocolate</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div className="flex flex-1 items-center justify-end ">
+            <CountCar></CountCar>
+          </div>
+
+          <div className="flex flex-1 items-center justify-end mr-3">
+            <h3>$350</h3>
+          </div>
         </div>
-      </Card>
+
+        <div className="">
+          <Divider></Divider>
+          <div className="flex justify-between">
+            <h3 className=" text-sm text-gray-900 ml-3">Envio</h3>
+            <h3 className="mr-3"> $120</h3>
+          </div>
+        </div>
+      </li>
     </>
   );
 }
