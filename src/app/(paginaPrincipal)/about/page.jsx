@@ -114,7 +114,7 @@ export default function page() {
           <div>
             <div className="grid justify-items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
               <div className="mr-[20px] md:mx-[20px]">
-                <a href="../about/paula">
+                <a href="../about/Paula">
                   <Image
                     src={imagenpaula}
                     alt="Foto de Paula"
@@ -126,7 +126,7 @@ export default function page() {
                 </a>
               </div>
               <div>
-                <a href="../about/itz">
+                <a href="../about/Itzel">
                   <Image
                     src={imagenitz}
                     alt="Foto de Itzel"
@@ -138,7 +138,7 @@ export default function page() {
                 </a>
               </div>
               <div className="mr-[20px]">
-                <a href="../about/alejandro">
+                <a href="../about/Alejandro">
                   <Image
                     src={imagenale}
                     alt="Foto de Alejandro"
@@ -151,7 +151,7 @@ export default function page() {
                 </a>
               </div>
               <div>
-                <a href="../about/bryan">
+                <a href="../about/Bryan">
                   <Image
                     src={imagenbryan}
                     alt="Foto de Bryan"
@@ -163,7 +163,7 @@ export default function page() {
                 </a>
               </div>
               <div className="mb-[30px] col-span-2 md:col-span-1">
-                <a href="../about/fer">
+                <a href="../about/Fer">
                   <Image
                     src={imagenfer}
                     alt="Foto de Fernanda"
