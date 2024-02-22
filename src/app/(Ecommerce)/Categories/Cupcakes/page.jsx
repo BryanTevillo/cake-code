@@ -62,8 +62,8 @@ export default function Cupcakes() {
           ></path>
         </svg>
       </div>
-      <div className="grid justify-items-end">
-        <form className="w-[20rem]    md:w-[30rem]  order-2 ">
+      <div>
+        <form className="w-[20rem]    md:w-[30rem]  order-2 mx-auto">
           <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
             Search
           </label>
