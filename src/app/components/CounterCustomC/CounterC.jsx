@@ -12,7 +12,7 @@ const ItemCountC = ({ onAdd, initial = 0, stock = 7 }) => {
   };
 
   return (
-    <div className="count-container ">
+    <div className="count-container">
       <div className="count-container__contador ">
         <div
           className={`border border-button_primary rounded-l-2xl  ${
@@ -29,7 +29,6 @@ const ItemCountC = ({ onAdd, initial = 0, stock = 7 }) => {
             -
           </button>
         </div>
-
         <span className="count-container__qty border border-button_primary">
           {qty}
         </span>
@@ -50,13 +49,13 @@ const ItemCountC = ({ onAdd, initial = 0, stock = 7 }) => {
         </div>
       </div>
 
-      <div className=" px-0">
+      <div className="pt-5 px-0">
         <Button
           onClick={() => {
             onAdd(); //se desarrolla en fututo
           }}
           disabled={stock === 0 ? true : null}
-          className=" w-80 text-blue-500 bg-button_primary bg-opacity-20 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5"
+          className=" w-80 text-blue-500 bg-button_primary bg-opacity-20 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           <HiShoppingCart className="mr-2 h-5 w-5" />
           AGREGAR AL CARRITO

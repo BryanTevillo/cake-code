@@ -4,7 +4,7 @@ import Cart from "@/app/components/CartComponent/Cart";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Luckiest_Guy } from "next/font/google";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
-
+import Link from "next/link";
 import { Card, Button } from "flowbite-react";
 import "./style.css";
 import { Divider } from "@mui/material";
@@ -46,12 +46,15 @@ function page() {
                 <p>Total:</p>
                 <p>$1500</p>
               </div>
-              <Button
-                color=""
-                className="bg-button_primary text-white hover:opacity-75"
-              >
-                Continuar compra
-              </Button>
+              "
+              <Link href="../User/Cart/SummaryC" className="ml-5">
+                <Button
+                  color=""
+                  className="bg-button_primary text-white hover:opacity-75 w-[300px]"
+                >
+                  Continuar compra
+                </Button>
+              </Link>
             </Card>
           </div>
         </div>
