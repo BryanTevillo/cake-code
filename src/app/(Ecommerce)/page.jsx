@@ -1,4 +1,4 @@
-import { Carousel } from "flowbite-react";
+import { Carousel, Button } from "flowbite-react";
 import { Card } from "flowbite-react";
 import Image from "next/image";
 import carrusel1 from "../../../public/carrusel1/carrusel1.webp";
@@ -176,13 +176,13 @@ export default function Home() {
                   </Card>
                 </div>
               </div>
-              <div className="flex justify-center md:py-[25px]">
-                <button
-                  type="submit"
-                  className="text-white text-xl bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-8 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              <div className="flex justify-center">
+                <Button
+                  href="/Categories/Cakes"
+                  className="bg-button_primary  px-2 py-1 text-center"
                 >
-                  <a href="/About">Ver más</a>
-                </button>
+                  <p className="text-xl">Ver más</p>
+                </Button>
               </div>
             </div>
           </div>
