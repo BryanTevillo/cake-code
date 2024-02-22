@@ -5,10 +5,25 @@ import { Dropdown, Navbar } from "flowbite-react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-
+import LogoutIcon from "@mui/icons-material/Logout";
+import useLocalStorage from "@/app/lib/hook";
 import Logo from "../../../../public/logosinFondo.webp";
 import Image from "next/image";
 function HeaderDash() {
+  const [isAuthenticatedUser, setIsAuthenticatedUser] = useLocalStorage(
+    "isAuthenticatedUser",
+    false
+  );
+  const [isAuthenticatedAdmin, setIsAuthenticatedAdmin] = useLocalStorage(
+    "isAuthenticatedAdmin",
+    false
+  );
+
+  const handleLogin = async () => {
+    console.log("message");
+    setIsAuthenticatedAdmin(false);
+    console.log(setIsAuthenticatedAdmin);
+  };
   return (
     <Navbar
       fluid={true}
@@ -69,8 +84,8 @@ function HeaderDash() {
             style={{ fontSize: 36 }}
           />
         </Navbar.Link>
-        <Navbar.Link href="/navbars">
-          <SearchOutlinedIcon
+        <Navbar.Link onClick={handleLogin} href="/Login">
+          <LogoutIcon
             className="  md:mr-0 xl:mr-20 text-black"
             style={{ fontSize: 36 }}
           />
