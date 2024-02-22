@@ -1,4 +1,5 @@
 "use client";
+
 import ItemCountC from "../../../../components/CounterCustomC/CounterC";
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const opensans = Open_Sans({ subsets: ["latin"] });
@@ -23,10 +24,6 @@ export default function resumen() {
   const [showAlert, setShowAlert] = useState(false);
   const [value, setValue] = useState("one");
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   const handleChageAlert = (qty) => {
     setShowAlert(true);
 
@@ -36,11 +33,6 @@ export default function resumen() {
   };
   return (
     <main>
-      {showAlert && (
-        <Alert variant="filled" severity="success">
-          Haz añadido este producto al carrito
-        </Alert>
-      )}
       <div
         className="grid  grid-cols-1 md:grid-cols-2 "
         style={{ paddingBottom: 0 }}
@@ -152,6 +144,7 @@ export default function resumen() {
           ></path>
         </svg>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:py-10 md:px-10 bg-[#eef6fb] justify-items-center gap-4 ">
         <div className="mt-20">
           <p className={[opensans.className + " text-xl  text-center mb-2"]}>
@@ -361,6 +354,11 @@ export default function resumen() {
           </Card>
         </div>
       </div>
+      {showAlert && (
+        <Alert variant="filled" severity="success">
+          Haz añadido este producto al carrito
+        </Alert>
+      )}
       <div className="bg-[#eef6fb] pb-10">
         <ItemCountC onAdd={handleChageAlert} />
       </div>
