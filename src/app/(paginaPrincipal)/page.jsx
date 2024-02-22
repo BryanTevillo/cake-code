@@ -65,7 +65,7 @@ export default function Home() {
           </div>
           <div style={{ marginBottom: 45 }} className="text-xl">
             <b>
-              <a href="/about">
+              <a href="/About">
                 <u className={opensans.className}>Conoce al equipo</u>
               </a>
             </b>
@@ -181,7 +181,7 @@ export default function Home() {
                   type="submit"
                   className="text-white text-xl bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-8 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  <a href="/about">Ver más</a>
+                  <a href="/About">Ver más</a>
                 </button>
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function Home() {
                 <Card
                   className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
                   renderImage={() => (
-                    <a href="../Categorias/cupcakes">
+                    <a href="../Categories/Cupcakes">
                       <Image
                         src={categoria1}
                         alt="Cupcake de brownie"
@@ -210,7 +210,7 @@ export default function Home() {
                   )}
                 >
                   <div className={opensans.className}>
-                    <a href="../Categorias/cupcakes">
+                    <a href="../Categories/Cupcakes">
                       <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
                         Cupcakes
                       </h5>
@@ -222,7 +222,7 @@ export default function Home() {
                 <Card
                   className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
                   renderImage={() => (
-                    <a href="../Categorias/Pastel">
+                    <a href="../Categories/Cakes">
                       <Image
                         src={categoria2}
                         alt="pastel de chocolate"
@@ -232,7 +232,7 @@ export default function Home() {
                   )}
                 >
                   <div className={opensans.className}>
-                    <a href="../Categorias/Pastel">
+                    <a href="../Categories/Cakes">
                       <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
                         Pastel
                       </h5>
@@ -246,7 +246,7 @@ export default function Home() {
                 <Card
                   className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
                   renderImage={() => (
-                    <a href="../Categorias/Galletas">
+                    <a href="../Categories/Cookies">
                       <Image
                         src={categoria3}
                         alt="Galletas de amaranto"
@@ -256,7 +256,7 @@ export default function Home() {
                   )}
                 >
                   <div className={opensans.className}>
-                    <a href="../Categorias/Galletas">
+                    <a href="../Categories/Cookies">
                       <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
                         Galletas
                       </h5>
@@ -268,7 +268,7 @@ export default function Home() {
                 <Card
                   className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
                   renderImage={() => (
-                    <a href="../Categorias/CreaTuPastel">
+                    <a href="../Categories/CustomCake">
                       <Image
                         src={categoria4}
                         alt="Personaliza tu pastel"
@@ -278,7 +278,7 @@ export default function Home() {
                   )}
                 >
                   <div className={opensans.className}>
-                    <a href="../Categorias/CreaTuPastel">
+                    <a href="../Categories/CustomCake">
                       <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
                         Personaliza tu pastel
                       </h5>

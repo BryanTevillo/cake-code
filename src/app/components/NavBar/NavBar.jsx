@@ -71,7 +71,7 @@ function Header() {
           </Dropdown>
         </div>
 
-        <Navbar.Link href="/Usuario/Cart">
+        <Navbar.Link href="/User/Cart">
           <ShoppingCartOutlinedIcon
             className="text-black  ml-0 md:ml-4 xl:ml-20"
             style={{ fontSize: 36 }}
