@@ -3,12 +3,29 @@ import { Open_Sans } from "next/font/google";
 const opensans = Open_Sans({ subsets: ["latin"] });
 import { Dropdown, Navbar } from "flowbite-react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import LogoutIcon from "@mui/icons-material/Logout";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import useLocalStorage from "@/app/lib/hook";
 
 import Logo from "../../../../public/logosinFondo.webp";
 import Image from "next/image";
+
 function Header() {
+  const [isAuthenticatedUser, setIsAuthenticatedUser] = useLocalStorage(
+    "isAuthenticatedUser",
+    false
+  );
+  const [isAuthenticatedAdmin, setIsAuthenticatedAdmin] = useLocalStorage(
+    "isAuthenticatedAdmin",
+    false
+  );
+
+  const handleLogin = async () => {
+    console.log("message");
+    setIsAuthenticatedUser(false);
+    console.log(isAuthenticatedUser);
+  };
+
   return (
     <Navbar
       fluid={true}
@@ -83,8 +100,9 @@ function Header() {
             style={{ fontSize: 36 }}
           />
         </Navbar.Link>
-        <Navbar.Link href="/navbars">
-          <SearchOutlinedIcon
+
+        <Navbar.Link onClick={handleLogin} href="/Login">
+          <LogoutIcon
             className="  md:mr-0 xl:mr-20 text-black"
             style={{ fontSize: 36 }}
           />

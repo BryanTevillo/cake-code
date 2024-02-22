@@ -13,7 +13,24 @@ import Pastel4 from "../../../../public/Pastelcerezas.webp";
 const opensans = Open_Sans({ subsets: ["latin"] });
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 
+import useLocalStorage from "@/app/lib/hook";
+
+import { redirect } from "next/navigation";
+
+
 function User() {
+  const [isAuthenticatedUser, setIsAuthenticatedUser] = useLocalStorage(
+    "isAuthenticatedUser",
+    false
+  );
+  const [isAuthenticatedAdmin, setIsAuthenticatedAdmin] = useLocalStorage(
+    "isAuthenticatedAdmin",
+    false
+  );
+
+  if (!isAuthenticatedUser) {
+    redirect("/Login");
+  }
   return (
     <div>
       <div id="usuario" className="grid justify-items-center ">
