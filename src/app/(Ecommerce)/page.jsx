@@ -1,5 +1,4 @@
 import { Carousel, Button } from "flowbite-react";
-import { Card } from "flowbite-react";
 import Image from "next/image";
 import carrusel1 from "../../../public/carrusel1/carrusel1.webp";
 import carrusel2 from "../../../public/carrusel1/carrusel2.webp";
@@ -15,6 +14,8 @@ import categoria4 from "../../../public/categoria/personaliza.webp";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const opensans = Open_Sans({ subsets: ["latin"] });
+import CardP from "@/app/components/CardPp/Card";
+import CardCat from "@/app/components/CardPp/Card1";
 
 export default function Home() {
   return (
@@ -84,96 +85,32 @@ export default function Home() {
             <div>
               <div className="grid justify-items-center md:grid-cols-4">
                 <div>
-                  <Card
-                    className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
-                    renderImage={() => (
-                      <Image
-                        src={masvendido1}
-                        alt="Pastel de oreo"
-                        className="rounded-[30px] md:w-[200px] md:h-[300px] w-[200px] h-[280px]"
-                      />
-                    )}
-                  >
-                    <div className={opensans.className}>
-                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white text-center">
-                        Pastel de oreo
-                      </h5>
-                      <div>
-                        <p className="text-xl font-normal text-black-700 dark:text-gray-400 text-center">
-                          $200
-                        </p>
-                      </div>
-                    </div>
-                  </Card>
+                  <CardP
+                    img={masvendido1}
+                    text1="Pastel de oreo"
+                    text2="$200"
+                  ></CardP>
                 </div>
                 <div>
-                  <Card
-                    className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
-                    renderImage={() => (
-                      <Image
-                        src={masvendido2}
-                        alt="Cupcake de avellana"
-                        className="rounded-[30px] md:w-[200px] md:h-[300px] w-[200px] h-[280px]"
-                      />
-                    )}
-                  >
-                    <div className={opensans.className}>
-                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white text-center">
-                        Cupcake de avellana
-                      </h5>
-                      <div>
-                        <p className="text-xl font-normal text-black-700 dark:text-gray-400 text-center">
-                          $80
-                        </p>
-                      </div>
-                    </div>
-                  </Card>
+                  <CardP
+                    img={masvendido2}
+                    text1="Cupcake de avellana"
+                    text2="$80"
+                  ></CardP>
                 </div>
                 <div>
-                  <Card
-                    className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
-                    renderImage={() => (
-                      <Image
-                        src={masvendido3}
-                        alt="Galletas de lavanda"
-                        className="rounded-[30px] md:w-[200px] md:h-[300px] w-[200px] h-[280px]"
-                      />
-                    )}
-                  >
-                    <div className={opensans.className}>
-                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white text-center">
-                        Galletas de lavanda
-                      </h5>
-                      <div>
-                        <p className="text-xl font-normal text-black-700 dark:text-gray-400 text-center">
-                          $100
-                        </p>
-                      </div>
-                    </div>
-                  </Card>
+                  <CardP
+                    img={masvendido3}
+                    text1="Galletas de lavanda"
+                    text2="$100"
+                  ></CardP>
                 </div>
                 <div>
-                  <Card
-                    className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
-                    renderImage={() => (
-                      <Image
-                        src={masvendido4}
-                        alt="Cupcake de cafe"
-                        className="rounded-[30px] md:w-[200px] md:h-[300px] w-[200px] h-[280px]"
-                      />
-                    )}
-                  >
-                    <div className={opensans.className}>
-                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white text-center">
-                        Cupcake de cafe
-                      </h5>
-                      <div>
-                        <p className="text-xl font-normal text-black-700 dark:text-gray-400 text-center">
-                          $75
-                        </p>
-                      </div>
-                    </div>
-                  </Card>
+                  <CardP
+                    img={masvendido4}
+                    text1="Cupcake de cafe"
+                    text2="$75"
+                  ></CardP>
                 </div>
               </div>
               <div className="flex justify-center">
@@ -197,94 +134,34 @@ export default function Home() {
             </div>
             <div className="grid justify-items-center grid-cols-2 md:px-[110px]">
               <div>
-                <Card
-                  className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
-                  renderImage={() => (
-                    <a href="../Categories/Cupcakes">
-                      <Image
-                        src={categoria1}
-                        alt="Cupcake de brownie"
-                        className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
-                      />
-                    </a>
-                  )}
-                >
-                  <div className={opensans.className}>
-                    <a href="../Categories/Cupcakes">
-                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
-                        Cupcakes
-                      </h5>
-                    </a>
-                  </div>
-                </Card>
+                <CardCat
+                  href="../Categories/Cupcakes"
+                  img={categoria1}
+                  text="Cupcakes"
+                ></CardCat>
               </div>
               <div>
-                <Card
-                  className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
-                  renderImage={() => (
-                    <a href="../Categories/Cakes">
-                      <Image
-                        src={categoria2}
-                        alt="pastel de chocolate"
-                        className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
-                      />
-                    </a>
-                  )}
-                >
-                  <div className={opensans.className}>
-                    <a href="../Categories/Cakes">
-                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
-                        Pastel
-                      </h5>
-                    </a>
-                  </div>
-                </Card>
+                <CardCat
+                  href="../Categories/Cakes"
+                  img={categoria2}
+                  text="Pastel"
+                ></CardCat>
               </div>
             </div>
             <div className="grid justify-items-center grid-cols-2 md:px-[110px]">
               <div>
-                <Card
-                  className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
-                  renderImage={() => (
-                    <a href="../Categories/Cookies">
-                      <Image
-                        src={categoria3}
-                        alt="Galletas de amaranto"
-                        className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
-                      />
-                    </a>
-                  )}
-                >
-                  <div className={opensans.className}>
-                    <a href="../Categories/Cookies">
-                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
-                        Galletas
-                      </h5>
-                    </a>
-                  </div>
-                </Card>
+                <CardCat
+                  href="../Categories/CustomCake"
+                  img={categoria3}
+                  text="Galletas"
+                ></CardCat>
               </div>
               <div>
-                <Card
-                  className="max-w-sm bg-transparent border-none rounded-none shadow-none place-items-center"
-                  renderImage={() => (
-                    <a href="../Categories/CustomCake">
-                      <Image
-                        src={categoria4}
-                        alt="Personaliza tu pastel"
-                        className="rounded-[30px] md:w-[235px] md:h-[240px] w-[185px] h-[190px]"
-                      />
-                    </a>
-                  )}
-                >
-                  <div className={opensans.className}>
-                    <a href="../Categories/CustomCake">
-                      <h5 className="text-3xl font-bold tracking-tight text-black-900 dark:text-white hover:text-[#FFFFFF] text-center">
-                        Personaliza tu pastel
-                      </h5>
-                    </a>
-                  </div>
-                </Card>
+                <CardCat
+                  href="../Categories/Cookies"
+                  img={categoria4}
+                  text="Personaliza tu pastel"
+                ></CardCat>
               </div>
             </div>
           </div>
