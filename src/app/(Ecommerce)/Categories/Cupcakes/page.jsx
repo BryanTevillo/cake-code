@@ -2,21 +2,18 @@
 
 import { Pagination } from "flowbite-react";
 import { useState } from "react";
-import { Card } from "flowbite-react";
 import Waves from "@/app/components/WavesComponent/Waves";
 import { Open_Sans, Luckiest_Guy } from "next/font/google";
 const luckiestguy = Luckiest_Guy({ subsets: ["latin"], weight: ["400"] });
 const opensans = Open_Sans({ subsets: ["latin"] });
 import "./styles.css";
-import Image from "next/image";
 import cupcake1 from "../../../../../public/cupcake/algodon.webp";
 import cupcake2 from "../../../../../public/cupcake/avellana.webp";
 import cupcake3 from "../../../../../public/cupcake/cafe.webp";
 import cupcake4 from "../../../../../public/cupcake/cereza.webp";
 import cupcake5 from "../../../../../public/cupcake/oreo.webp";
 import cupcake6 from "../../../../../public/cupcake/redvelvet.webp";
-import { HiShoppingCart } from "react-icons/hi";
-import { Button } from "flowbite-react";
+import Card1 from "@/app/components/CardCupcakes/CardCupcakes";
 
 export default function Cupcakes() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -71,156 +68,44 @@ export default function Cupcakes() {
         </form>
       </div>
       <div className="pt-50 grid justify-items-center md:grid-cols-3">
-        {/* card1 */}
         <div className={opensans.className}>
-          <Card className="max-w-xs my-4">
-            <a href="../Categories/Product">
-              <Image
-                src={cupcake1}
-                alt="cupcake1"
-                className="w-[250px] h-[310px] hover:w-[260px] hover:h-[320px]"
-              />
-            </a>
-            <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Algodón de azucar
-            </h5>
-            <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $35.00 c/u
-            </p>
-            <div className="flex justify-center px-0">
-              <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                <HiShoppingCart className="mr-2 h-5 w-5" />
-                Agregar al carrito
-              </Button>
-            </div>
-          </Card>
+          <Card1
+            img={cupcake1}
+            text1="Vainilla y chantilli"
+            text2="$25.00 c/u"
+          ></Card1>
         </div>
-        {/* termino card1 */}
-        {/* card2 */}
         <div>
-          <Card className="max-w-xs my-4 ">
-            <a href="../Categories/Product">
-              <Image
-                src={cupcake2}
-                alt="cupcake2"
-                className="w-[250px] h-[310px] hover:w-[260px] hover:h-[320px]"
-              />
-            </a>
-            <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Avellana y ferrero rocher
-            </h5>
-            <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $35.00 c/u
-            </p>
-            <div className="flex justify-center px-0">
-              <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                <HiShoppingCart className="mr-2 h-5 w-5" />
-                Agregar al carrito
-              </Button>
-            </div>
-          </Card>
+          <Card1
+            img={cupcake2}
+            text1="Avellana y ferrero rocher"
+            text2="$35.00 c/u"
+          ></Card1>
         </div>
-        {/* termino card2 */}
-        {/* card3 */}
         <div>
-          <Card className="max-w-xs my-4">
-            <a href="../Categories/Product">
-              <Image
-                src={cupcake3}
-                alt="cupcake3"
-                className="w-[280px] h-[310px] hover:w-[260px] hover:h-[320px]"
-              />
-            </a>
-            <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Café con chocolate
-            </h5>
-            <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $25.00 c/u
-            </p>
-            <div className="flex justify-center px-0">
-              <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                <HiShoppingCart className="mr-2 h-5 w-5" />
-                Agregar al carrito
-              </Button>
-            </div>
-          </Card>
+          <Card1
+            img={cupcake3}
+            text1="Café con chocolate"
+            text2="$25.00 c/u"
+          ></Card1>
         </div>
-        {/* termino card3 */}
-        {/* card4 */}
         <div>
-          <Card className="max-w-xs my-4">
-            <a href="../Categories/Product">
-              <Image
-                src={cupcake4}
-                alt="cupcake4"
-                className="w-[250px] h-[310px] hover:w-[260px] hover:h-[320px]"
-              />
-            </a>
-            <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Cereza y chispas de colores
-            </h5>
-            <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $35.00 c/u
-            </p>
-            <div className="flex justify-center px-0">
-              <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                <HiShoppingCart className="mr-2 h-5 w-5" />
-                Agregar al carrito
-              </Button>
-            </div>
-          </Card>
+          <Card1
+            img={cupcake4}
+            text1="Cereza y chantilli"
+            text2="$35.00 c/u"
+          ></Card1>
         </div>
-        {/* termino card4 */}
-        {/* card5 */}
         <div>
-          <Card className="max-w-xs my-4">
-            <a href="../Categories/Product">
-              <Image
-                src={cupcake5}
-                alt="cupcake5"
-                className="w-[250px] h-[310px] hover:w-[260px] hover:h-[320px]"
-              />
-            </a>
-            <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Cupcake de oreo
-            </h5>
-            <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $37.00 c/u
-            </p>
-            <div className="flex justify-center px-0">
-              <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                <HiShoppingCart className="mr-2 h-5 w-5" />
-                Agregar al carrito
-              </Button>
-            </div>
-          </Card>
+          <Card1
+            img={cupcake5}
+            text1="Cupcake de oreo"
+            text2="$37.00 c/u"
+          ></Card1>
         </div>
-        {/* termino card5 */}
-        {/* card6 */}
         <div>
-          <Card className="max-w-xs my-4">
-            <a href="../Categories/Product">
-              <Image
-                src={cupcake6}
-                alt="cupcake6"
-                className="w-[250px] h-[310px] hover:w-[260px] hover:h-[320px]"
-              />
-            </a>
-            <h5 className="text-center text-xl font-bold text-gray-900 dark:text-white">
-              Red velvet
-            </h5>
-            <p className="text-center font-normal text-gray-700 dark:text-gray-400">
-              $30.00 c/u
-            </p>
-            <div className="flex justify-center px-0">
-              <Button className="text-white bg-button_primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                <HiShoppingCart className="mr-2 h-5 w-5" />
-                Agregar al carrito
-              </Button>
-            </div>
-          </Card>
+          <Card1 img={cupcake6} text1="Red velvet" text2="$37.00 c/u"></Card1>
         </div>
-        {/* termino card6 */}
       </div>
       <div className="my-8 flex overflow-x-auto sm:justify-center rounded-full">
         <Pagination
