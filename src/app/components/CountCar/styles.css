@@ -1,0 +1,42 @@
+.count-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.count-container__contador {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  font-weight: 600;
+  margin: 0px auto 0;
+}
+
+.count-container__button {
+  color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border-color);
+
+  transition: all 250ms ease-out;
+}
+
+.count-container__button:hover {
+  border: none;
+  color: var(--just-white);
+  background-color: var(--primary-color);
+}
+
+.count-container__button[disabled] {
+  color: var(--border-color);
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+}
+
+.count-container__qty {
+  text-align: center;
+  height: 100%;
+  padding-top: 10px;
+  color: var(--primary-color);
+  background-color: var(--just-white);
+}
