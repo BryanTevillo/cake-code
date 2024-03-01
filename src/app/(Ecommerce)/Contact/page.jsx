@@ -50,15 +50,33 @@ function page() {
                 </div>
                 <div className={opensans.className}>
                   <div className="text-lg">
-                    <form action="">
+                    <form
+                      action="https://formspree.io/f/xeqykvbz"
+                      method="POST"
+                    >
                       <label htmlFor="name">Nombre completo*</label>
-                      <TextInput type="text" id="name" required />
+                      <TextInput
+                        type="text"
+                        id="name"
+                        name="Nombre:"
+                        required
+                      />
                       <br />
                       <label htmlFor="phone">Telefono*</label>
-                      <TextInput type="text" id="phone" required />
+                      <TextInput
+                        type="text"
+                        id="phone"
+                        name="Telefono:"
+                        required
+                      />
                       <br />
                       <label htmlFor="email">Correo Electronico*</label>
-                      <TextInput type="text" id="email" required />
+                      <TextInput
+                        type="text"
+                        id="email"
+                        name="Correo:"
+                        required
+                      />
                       <br />
                       <label htmlFor="event">
                         <p>Evento</p>
@@ -67,13 +85,22 @@ function page() {
                           etc.)
                         </p>
                       </label>
-                      <TextInput type="text" id="event" />
+                      <TextInput type="text" id="event" name="Evento:" />
                       <br />
                       <label htmlFor="date">Fecha de evento</label>
-                      <TextInput type="date" id="date" />
+                      <TextInput
+                        type="date"
+                        id="date"
+                        name="Fecha de evento:"
+                      />
                       <br />
                       <label htmlFor="num-servering">Número de invitados</label>
-                      <TextInput type="number" id="num-servering" min={1} />
+                      <TextInput
+                        type="number"
+                        id="num-servering"
+                        name="num-servering"
+                        min={1}
+                      />
                       <br />
                       <label htmlFor="message">
                         <p className={opensans.className}>Mensaje*</p>
@@ -84,6 +111,7 @@ function page() {
                       </label>
                       <textarea
                         id="message"
+                        name="Mensaje para organizador:"
                         rows="4"
                         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         maxlength="200"
@@ -106,6 +134,7 @@ function page() {
                             type="checkbox"
                             id="chocolate"
                             style={{ marginRight: 10 }}
+                            name="Fue seleccionado el pastel de chocolate"
                           />
                           <label for="chocolate">Chocolate</label>
                         </div>
@@ -114,6 +143,7 @@ function page() {
                             type="checkbox"
                             id="vanilla"
                             style={{ marginRight: 10 }}
+                            name="Fue seleccionado el pastel de vainilla"
                           />
                           <label for="vanilla">French Vanilla</label>
                         </div>
@@ -122,6 +152,7 @@ function page() {
                             type="checkbox"
                             id="fresa"
                             style={{ marginRight: 10 }}
+                            name="Fue seleccionado el pastel de fresa"
                           />
                           <label for="fresa">Fresa</label>
                         </div>
@@ -130,6 +161,7 @@ function page() {
                             type="checkbox"
                             id="redvelvet"
                             style={{ marginRight: 10 }}
+                            name="Fue seleccionado el pastel de redvelvet"
                           />
                           <label for="redvelvet">Red Velvet</label>
                         </div>
@@ -138,6 +170,7 @@ function page() {
                             type="checkbox"
                             id="zanahoria"
                             style={{ marginRight: 10 }}
+                            name="Fue seleccionado el pastel de zanahoria"
                           />
                           <label for="zanahoria">Zanahoria</label>
                         </div>
@@ -146,6 +179,7 @@ function page() {
                             type="checkbox"
                             id="limon"
                             style={{ marginRight: 10 }}
+                            name="Fue seleccionado el pastel de limon"
                           />
                           <label for="limon">Limon</label>
                         </div>
@@ -160,6 +194,7 @@ function page() {
                             type="checkbox"
                             id="chocolate-relleno"
                             style={{ marginRight: 10 }}
+                            name="Fue seleccionado el relleno de chocolate"
                           />
                           <label for="chocolate-relleno">Chocolate</label>
                         </div>
@@ -168,6 +203,7 @@ function page() {
                             type="checkbox"
                             id="vanilla-relleno"
                             style={{ marginRight: 10 }}
+                            name="Fue seleccionado el relleno de vainilla"
                           />
                           <label for="vanilla-relleno">Vanilla</label>
                         </div>
@@ -176,6 +212,7 @@ function page() {
                             type="checkbox"
                             id="fresa-relleno"
                             style={{ marginRight: 10 }}
+                            name="Fue seleccionado el relleno de fresa"
                           />
                           <label for="fresa-relleno">Fresa</label>
                         </div>
@@ -184,6 +221,7 @@ function page() {
                             type="checkbox"
                             id="mocha-relleno"
                             style={{ marginRight: 10 }}
+                            name="Fue seleccionado el relleno de mocha"
                           />
                           <label for="mocharelleno">Mocha</label>
                         </div>
@@ -192,13 +230,14 @@ function page() {
                             type="checkbox"
                             id="galleta-relleno"
                             style={{ marginRight: 10 }}
+                            name="Fue seleccionado el relleno de galleta"
                           />
                           <label for="galleta-relleno">Galleta</label>
                         </div>
                       </fieldset>
                       <div className="flex justify-center">
                         <Button
-                          type="send"
+                          type="submit"
                           className="bg-button_primary px-2 py-1 text-center"
                         >
                           <p className="text-base">Enviar</p>
