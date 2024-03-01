@@ -15,6 +15,8 @@ export default function Card1({ img, text1, text2 }) {
           <a href="../Categories/Product">
             <Image
               src={img}
+              width={100}
+              height={100}
               alt="cupcake1"
               className="w-[250px] h-[310px] hover:w-[260px] hover:h-[320px]"
             />

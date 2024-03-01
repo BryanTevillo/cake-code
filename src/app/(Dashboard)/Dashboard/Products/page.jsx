@@ -4,7 +4,35 @@ import { Checkbox, Table, Button } from "flowbite-react";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./style.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
 function Productos() {
+  const [products, setProducts] = useState([]);
+
+  const solicitudProducts = async (param) => {
+    const { data } = await axios.get(
+      "https://cakecodedeploy.onrender.com/api/v1/ecommerce/products"
+    );
+    console.log(data);
+    setProducts(data);
+  };
+
+  useEffect(() => {
+    solicitudProducts();
+  }, []);
+
+  const handleDeleteClick = async (id) => {
+    try {
+      await axios.delete(
+        `https://cakecodedeploy.onrender.com/api/v1/ecommerce/products/${id}`
+      );
+      // Después de eliminar con éxito, cargar los datos nuevamente para reflejar los cambios
+      solicitudProducts();
+    } catch (error) {
+      console.error("Error deleting data:", error);
+    }
+  };
+
   return (
     <>
       <h1 className="text-center font-bold text-[5rem]  mb-5">
@@ -63,103 +91,50 @@ function Productos() {
               <Table.HeadCell className="p-4">
                 <Checkbox />
               </Table.HeadCell>
+              <Table.HeadCell>Id</Table.HeadCell>
               <Table.HeadCell>Nombre del producto</Table.HeadCell>
+              <Table.HeadCell>Tipo</Table.HeadCell>
               <Table.HeadCell>Sabor/Relleno</Table.HeadCell>
               <Table.HeadCell>Descripción</Table.HeadCell>
               <Table.HeadCell>Precio</Table.HeadCell>
-              <Table.HeadCell>
-                <span className="sr-only">Edit</span>
-              </Table.HeadCell>
+              <Table.HeadCell>Stock</Table.HeadCell>
               <Table.HeadCell>
                 <span className="sr-only">Delete</span>
               </Table.HeadCell>
             </Table.Head>
             <Table.Body className="divide-y">
-              <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                <Table.Cell className="p-4">
-                  <Checkbox />
-                </Table.Cell>
-                <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                  {"Chocolate con cerezas"}
-                </Table.Cell>
-                <Table.Cell>Chocolate</Table.Cell>
-                <Table.Cell>
-                  Chocolate con decoracion de cerezas de betún
-                </Table.Cell>
-                <Table.Cell>$380.00</Table.Cell>
-                <Table.Cell>
-                  <a
-                    href="#"
-                    className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    <EditIcon></EditIcon>
-                  </a>
-                </Table.Cell>
-                <Table.Cell>
-                  <a
-                    href="#"
-                    className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    <DeleteIcon></DeleteIcon>
-                  </a>
-                </Table.Cell>
-              </Table.Row>
-              <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                <Table.Cell className="p-4">
-                  <Checkbox />
-                </Table.Cell>
-                <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                  Oreo con vainilla
-                </Table.Cell>
-                <Table.Cell>Chocolate</Table.Cell>
-                <Table.Cell>Chocolate con oreo y derretido de fresa</Table.Cell>
-                <Table.Cell>$399.00</Table.Cell>
-                <Table.Cell>
-                  <a
-                    href="#"
-                    className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    <EditIcon></EditIcon>
-                  </a>
-                </Table.Cell>
-                <Table.Cell>
-                  <a
-                    href="#"
-                    className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    <DeleteIcon></DeleteIcon>
-                  </a>
-                </Table.Cell>
-              </Table.Row>
-              <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                <Table.Cell className="p-4">
-                  <Checkbox />
-                </Table.Cell>
-                <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                  Chocolate con frutos rojos
-                </Table.Cell>
-                <Table.Cell>Frutos de rojos</Table.Cell>
-                <Table.Cell>
-                  Chocolate fudge con toppings frutos rojos
-                </Table.Cell>
-                <Table.Cell>$350.00</Table.Cell>
-                <Table.Cell>
-                  <a
-                    href="#"
-                    className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    <EditIcon></EditIcon>
-                  </a>
-                </Table.Cell>
-                <Table.Cell>
-                  <a
-                    href="#"
-                    className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    <DeleteIcon></DeleteIcon>
-                  </a>
-                </Table.Cell>
-              </Table.Row>
+              {products.map((value, index, array) => (
+                <Table.Row
+                  key={value.id}
+                  className="bg-white dark:border-gray-700 dark:bg-gray-800"
+                >
+                  <Table.Cell className="p-4">
+                    <Checkbox />
+                  </Table.Cell>
+                  <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    {value.id}
+                  </Table.Cell>
+                  <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    {value.name}
+                  </Table.Cell>
+                  <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    {value.type}
+                  </Table.Cell>
+                  <Table.Cell> {value.flavor}</Table.Cell>
+                  <Table.Cell>{value.description}</Table.Cell>
+                  <Table.Cell>${value.price}.00</Table.Cell>
+                  <Table.Cell>{value.stock}</Table.Cell>
+                  <Table.Cell>
+                    <a
+                      href="#"
+                      className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                      onClick={() => handleDeleteClick(value.id)}
+                    >
+                      <DeleteIcon></DeleteIcon>
+                    </a>
+                  </Table.Cell>
+                </Table.Row>
+              ))}
             </Table.Body>
           </Table>
         </div>
