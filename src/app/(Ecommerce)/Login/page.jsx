@@ -34,24 +34,39 @@ export default function Login() {
     const formData = new FormData(event.target);
     console.log(formData.get("password"));
     console.log(formData.get("email"));
-    const { data } = await axios.get("https://gorest.co.in/public/v2/users");
+    const { data } = await axios.get(
+      "https://cakecodedeploy.onrender.com/api/v1/ecommerce/user"
+    );
     console.log(data);
-    if (
-      data &&
-      formData.get("password") === "123" &&
-      formData.get("email") === "tevillo24@gmail.com"
-    ) {
-      console.log(data);
-      setIsAuthenticatedUser(true);
-    }
-    if (
-      data &&
-      formData.get("password") === "123" &&
-      formData.get("email") === "paula@gmail.com"
-    ) {
-      console.log(data);
-      setIsAuthenticatedAdmin(true);
-    }
+    console.table(data);
+    const resp = await axios.get(
+      "https://cakecodedeploy.onrender.com/api/v1/ecommerce/adminuser"
+    );
+
+    console.log(resp.data);
+    console.table(resp.data);
+
+    data.forEach((user, index, array) => {
+      //console.log(user.email)
+      if (
+        user.email === formData.get("email") &&
+        formData.get("password") === user.password
+      ) {
+        console.log(data);
+        setIsAuthenticatedUser(true);
+      }
+    });
+
+    resp.data.forEach((user, index, array) => {
+      //console.log(user.email)
+      if (
+        user.name === formData.get("email") &&
+        formData.get("password") === user.password
+      ) {
+        console.log(data);
+        setIsAuthenticatedAdmin(true);
+      }
+    });
 
     if (isAuthenticatedUser) {
       redirect("/User");
@@ -138,7 +153,7 @@ export default function Login() {
       </div>
 
       <div className="h-[12px] md:h-[25px] xl:h-[30px]">
-      <Waves color="#FFDDCC"></Waves>
+        <Waves color="#FFDDCC"></Waves>
       </div>
       <div id="divrosa">
         <div className="h-[70px] md:h-[210px] xl:h-[205px]"></div>
